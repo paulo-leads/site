@@ -1,0 +1,694 @@
+---
+layout: null
+title: "Paulo Leads | Especialista em Recuperação e Mentoria para Co-dependência"
+permalink: /mentoria/
+---
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paulo Leads | Especialista em Recuperação e Mentoria para Co-dependência</title>
+    <meta name="description" content="Mentoria estratégica para homens e famílias. Supere o alcoolismo, a dependência química e reorganize sua vida com quem viveu 26 anos na ativa e hoje vive a vitória real.">
+
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+
+    <!-- Configuração Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Montserrat', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        'navy': {
+                            '900': '#0a1628',
+                            '800': '#0d1d35',
+                            '700': '#102540',
+                            '600': '#142d4d',
+                        },
+                        'anthracite': {
+                            '900': '#1a1a1a',
+                            '800': '#242424',
+                            '700': '#2d2d2d',
+                            '600': '#363636',
+                        },
+                        'burned': {
+                            '500': '#f59e0b',
+                            '600': '#d97706',
+                            '700': '#b45309',
+                            '800': '#92400e',
+                        },
+                        'cream': '#f8fafc',
+                    },
+                    backgroundImage: {
+                        'grid-pattern': "linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)",
+                        'grid-pattern-lg': "linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)",
+                        'circuit-glow': 'radial-gradient(ellipse at 70% 30%, rgba(217, 119, 6, 0.06) 0%, transparent 60%)',
+                        'tech-lines': 'linear-gradient(135deg, rgba(245, 158, 11, 0.03) 0%, transparent 50%, rgba(245, 158, 11, 0.02) 100%)',
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'cursor-blink': 'blink 1.2s step-end infinite',
+                    },
+                    keyframes: {
+                        blink: {
+                            '0%, 100%': { opacity: '1' },
+                            '50%': { opacity: '0' },
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a1628;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d97706;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #f59e0b;
+        }
+        .divider-gold {
+            height: 2px;
+            background: linear-gradient(90deg, transparent 0%, #d97706 50%, transparent 100%);
+            border: none;
+        }
+        .card-tech-hover {
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .card-tech-hover::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            border: 1px solid transparent;
+            transition: border-color 0.4s ease;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .card-tech-hover:hover::before {
+            border-color: rgba(217, 119, 6, 0.35);
+        }
+        .shadow-gold {
+            box-shadow: 0 0 30px rgba(217, 119, 6, 0.08), 0 0 60px rgba(217, 119, 6, 0.03);
+        }
+        .status-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #22c55e;
+            box-shadow: 0 0 8px rgba(34, 197, 94, 0.5);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 8px rgba(34, 197, 94, 0.5); }
+            50% { box-shadow: 0 0 18px rgba(34, 197, 94, 0.8); }
+        }
+        .text-glow-subtle {
+            text-shadow: 0 0 40px rgba(217, 119, 6, 0.15);
+        }
+        .emergency-banner {
+            background: #b45309;
+            color: white;
+            font-weight: 700;
+            text-align: center;
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .emergency-banner:hover {
+            background: #d97706;
+        }
+    </style>
+</head>
+<body class="font-sans bg-navy-900 text-gray-200 antialiased min-h-screen">
+
+    <!-- ==================== BOTÃO DE EMERGÊNCIA (FIXO NO TOPO) ==================== -->
+    <a href="https://wa.me/5519982642481?text=Olá%20Paulo,%20preciso%20de%20ajuda%20agora." target="_blank" rel="noopener noreferrer" class="emergency-banner fixed top-0 left-0 right-0 z-[60]">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"/>
+        </svg>
+        PRECISO DE AJUDA AGORA (Falar no WhatsApp)
+    </a>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="fixed top-8 left-0 right-0 z-50 bg-navy-900/80 backdrop-blur-md border-b border-white/5" id="navbar">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-18">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2 group">
+                    <span class="text-2xl font-black tracking-tight text-white">
+                        Paulo<span class="text-burned-600">Leads</span>
+                    </span>
+                    <span class="hidden sm:inline-block text-[10px] uppercase tracking-[0.2em] text-gray-500 border border-gray-700 rounded px-2 py-0.5 font-medium">Mentoria</span>
+                </a>
+
+                <!-- Links Desktop -->
+                <div class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-gray-400">
+                    <a href="#sobre" class="hover:text-white transition-colors duration-200">Quem Sou</a>
+                    <a href="#experiencia" class="hover:text-white transition-colors duration-200">Experiência</a>
+                    <a href="#diferencial" class="hover:text-white transition-colors duration-200">O Diferencial</a>
+                    <a href="#servicos" class="hover:text-white transition-colors duration-200">Serviços</a>
+                    <a href="#blog" class="hover:text-white transition-colors duration-200">Conteúdo</a>
+                    <a href="https://wa.me/5519982642481?text=Olá%20Paulo,%20vim%20pelo%20site%20e%20quero%20dar%20o%20primeiro%20passo." target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-burned-600 hover:bg-burned-500 text-white rounded font-semibold text-xs uppercase tracking-wider transition-all duration-300 shadow-gold">
+                        Falar Agora
+                    </a>
+                </div>
+
+                <!-- Botão Mobile -->
+                <button id="mobileMenuBtn" class="md:hidden text-white p-2 hover:bg-white/10 rounded transition-colors" aria-label="Abrir menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Menu Mobile -->
+            <div id="mobileMenu" class="md:hidden hidden pb-4 border-t border-white/5 mt-2 pt-3">
+                <a href="#sobre" class="block py-3 px-2 text-gray-400 hover:text-white transition-colors text-sm font-medium">Quem Sou</a>
+                <a href="#experiencia" class="block py-3 px-2 text-gray-400 hover:text-white transition-colors text-sm font-medium">Experiência</a>
+                <a href="#diferencial" class="block py-3 px-2 text-gray-400 hover:text-white transition-colors text-sm font-medium">O Diferencial</a>
+                <a href="#servicos" class="block py-3 px-2 text-gray-400 hover:text-white transition-colors text-sm font-medium">Serviços</a>
+                <a href="#blog" class="block py-3 px-2 text-gray-400 hover:text-white transition-colors text-sm font-medium">Conteúdo</a>
+                <a href="https://wa.me/5519982642481?text=Olá%20Paulo,%20vim%20pelo%20site%20e%20quero%20dar%20o%20primeiro%20passo." target="_blank" rel="noopener noreferrer" class="block py-3 px-2 text-burned-500 hover:text-burned-400 font-semibold text-sm">Falar Agora →</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden bg-navy-900 bg-grid-pattern-lg bg-[length:60px_60px]" id="hero">
+        <div class="absolute inset-0 bg-circuit-glow pointer-events-none"></div>
+        <div class="absolute inset-0 bg-tech-lines pointer-events-none"></div>
+        <div class="absolute top-1/4 left-[5%] text-[120px] sm:text-[180px] font-black text-white/[0.015] select-none pointer-events-none leading-none hidden lg:block">{</div>
+        <div class="absolute bottom-1/4 right-[5%] text-[120px] sm:text-[180px] font-black text-white/[0.015] select-none pointer-events-none leading-none hidden lg:block">}</div>
+        <div class="absolute top-[15%] right-[10%] text-[60px] font-black text-burned-600/[0.04] select-none pointer-events-none leading-none hidden lg:block">&lt;/&gt;</div>
+
+        <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+                <div class="space-y-6 lg:space-y-8">
+                    <div class="inline-flex items-center gap-2 bg-burned-600/10 border border-burned-600/25 rounded-full px-4 py-1.5 text-xs font-semibold text-burned-500 uppercase tracking-wider">
+                        <span class="status-dot"></span> Mentor ativo • 2 anos limpo
+                    </div>
+
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-[1.08] tracking-tight">
+                        Vença a <span class="text-burned-500 relative">Dependência Química<span class="absolute -bottom-1 left-0 w-full h-[3px] bg-burned-600/60 rounded"></span></span> e recupere sua dignidade.
+                    </h1>
+
+                    <p class="text-base sm:text-lg lg:text-xl text-gray-400 leading-relaxed max-w-xl">
+                        Estratégias práticas para <strong class="text-white font-semibold">alcoólicos, dependentes e suas famílias.</strong>
+                    </p>
+
+                    <p class="text-sm sm:text-base text-gray-500 leading-relaxed max-w-lg border-l-2 border-burned-600/50 pl-4">
+                        Paulo Leads: Mentoria prática em sobriedade para homens que cansaram de perder produtividade, dinheiro e família para o álcool e as drogas.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                        <a href="https://wa.me/5519982642481?text=Olá%20Paulo,%20vim%20pelo%20site%20e%20quero%20dar%20o%20primeiro%20passo." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-burned-600 hover:bg-burned-500 text-white font-bold text-sm sm:text-base px-8 py-4 rounded transition-all duration-300 shadow-gold hover:shadow-xl hover:shadow-burned-700/20 group">
+                            Quero minha vida de volta
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4 group-hover:translate-x-1 transition-transform">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/>
+                            </svg>
+                        </a>
+                        <span class="text-xs text-gray-600 self-center sm:self-auto text-center sm:text-left">Falar no WhatsApp →</span>
+                    </div>
+
+                    <div class="flex gap-6 sm:gap-10 pt-4 border-t border-white/5">
+                        <div>
+                            <span class="block text-2xl sm:text-3xl font-black text-white">26</span>
+                            <span class="text-[10px] sm:text-xs text-gray-500 uppercase tracking-wider">Anos na ativa</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl sm:text-3xl font-black text-burned-500">2+</span>
+                            <span class="text-[10px] sm:text-xs text-gray-500 uppercase tracking-wider">Anos de vitória</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl sm:text-3xl font-black text-white">100%</span>
+                            <span class="text-[10px] sm:text-xs text-gray-500 uppercase tracking-wider">Estratégia real</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative hidden lg:block">
+                    <div class="aspect-[4/5] max-w-md mx-auto bg-navy-800/60 rounded-2xl border border-white/5 overflow-hidden shadow-2xl relative">
+                        <div class="absolute inset-0 bg-grid-pattern bg-[length:30px_30px] opacity-40"></div>
+                        <div class="absolute inset-0 bg-gradient-to-br from-navy-800/80 via-navy-700/40 to-navy-900/90 flex items-center justify-center">
+                            <div class="text-center p-8">
+                                <div class="w-28 h-28 mx-auto mb-6 rounded-full bg-burned-600/10 border-2 border-burned-600/30 flex items-center justify-center relative">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-14 h-14 text-burned-500">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z"/>
+                                    </svg>
+                                    <div class="absolute inset-0 rounded-full border border-burned-500/20 animate-pulse-slow"></div>
+                                </div>
+                                <p class="text-gray-400 text-sm font-medium">Paulo Leads</p>
+                                <p class="text-gray-600 text-xs mt-1">Mentor • Estrategista • Sobrevivente</p>
+                                <div class="mt-6 space-y-1.5 opacity-25">
+                                    <div class="h-1 bg-burned-500/60 rounded w-3/4 mx-auto"></div>
+                                    <div class="h-1 bg-gray-400/40 rounded w-1/2 mx-auto"></div>
+                                    <div class="h-1 bg-gray-400/30 rounded w-2/3 mx-auto"></div>
+                                    <div class="h-1 bg-burned-500/50 rounded w-3/5 mx-auto"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute -inset-[1px] rounded-2xl border border-burned-600/10 pointer-events-none"></div>
+                    </div>
+                    <div class="absolute -bottom-4 -right-2 bg-anthracite-800/90 backdrop-blur-sm border border-white/5 rounded-lg px-4 py-3 text-xs font-mono text-gray-500 shadow-xl hidden xl:block">
+                        <span class="text-burned-500">></span> rotina_blindagem<span class="text-burned-500">.</span>ativar<span class="text-burned-500">()</span>
+                        <span class="inline-block w-2 h-4 bg-burned-500 ml-1 animate-cursor-blink align-middle"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 animate-pulse-slow">
+            <span class="text-[10px] uppercase tracking-[0.3em] text-gray-600">Role</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-gray-600">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ==================== SEÇÃO: A BAGAGEM DE OURO (SOBRE) ==================== -->
+    <section class="py-20 md:py-28 bg-anthracite-900 relative overflow-hidden" id="sobre">
+        <div class="absolute inset-0 bg-grid-pattern bg-[length:40px_40px] opacity-30 pointer-events-none"></div>
+        <div class="absolute top-0 right-0 w-96 h-96 bg-burned-600/[0.02] blur-3xl rounded-full pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-5 gap-10 md:gap-16 items-center">
+                <div class="md:col-span-2 flex justify-center">
+                    <div class="relative w-56 h-56 sm:w-64 sm:h-64">
+                        <div class="absolute inset-0 rounded-full border-2 border-dashed border-burned-600/20 animate-[spin_40s_linear_infinite]"></div>
+                        <div class="absolute inset-3 rounded-full bg-navy-800 border border-white/5 flex items-center justify-center overflow-hidden">
+                            <div class="text-center">
+                                <span class="block text-5xl sm:text-6xl font-black text-white">PL</span>
+                                <span class="text-[10px] text-burned-500 uppercase tracking-[0.3em] font-semibold">Mentor</span>
+                            </div>
+                        </div>
+                        <div class="absolute top-2 right-6 w-3 h-3 bg-burned-500 rounded-full shadow-lg shadow-burned-500/40"></div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-3 space-y-6">
+                    <span class="text-xs uppercase tracking-[0.2em] text-burned-500 font-semibold">A Bagagem de Ouro</span>
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white leading-tight">
+                        Ex-pastor, ex-comerciante, ex-sucateiro e <span class="text-burned-500">sobrevivente</span> de 26 anos de alcoolismo.
+                    </h2>
+                    <div class="divider-gold my-4"></div>
+                    <p class="text-gray-400 leading-relaxed text-sm sm:text-base">
+                        Minha trajetória não cabe em caixinhas. Já estive no altar, no balcão, no ferro-velho e no fundo do poço — tudo isso me deu uma <strong class="text-white font-semibold">visão versátil e autodidata</strong> que nenhuma faculdade ensina.
+                    </p>
+                    <p class="text-gray-400 leading-relaxed text-sm sm:text-base">
+                        Hoje, uso <strong class="text-white font-semibold">inteligência artificial e tecnologia</strong> como aliadas na blindagem da rotina. Não vendo milagres — entrego método, constância e um papo reto de quem já sentiu o cheiro do fundo do poço.
+                    </p>
+                    <div class="inline-flex items-center gap-2 bg-navy-800/60 border border-white/5 rounded-lg px-4 py-2 text-xs text-gray-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-burned-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Z"/>
+                        </svg>
+                        Blindagem com IA • Rotinas automatizadas • Estratégia real
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== NOVA SEÇÃO: EXPERIÊNCIA EM CAMPO (PROVA SOCIAL) ==================== -->
+    <section class="py-16 md:py-20 bg-navy-800 relative overflow-hidden" id="experiencia">
+        <div class="absolute inset-0 bg-circuit-glow pointer-events-none"></div>
+        <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-xs uppercase tracking-[0.2em] text-burned-500 font-semibold">Prova Social</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white mt-2">Mais de 2.100 horas de escuta ativa e aconselhamento</h2>
+                <div class="divider-gold w-24 mx-auto mt-3"></div>
+                <p class="text-gray-500 text-sm mt-3 max-w-xl mx-auto">Antes de ser mentor pago, fui voluntário onde a dor é real. Essa bagagem está disponível para você.</p>
+            </div>
+
+            <!-- Cards de experiência -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                <!-- Card 1: Aconselhamento AA -->
+                <div class="bg-navy-700/60 border border-white/5 rounded-xl p-5 flex flex-col items-center text-center hover:border-burned-600/30 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-full bg-burned-600/10 flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-burned-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/>
+                        </svg>
+                    </div>
+                    <span class="text-2xl font-black text-white">+800h</span>
+                    <span class="text-xs text-gray-500 uppercase tracking-wider mt-1">Partilhas Reuniões em Programas de 12 Passos.</span>
+                    <p class="text-gray-500 text-xs mt-3 leading-relaxed">Serviço voluntário direto, anônimo, mas com método real de recuperação.</p>
+                </div>
+
+                <!-- Card 2: Santa Casa de Valinhos -->
+                <div class="bg-navy-700/60 border border-white/5 rounded-xl p-5 flex flex-col items-center text-center hover:border-burned-600/30 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-full bg-burned-600/10 flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-burned-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z"/>
+                        </svg>
+                    </div>
+                    <span class="text-2xl font-black text-white">Voluntariado</span>
+                    <span class="text-xs text-gray-500 uppercase tracking-wider mt-1">Santa Casa de Valinhos</span>
+                    <p class="text-gray-500 text-xs mt-3 leading-relaxed">Atuação em ambiente hospitalar, levando suporte a famílias em crise.</p>
+                </div>
+
+                <!-- Card 3: SIPATs e Escolas -->
+                <div class="bg-navy-700/60 border border-white/5 rounded-xl p-5 flex flex-col items-center text-center hover:border-burned-600/30 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-full bg-burned-600/10 flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-burned-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 1 1 0-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38a.883.883 0 0 1-.862-.082A9.001 9.001 0 0 0 17.25 18c0-4.507-3.041-8.323-7.15-9.374m0 9.18c-.999-.086-1.996-.389-2.85-.88m2.85.88c.253-.962.584-1.892.985-2.783.247-.55.06-1.21-.463-1.511l-.657-.38a.883.883 0 0 0-.862.082A9.001 9.001 0 0 1 3.75 9c0-4.507 3.041-8.323 7.15-9.374m-2.85 8.88c.999.086 1.996.389 2.85.88"/>
+                        </svg>
+                    </div>
+                    <span class="text-2xl font-black text-white">+30</span>
+                    <span class="text-xs text-gray-500 uppercase tracking-wider mt-1">Palestras e SIPATs</span>
+                    <p class="text-gray-500 text-xs mt-3 leading-relaxed">Empresas, escolas e ações de RH. Prevenção real, sem romantismo.</p>
+                </div>
+
+                <!-- Card 4: Aconselhamento familiar -->
+                <div class="bg-navy-700/60 border border-white/5 rounded-xl p-5 flex flex-col items-center text-center hover:border-burned-600/30 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-full bg-burned-600/10 flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-burned-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"/>
+                        </svg>
+                    </div>
+                    <span class="text-2xl font-black text-white">+400h</span>
+                    <span class="text-xs text-gray-500 uppercase tracking-wider mt-1">Suporte a Famílias</span>
+                    <p class="text-gray-500 text-xs mt-3 leading-relaxed">Orientação prática para co-dependentes. Quem ama também precisa de estratégia.</p>
+                </div>
+            </div>
+
+            <!-- Selo de confiança extra -->
+            <div class="mt-10 text-center">
+                <div class="inline-flex items-center gap-3 bg-burned-600/5 border border-burned-600/20 rounded-full px-6 py-2 text-xs text-gray-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-burned-500">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 12 5.176-1.71 9-6.408 9-12 0-1.262-.196-2.49-.598-3.751H12Z"/>
+                    </svg>
+                    Experiência validada em instituições de saúde, empresas e comunidades terapêuticas
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SEÇÃO: POR QUE ESTA MENTORIA É DIFERENTE ==================== -->
+    <section class="py-20 md:py-28 bg-navy-900 relative" id="diferencial">
+        <div class="absolute inset-0 bg-circuit-glow pointer-events-none"></div>
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14 md:mb-18">
+                <span class="text-xs uppercase tracking-[0.2em] text-burned-500 font-semibold">O Diferencial</span>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white mt-3 mb-4">Por que esta mentoria é diferente?</h2>
+                <div class="divider-gold w-32 mx-auto"></div>
+                <p class="text-gray-500 text-sm sm:text-base mt-4 max-w-xl mx-auto">Sem teorias chatas. Sem jargão clínico. Aqui o papo é de quem viveu — e venceu.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                <div class="card-tech-hover bg-navy-800/60 border border-white/5 rounded-2xl p-6 sm:p-8 group hover:bg-navy-800/80 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-burned-600/10 flex items-center justify-center mb-5 group-hover:bg-burned-600/20 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-6 h-6 text-burned-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 18a3.75 3.75 0 0 0 .495-7.468 5.99 5.99 0 0 0-1.925 3.547 5.975 5.975 0 0 1-2.133-1.001A3.75 3.75 0 0 0 12 18Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold text-white mb-3">Identificação Real</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Sem teorias chatas. Papo de quem já sentiu o cheiro do fundo do poço — e sabe o caminho de volta. Aqui não tem julgamento, tem verdade.</p>
+                </div>
+
+                <div class="card-tech-hover bg-navy-800/60 border border-white/5 rounded-2xl p-6 sm:p-8 group hover:bg-navy-800/80 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-burned-600/10 flex items-center justify-center mb-5 group-hover:bg-burned-600/20 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-6 h-6 text-burned-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold text-white mb-3">Blindagem Tecnológica</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Uso de ferramentas e rotinas automatizadas para gerenciar gatilhos e produtividade. Tecnologia como escudo, não como distração.</p>
+                </div>
+
+                <div class="card-tech-hover bg-navy-800/60 border border-white/5 rounded-2xl p-6 sm:p-8 group hover:bg-navy-800/80 transition-all duration-300 sm:col-span-2 lg:col-span-1">
+                    <div class="w-12 h-12 rounded-xl bg-burned-600/10 flex items-center justify-center mb-5 group-hover:bg-burned-600/20 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-6 h-6 text-burned-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold text-white mb-3">Equilíbrio Familiar</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Foco na reparação real com esposa e filhos. Porque sobriedade sem família restaurada é só metade da vitória.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SEÇÃO DE SERVIÇOS ==================== -->
+    <section class="py-20 md:py-28 bg-anthracite-900 relative overflow-hidden" id="servicos">
+        <div class="absolute inset-0 bg-grid-pattern bg-[length:40px_40px] opacity-25 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-burned-600/[0.015] blur-3xl rounded-full pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14 md:mb-18">
+                <span class="text-xs uppercase tracking-[0.2em] text-burned-500 font-semibold">Serviços</span>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white mt-3 mb-4">Como posso te ajudar</h2>
+                <div class="divider-gold w-32 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+                <!-- Card 1: Mentoria Individual -->
+                <div class="card-tech-hover bg-navy-800/70 border border-white/5 rounded-2xl p-6 sm:p-7 flex flex-col group hover:border-burned-600/30 transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-burned-600/[0.04] blur-2xl rounded-full pointer-events-none group-hover:bg-burned-600/[0.08] transition-colors"></div>
+                    <span class="text-[10px] uppercase tracking-[0.2em] text-burned-500 font-bold mb-3 relative z-10">Individual</span>
+                    <h3 class="text-lg sm:text-xl font-bold text-white mb-3 relative z-10">Mentoria Individual de Blindagem</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6 flex-grow relative z-10">Foco total no dependente. Sessões individuais com método prático de blindagem de rotina, identificação de gatilhos e construção de uma nova identidade produtiva.</p>
+                    <a href="https://wa.me/5519982642481?text=Olá%20Paulo,%20quero%20saber%20sobre%20a%20mentoria%20individual." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-burned-500 hover:text-burned-400 font-semibold text-sm transition-colors relative z-10 group/link">
+                        Saber mais
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Card 2: Co-dependência (FAMÍLIA) -->
+                <div class="card-tech-hover bg-navy-800/70 border border-white/5 rounded-2xl p-6 sm:p-7 flex flex-col group hover:border-burned-600/30 transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-burned-600/[0.04] blur-2xl rounded-full pointer-events-none group-hover:bg-burned-600/[0.08] transition-colors"></div>
+                    <span class="text-[10px] uppercase tracking-[0.2em] text-burned-500 font-bold mb-3 relative z-10">Família & Co-dependência</span>
+                    <h3 class="text-lg sm:text-xl font-bold text-white mb-3 relative z-10">Resgate para Co-dependentes</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6 flex-grow relative z-10">Mentoria para esposas e pais. Aprenda a estabelecer limites, parar de "enxugar gelo" e recuperar sua própria sanidade, independentemente da escolha do outro.</p>
+                    <a href="https://wa.me/5519982642481?text=Olá%20Paulo,%20preciso%20de%20orientação%20para%20lidar%20com%20a%20dependência%20na%20minha%20família." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-burned-500 hover:text-burned-400 font-semibold text-sm transition-colors relative z-10 group/link">
+                        Saber mais
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Card 3: Produtividade -->
+                <div class="card-tech-hover bg-navy-800/70 border border-white/5 rounded-2xl p-6 sm:p-7 flex flex-col group hover:border-burned-600/30 transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-burned-600/[0.04] blur-2xl rounded-full pointer-events-none group-hover:bg-burned-600/[0.08] transition-colors"></div>
+                    <span class="text-[10px] uppercase tracking-[0.2em] text-burned-500 font-bold mb-3 relative z-10">Produtividade</span>
+                    <h3 class="text-lg sm:text-xl font-bold text-white mb-3 relative z-10">Consultoria de Rotina e Performance</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6 flex-grow relative z-10">Para o homem que quer voltar a produzir e liderar. Home office, disciplina e vida limpa. Reconstrua sua capacidade de gerar renda e respeito.</p>
+                    <a href="https://wa.me/5519982642481?text=Olá%20Paulo,%20quero%20saber%20sobre%20a%20consultoria%20de%20rotina." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-burned-500 hover:text-burned-400 font-semibold text-sm transition-colors relative z-10 group/link">
+                        Saber mais
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SEÇÃO: TRANSPARÊNCIA ÉTICA ==================== -->
+    <section class="py-16 md:py-20 bg-cream relative" id="etica">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="bg-white border border-gray-200 rounded-2xl p-8 sm:p-10 shadow-sm">
+                <div class="w-14 h-14 mx-auto mb-5 rounded-full bg-burned-600/10 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-7 h-7 text-burned-600">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m0-10.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.75c0 5.592 3.824 10.29 9 12 5.176-1.71 9-6.408 9-12 0-1.262-.196-2.49-.598-3.75H12Z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 14.25v.008m.008-.008v.008"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold text-anthracite-900 mb-4">Transparência Ética</h3>
+                <p class="text-gray-600 leading-relaxed text-sm sm:text-base max-w-2xl mx-auto">
+                    Mantenho minha <strong class="text-anthracite-900">gratidão e serviço em A.A. de forma gratuita</strong>. Este site oferece meus serviços profissionais de mentoria, consultoria e aconselhamento técnico em dependência química. Uma coisa não anula a outra — ambas caminham juntas com honestidade.
+                </p>
+                <div class="divider-gold w-24 mx-auto mt-6"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SEÇÃO BLOG ==================== -->
+    <section class="py-20 md:py-28 bg-navy-900 relative" id="blog">
+        <div class="absolute inset-0 bg-grid-pattern bg-[length:50px_50px] opacity-20 pointer-events-none"></div>
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14 md:mb-18">
+                <span class="text-xs uppercase tracking-[0.2em] text-burned-500 font-semibold">Conteúdo</span>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white mt-3 mb-4">Artigos & Estratégia</h2>
+                <div class="divider-gold w-32 mx-auto"></div>
+                <p class="text-gray-500 text-sm sm:text-base mt-4 max-w-xl mx-auto">IA, sobriedade e marketing da vida real. Conteúdo direto para quem quer resultado.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-6 lg:gap-8">
+                <a href="#" class="card-tech-hover bg-navy-800/60 border border-white/5 rounded-2xl p-6 sm:p-7 group hover:bg-navy-800/80 transition-all duration-300 block">
+                    <span class="text-[10px] uppercase tracking-[0.2em] text-burned-500 font-bold">Tecnologia</span>
+                    <h3 class="text-lg font-bold text-white mt-2 mb-3 group-hover:text-burned-400 transition-colors">IA e Sobriedade: Como usar inteligência artificial para blindar sua rotina</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">Ferramentas simples que podem ser o diferencial entre uma recaída e um dia produtivo. Automação a serviço da recuperação.</p>
+                    <span class="text-burned-500 text-xs font-semibold group-hover:underline">Ler artigo →</span>
+                </a>
+
+                <a href="#" class="card-tech-hover bg-navy-800/60 border border-white/5 rounded-2xl p-6 sm:p-7 group hover:bg-navy-800/80 transition-all duration-300 block">
+                    <span class="text-[10px] uppercase tracking-[0.2em] text-burned-500 font-bold">Vida Real</span>
+                    <h3 class="text-lg font-bold text-white mt-2 mb-3 group-hover:text-burned-400 transition-colors">Marketing da Vida Real: Reconstruindo sua reputação depois do fundo do poço</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">Como reerguer sua imagem profissional e pessoal quando tudo parece perdido. Estratégia prática, sem discurso motivacional vazio.</p>
+                    <span class="text-burned-500 text-xs font-semibold group-hover:underline">Ler artigo →</span>
+                </a>
+            </div>
+
+            <div class="text-center mt-10">
+                <a href="#" class="inline-flex items-center gap-2 text-gray-500 hover:text-white text-sm font-medium transition-colors">
+                    Ver todos os artigos
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SEÇÃO CONTATO / CTA FINAL ==================== -->
+    <section class="py-20 md:py-24 bg-anthracite-900 relative overflow-hidden" id="contato">
+        <div class="absolute inset-0 bg-circuit-glow pointer-events-none"></div>
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-px h-full bg-gradient-to-b from-transparent via-burned-600/15 to-transparent pointer-events-none hidden md:block"></div>
+
+        <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-xs uppercase tracking-[0.2em] text-burned-500 font-semibold">Pronto para agir?</span>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white mt-3 mb-4">Sua vida de volta começa com <span class="text-burned-500">uma decisão</span>.</h2>
+            <p class="text-gray-400 text-sm sm:text-base mb-8 max-w-lg mx-auto">
+                Não espere o próximo fundo do poço. Fale comigo agora mesmo pelo WhatsApp e dê o primeiro passo com quem entende do caminho.
+            </p>
+
+            <a href="https://wa.me/5519982642481?text=Olá%20Paulo,%20vim%20pelo%20site%20e%20quero%20dar%20o%20primeiro%20passo." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-burned-600 hover:bg-burned-500 text-white font-bold text-base sm:text-lg px-10 py-5 rounded-xl transition-all duration-300 shadow-gold hover:shadow-xl hover:shadow-burned-700/30 group">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                    <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2.22 21.28a.75.75 0 0 0 .932.94l4.03-1.005A9.96 9.96 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2Zm.97 14.82c-.345.97-1.415 1.54-2.448 1.265a6.5 6.5 0 0 1-2.756-1.602 6.5 6.5 0 0 1-1.602-2.756c-.275-1.033.295-2.103 1.265-2.448.304-.108.63-.045.87.165.425.373.777.82 1.037 1.32.26.5.37 1.07.28 1.62-.09.55-.38 1.05-.82 1.38.44.76 1.06 1.38 1.82 1.82.33-.44.83-.73 1.38-.82.55-.09 1.12.02 1.62.28.5.26.947.612 1.32 1.037.21.24.273.566.165.87Z" clip-rule="evenodd"/>
+                </svg>
+                Quero minha vida de volta – Falar no WhatsApp
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5 group-hover:translate-x-1 transition-transform">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/>
+                </svg>
+            </a>
+
+            <p class="text-gray-600 text-xs mt-6">Resposta em até 24h • Atendimento direto com Paulo</p>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-navy-900 border-t border-white/5 py-10 md:py-12">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+                <a href="#" class="text-xl font-black text-white tracking-tight">
+                    Paulo<span class="text-burned-600">Leads</span>
+                </a>
+
+                <div class="flex flex-wrap justify-center gap-4 sm:gap-6 text-xs text-gray-500 font-medium">
+                    <a href="#sobre" class="hover:text-white transition-colors">Quem Sou</a>
+                    <a href="#experiencia" class="hover:text-white transition-colors">Experiência</a>
+                    <a href="#diferencial" class="hover:text-white transition-colors">Diferencial</a>
+                    <a href="#servicos" class="hover:text-white transition-colors">Serviços</a>
+                    <a href="#blog" class="hover:text-white transition-colors">Conteúdo</a>
+                    <a href="#etica" class="hover:text-white transition-colors">Ética</a>
+                </div>
+
+                <p class="text-[10px] sm:text-xs text-gray-600 text-center sm:text-right">
+                    © 2026 Paulo Leads. Todos os direitos reservados.<br class="sm:hidden">
+                    <span class="text-gray-700">Mentoria • Consultoria • Aconselhamento Técnico</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== WHATSAPP FLUTUANTE ==================== -->
+    <a href="https://wa.me/5519982642481?text=Olá%20Paulo,%20vim%20pelo%20site%20e%20quero%20dar%20o%20primeiro%20passo." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-4 sm:bottom-8 sm:right-6 z-50 flex items-center gap-3 bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold text-sm px-5 py-3.5 rounded-full shadow-2xl hover:shadow-[#25D366]/30 transition-all duration-300 group animate-pulse-slow hover:animate-none" aria-label="Falar no WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 sm:w-6 sm:h-6">
+            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2.22 21.28a.75.75 0 0 0 .932.94l4.03-1.005A9.96 9.96 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2Zm.97 14.82c-.345.97-1.415 1.54-2.448 1.265a6.5 6.5 0 0 1-2.756-1.602 6.5 6.5 0 0 1-1.602-2.756c-.275-1.033.295-2.103 1.265-2.448.304-.108.63-.045.87.165.425.373.777.82 1.037 1.32.26.5.37 1.07.28 1.62-.09.55-.38 1.05-.82 1.38.44.76 1.06 1.38 1.82 1.82.33-.44.83-.73 1.38-.82.55-.09 1.12.02 1.62.28.5.26.947.612 1.32 1.037.21.24.273.566.165.87Z" clip-rule="evenodd"/>
+        </svg>
+        <span class="hidden sm:inline">Falar agora</span>
+        <span class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-green-400 border-2 border-navy-900 rounded-full"></span>
+    </a>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenuBtn.innerHTML = `
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+                        </svg>`;
+            } else {
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.innerHTML = `
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                        </svg>`;
+            }
+        });
+
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.innerHTML = `
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                        </svg>`;
+            });
+        });
+
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-lg', 'shadow-black/20');
+            } else {
+                navbar.classList.remove('shadow-lg', 'shadow-black/20');
+            }
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - 120;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

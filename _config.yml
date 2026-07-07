@@ -1,0 +1,14 @@
+# Configuracoes do Site
+title: "Paulo Leads"
+description: "Site organizado para GitHub Pages"
+url: "https://paulo-leads.github.io"
+baseurl: "/site"
+
+permalink: /:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "null"

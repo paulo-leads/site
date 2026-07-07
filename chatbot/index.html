@@ -1,0 +1,734 @@
+---
+layout: null
+title: "Dominus SaaS 2026 | Paulo Leads · Arquitetura Tática de Vendas Autônomas"
+permalink: /chatbot/
+---
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Dominus SaaS 2026 | Paulo Leads · Arquitetura Tática de Vendas Autônomas</title>
+    <meta name="description" content="Dominus SaaS — Máquina de Guerra Digital com redundância cognitiva, áudios humanos sintetizados e blindagem anti-Meta. Escale operações high-ticket sem depender de algoritmos.">
+    <meta name="keywords" content="Dominus SaaS, Paulo Leads, vendas autônomas, WhatsApp bot, IA vendas, high-ticket, automação comercial, Black-Ops">
+    <meta name="author" content="Paulo Leads - Engenharia Comercial">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.pauloleads.com.br/dominus">
+
+    <meta property="og:title" content="Dominus SaaS 2026: Máquina de Guerra Digital para Vendas High-Ticket">
+    <meta property="og:description" content="O fim da era do atendimento reativo. Venda enquanto o mundo colapsa com redundância cognitiva e blindagem anti-Meta.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Montserrat', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        'navy': {
+                            '900': '#0a1628',
+                            '800': '#0d1d35',
+                            '700': '#102540',
+                            '600': '#142d4d',
+                        },
+                        'anthracite': {
+                            '900': '#1a1a1a',
+                            '800': '#242424',
+                            '700': '#2d2d2d',
+                            '600': '#363636',
+                        },
+                        'burned': {
+                            '500': '#f59e0b',
+                            '600': '#d97706',
+                            '700': '#b45309',
+                            '800': '#92400e',
+                        },
+                        'cream': '#f8fafc',
+                    },
+                    backgroundImage: {
+                        'grid-pattern': "linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)",
+                        'grid-pattern-lg': "linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)",
+                        'circuit-glow': 'radial-gradient(ellipse at 70% 30%, rgba(217, 119, 6, 0.06) 0%, transparent 60%)',
+                        'tech-lines': 'linear-gradient(135deg, rgba(245, 158, 11, 0.03) 0%, transparent 50%, rgba(245, 158, 11, 0.02) 100%)',
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'cursor-blink': 'blink 1.2s step-end infinite',
+                    },
+                    keyframes: {
+                        blink: {
+                            '0%, 100%': { opacity: '1' },
+                            '50%': { opacity: '0' },
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0a1628; }
+        ::-webkit-scrollbar-thumb { background: #d97706; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #f59e0b; }
+        .divider-gold {
+            height: 2px;
+            background: linear-gradient(90deg, transparent 0%, #d97706 50%, transparent 100%);
+            border: none;
+        }
+        .card-tech-hover {
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .card-tech-hover::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            border: 1px solid transparent;
+            transition: border-color 0.4s ease;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .card-tech-hover:hover::before {
+            border-color: rgba(217, 119, 6, 0.35);
+        }
+        .shadow-gold {
+            box-shadow: 0 0 30px rgba(217, 119, 6, 0.08), 0 0 60px rgba(217, 119, 6, 0.03);
+        }
+        .status-dot {
+            display: inline-block;
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background-color: #22c55e;
+            box-shadow: 0 0 8px rgba(34, 197, 94, 0.5);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 8px rgba(34, 197, 94, 0.5); }
+            50% { box-shadow: 0 0 18px rgba(34, 197, 94, 0.8); }
+        }
+        .emergency-banner {
+            background: #b45309;
+            color: white;
+            font-weight: 700;
+            text-align: center;
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .emergency-banner:hover { background: #d97706; }
+        .insight-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #f59e0b;
+            line-height: 1;
+        }
+        details summary {
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+            color: #e2e8f0;
+        }
+        details summary::after {
+            content: '+';
+            color: #d97706;
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+        details[open] summary::after {
+            content: '−';
+        }
+    </style>
+    <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "x0ztdb68qw");
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pauloleads.com.br/#organization",
+      "name": "Paulo Leads",
+      "url": "https://pauloleads.com.br",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://pauloleads.com.br/wp-content/uploads/logo-paulo-leads.png"
+      },
+      "description": "Infraestrutura Comercial com IA, Engenharia de Microdados e RAG para B2B e Mercado Imobiliário High-Ticket.",
+      "sameAs": [
+        "https://www.wikidata.org/wiki/Q140067740",
+        "https://br.trustpilot.com/review/pauloleads.com.br",
+        "https://www.glassdoor.com.br/Vis%C3%A3o-geral/Trabalhar-na-Paulo-Leads-EI_IE11154127.13,24.htm",
+        "https://br.indeed.com/cmp/Paulo-Leads",
+        "https://wellfound.com/company/paulo-leads",
+        "https://www.crunchbase.com/organization/paulo-leads",
+        "https://www.youtube.com/@paulo-leads",
+        "https://vimeo.com/pauloleadsbrasil",
+        "https://www.instagram.com/pauloleads2/",
+        "https://www.facebook.com/pauloleadsbrasil",
+        "https://www.threads.com/@pauloleads2",
+        "https://huggingface.co/paulo-leads",
+        "https://paulo-leads.github.io/paulo-leads-careers/"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pauloleads.com.br/#person",
+      "name": "Paulo",
+      "jobTitle": "Arquiteto de Infraestrutura B2B e IA",
+      "worksFor": {
+        "@id": "https://pauloleads.com.br/#organization"
+      },
+      "sameAs": [
+        "https://me.developers.google.com/u/pauloleads",
+        "https://github.com/paulo-leads",
+        "https://github.com/paulo-leads/protocolo-hidra",
+        "https://gitlab.com/pauloleads",
+        "https://stackoverflow.com/users/32809119/paulo-leads",
+        "https://dev.to/pauloleads",
+        "https://www.linkedin.com/in/pauloleads/",
+        "https://zenodo.org/records/20475915",
+        "https://doi.org/10.5281/zenodo.20320049",
+        "https://beacons.ai/pauloleads",
+        "https://pt.slideshare.net/slideshow/infraestrutura-comercial-com-ia-para-mercado-imobiliario-e-b2b-cruzamento-de-dados-publicos-e-big-data-para-aquisicao-de-clientes/287925338",
+        "https://pt.scribd.com/document/1047394531/Como-Cruzar-Dados-Publicos-de-Empresas-de-Alto-Faturamento-Receita-Federal-Com-o-Raio-de-Influencia-Dos-Meus-Novos-Lancamentos"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://pauloleads.com.br/#website",
+      "url": "https://pauloleads.com.br",
+      "name": "Protocolo Hidra - Paulo Leads",
+      "publisher": {
+        "@id": "https://pauloleads.com.br/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://pauloleads.com.br/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "O que é RAG (Retrieval-Augmented Generation) aplicado à qualificação e vendas corporativas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "RAG é uma arquitetura de IA que permite conectar Modelos de Linguagem (LLMs) diretamente às bases de dados corporativas (CRMs, Manuais Técnicos, Receita Federal). Na Paulo Leads, aplicamos o RAG através do Protocolo Hidra para transformar Inteligências Artificiais em SDRs Autônomos, qualificando microdados B2B em tempo real e eliminando o trabalho braçal de prospecção."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como reduzir o CAC B2B em operações high-ticket sem aumentar o headcount do time de vendas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A redução matemática do Custo de Aquisição de Clientes (CAC) ocorre ao substituir a fragmentação de ferramentas (Salesloft, Apollo, Outreach) por uma infraestrutura bare-metal. O Protocolo Hidra atua como um conector de engenharia de dados, mapeando empresas e injetando leads validados nativamente no HubSpot ou Salesforce, operando 24/7 sem inflar os custos operacionais (RevOps)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como automatizar o primeiro contato e a qualificação do SDR usando IA diretamente no WhatsApp?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Utilizando a WhatsApp Cloud API em conjunto com agentes autônomos integrados. A infraestrutura mapeia a intenção do lead, reduz o speed-to-lead para menos de 1 minuto e executa frameworks BANT ou SPIN Selling automaticamente, repassando para os Closers (executivos de vendas) apenas as oportunidades pré-qualificadas, protegendo a conta contra banimentos e rate limits."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como reduzir o altíssimo CAC de imóveis de luxo substituindo o tráfego pago saturado por prospecção ativa baseada em dados?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Em vez de depender de Meta Ads e portais imobiliários, a solução é o uso de Big Data e Engenharia de Microdados. A tecnologia varre dados públicos de empresas de alto faturamento, mapeia expansões (CNAE) e localiza investidores corporativos ou médicos e advogados na região de influência dos lançamentos, gerando uma captação ativa e exclusiva sem a dependência do tráfego orgânico tradicional."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como estruturar uma máquina de vendas de alto ticket imune a bloqueios de Meta e WhatsApp?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Construindo uma operação pautada em conformidade (governança comercial) e arquitetura de rede adequada. O uso de tokens oficiais de API (Cloud API da Meta), tratamento nativo de códigos de erro (como 131047 e 131026), e algoritmos de backoff exponencial garantem que a automação comercial escale a prospecção B2B respeitando os rate limits impostos pelas plataformas de mensageria."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="font-sans bg-navy-900 text-gray-200 antialiased min-h-screen">
+
+    <!-- Banner de urgência -->
+    <a href="https://wa.me/5519982642481?text=Olá%2C%20vim%20pelo%20Dominus%20SaaS%20e%20quero%20minha%20demonstração%20estratégica." target="_blank" rel="noopener noreferrer" class="emergency-banner fixed top-0 left-0 right-0 z-[60]">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"/>
+        </svg>
+        AGENDAR DEMONSTRAÇÃO ESTRATÉGICA (Falar no WhatsApp)
+    </a>
+
+    <!-- Navbar -->
+    <nav class="fixed top-8 left-0 right-0 z-50 bg-navy-900/80 backdrop-blur-md border-b border-white/5" id="navbar">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-18">
+                <a href="#" class="flex items-center gap-2 group">
+                    <span class="text-2xl font-black tracking-tight text-white">Dominus<span class="text-burned-600">SaaS</span></span>
+                    <span class="hidden sm:inline-block text-[10px] uppercase tracking-[0.2em] text-gray-500 border border-gray-700 rounded px-2 py-0.5 font-medium">2026</span>
+                </a>
+                <div class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-gray-400">
+                    <a href="#prefacio" class="hover:text-white transition-colors">Prefácio</a>
+                    <a href="#nucleo" class="hover:text-white transition-colors">Núcleo</a>
+                    <a href="#sensorial" class="hover:text-white transition-colors">Sensorial</a>
+                    <a href="#outbound" class="hover:text-white transition-colors">Outbound</a>
+                    <a href="#depoimentos" class="hover:text-white transition-colors">Resultados</a>
+                    <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+                    <a href="https://wa.me/5519982642481?text=Olá%2C%20vim%20pelo%20Dominus%20SaaS%20e%20quero%20minha%20demonstração%20estratégica." target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-burned-600 hover:bg-burned-500 text-white rounded font-semibold text-xs uppercase tracking-wider transition-all duration-300 shadow-gold">Comando Central</a>
+                </div>
+                <button id="mobileMenuBtn" class="md:hidden text-white p-2 hover:bg-white/10 rounded transition-colors" aria-label="Abrir menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                    </svg>
+                </button>
+            </div>
+            <div id="mobileMenu" class="md:hidden hidden pb-4 border-t border-white/5 mt-2 pt-3">
+                <a href="#prefacio" class="block py-3 px-2 text-gray-400 hover:text-white transition-colors text-sm font-medium">Prefácio</a>
+                <a href="#nucleo" class="block py-3 px-2 text-gray-400 hover:text-white transition-colors text-sm font-medium">Núcleo</a>
+                <a href="#sensorial" class="block py-3 px-2 text-gray-400 hover:text-white transition-colors text-sm font-medium">Sensorial</a>
+                <a href="#outbound" class="block py-3 px-2 text-gray-400 hover:text-white transition-colors text-sm font-medium">Outbound</a>
+                <a href="#depoimentos" class="block py-3 px-2 text-gray-400 hover:text-white transition-colors text-sm font-medium">Resultados</a>
+                <a href="#faq" class="block py-3 px-2 text-gray-400 hover:text-white transition-colors text-sm font-medium">FAQ</a>
+                <a href="https://wa.me/5519982642481?text=Olá%2C%20vim%20pelo%20Dominus%20SaaS%20e%20quero%20minha%20demonstração%20estratégica." target="_blank" rel="noopener noreferrer" class="block py-3 px-2 text-burned-500 hover:text-burned-400 font-semibold text-sm">Comando Central →</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden bg-navy-900 bg-grid-pattern-lg bg-[length:60px_60px]" id="hero">
+        <div class="absolute inset-0 bg-circuit-glow pointer-events-none"></div>
+        <div class="absolute inset-0 bg-tech-lines pointer-events-none"></div>
+        <div class="absolute top-1/4 left-[5%] text-[120px] sm:text-[180px] font-black text-white/[0.015] select-none pointer-events-none leading-none hidden lg:block">{</div>
+        <div class="absolute bottom-1/4 right-[5%] text-[120px] sm:text-[180px] font-black text-white/[0.015] select-none pointer-events-none leading-none hidden lg:block">}</div>
+        <div class="absolute top-[15%] right-[10%] text-[60px] font-black text-burned-600/[0.04] select-none pointer-events-none leading-none hidden lg:block">&lt;/&gt;</div>
+
+        <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center">
+            <div class="inline-flex items-center gap-2 bg-burned-600/10 border border-burned-600/25 rounded-full px-4 py-1.5 text-xs font-semibold text-burned-500 uppercase tracking-wider mb-6">
+                <span class="status-dot"></span> BLACK-OPS EDITION | PAULO LEADS · ARQUITETURA TÁTICA
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-[1.08] tracking-tight max-w-4xl mx-auto">
+                O fim da era do atendimento reativo.<br>
+                <span class="text-burned-500 relative">Venda enquanto o mundo colapsa.<span class="absolute -bottom-1 left-0 w-full h-[3px] bg-burned-600/60 rounded"></span></span>
+            </h1>
+
+            <p class="text-base sm:text-lg lg:text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto mt-6">
+                DOMINUS SaaS — Máquina de Guerra Digital com redundância cognitiva, áudios humanos sintetizados e blindagem anti-Meta. Escale operações high-ticket sem depender de algoritmos.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-3 pt-6 justify-center">
+                <a href="https://wa.me/5519982642481?text=Olá%2C%20vim%20pelo%20Dominus%20SaaS%20e%20quero%20minha%20demonstração%20estratégica." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-burned-600 hover:bg-burned-500 text-white font-bold text-sm sm:text-base px-8 py-4 rounded transition-all duration-300 shadow-gold hover:shadow-xl hover:shadow-burned-700/20 group">
+                    Acessar Arsenal →
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4 group-hover:translate-x-1 transition-transform">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/>
+                    </svg>
+                </a>
+                <span class="text-xs text-gray-600 self-center">Falar no WhatsApp →</span>
+            </div>
+
+            <!-- Métricas -->
+            <div class="flex flex-wrap justify-center gap-6 sm:gap-10 pt-10 border-t border-white/5 mt-10">
+                <div class="text-center"><span class="block insight-number">+2.8M</span><span class="text-[10px] sm:text-xs text-gray-500 uppercase tracking-wider">mensagens negociadas</span></div>
+                <div class="text-center"><span class="block insight-number">99.98%</span><span class="text-[10px] sm:text-xs text-gray-500 uppercase tracking-wider">uptime failover triplo</span></div>
+                <div class="text-center"><span class="block insight-number">0</span><span class="text-[10px] sm:text-xs text-gray-500 uppercase tracking-wider">banimentos por Meta</span></div>
+                <div class="text-center"><span class="block insight-number">R$47M</span><span class="text-[10px] sm:text-xs text-gray-500 uppercase tracking-wider">em oportunidades geradas</span></div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 animate-pulse-slow">
+            <span class="text-[10px] uppercase tracking-[0.3em] text-gray-600">Role</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-gray-600">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Seção: Prefácio Executivo -->
+    <section class="py-20 md:py-28 bg-anthracite-900 relative overflow-hidden" id="prefacio">
+        <div class="absolute inset-0 bg-grid-pattern bg-[length:40px_40px] opacity-30 pointer-events-none"></div>
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <span class="text-xs uppercase tracking-[0.2em] text-burned-500 font-semibold">📜 Prefácio Executivo · 2026</span>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white mt-3 mb-4">O mercado high-ticket exige algo além de chatbots engessados</h2>
+                <div class="divider-gold w-32 mx-auto"></div>
+            </div>
+            <div class="max-w-3xl mx-auto bg-navy-800/60 border border-white/5 rounded-2xl p-6 sm:p-8">
+                <p class="text-gray-400 leading-relaxed">Bem-vindo ao ano de 2026. Os algoritmos das Big Techs se tornaram predadores impiedosos e o consumidor High-Ticket desenvolveu imunidade absoluta a automações robóticas. O mercado imobiliário de luxo, assessorias de investimento e operações de venda complexa não podem mais depender de fluxos de botões ou APIs oficiais que limitam a cadência e bloqueiam operações milionárias por "violação de políticas".</p>
+                <p class="text-gray-400 leading-relaxed mt-4"><strong class="text-white">Dominus SaaS</strong> não é um "bot de WhatsApp". É uma Máquina de Guerra Digital com arquitetura de guerrilha (<em class="text-burned-500">Black-Ops</em>). Construímos um Cérebro Cognitivo Descentralizado, imune a quedas de servidores, blindado contra atualizações da Meta e treinado para mimetizar o comportamento humano de um <em>Closer</em> de elite.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Núcleo Cognitivo -->
+    <section class="py-20 md:py-28 bg-navy-900 relative" id="nucleo">
+        <div class="absolute inset-0 bg-circuit-glow pointer-events-none"></div>
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="text-xs uppercase tracking-[0.2em] text-burned-500 font-semibold">⚙️ Núcleo Cognitivo</span>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white mt-3 mb-4">Redundância em Cascata · Zero-Downtime & Blindagem</h2>
+                <div class="divider-gold w-32 mx-auto"></div>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                <div class="card-tech-hover bg-navy-800/60 border border-white/5 rounded-2xl p-6 sm:p-8 group hover:bg-navy-800/80 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-burned-600/10 flex items-center justify-center mb-5 group-hover:bg-burned-600/20 transition-colors">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="text-burned-500"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Fallback Matrix</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Loop de interceptação tática com LLMs Gemini (2.5 Flash → 3.1 Flash → 1.5 Flash). Em caso de Erro 503, migra instantaneamente. Zero leads no vácuo.</p>
+                </div>
+                <div class="card-tech-hover bg-navy-800/60 border border-white/5 rounded-2xl p-6 sm:p-8 group hover:bg-navy-800/80 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-burned-600/10 flex items-center justify-center mb-5 group-hover:bg-burned-600/20 transition-colors">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="text-burned-500"><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-6"/><path d="M12 2v12m-3-3 3 3 3-3"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Protocolo Apocalipse Zumbi</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Failsafe vCard: se todas as LLMs falharem, envia mensagem empática + cartão do diretor de vendas. Transforma falha técnica em gatilho de autoridade.</p>
+                </div>
+                <div class="card-tech-hover bg-navy-800/60 border border-white/5 rounded-2xl p-6 sm:p-8 group hover:bg-navy-800/80 transition-all duration-300 sm:col-span-2 lg:col-span-1">
+                    <div class="w-12 h-12 rounded-xl bg-burned-600/10 flex items-center justify-center mb-5 group-hover:bg-burned-600/20 transition-colors">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="text-burned-500"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">SQLite Blindado</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Banco local criptografado (dominus.db). Memória eidética offline. Se o número for banido, a IA reassume a conversa com histórico perfeito após troca de chip.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Memória Eidética -->
+    <section class="py-16 md:py-20 bg-anthracite-900 relative overflow-hidden">
+        <div class="absolute inset-0 bg-grid-pattern bg-[length:40px_40px] opacity-25 pointer-events-none"></div>
+        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-xs uppercase tracking-[0.2em] text-burned-500 font-semibold">🧠 Engenharia de Memória Eidética</span>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white mt-3 mb-6">Zero-Trust · Soberania de dados contra APIs predadoras</h2>
+            <div class="divider-gold w-32 mx-auto mb-8"></div>
+            <p class="text-gray-400 leading-relaxed max-w-2xl mx-auto"><strong class="text-white">Banco de Dados Local Blindado (SQLite Autônomo):</strong> A Dominus não confia na Meta para lembrar do passado. Todo input/output é gravado em núcleo relacional criptografado. A IA busca contexto diretamente deste cofre offline, ignorando as amarras do WhatsApp Web. <strong class="text-burned-500">Impacto Comercial:</strong> Imortalidade Operacional. Seu império torna-se inrastreável e indestrutível.</p>
+        </div>
+    </section>
+
+    <!-- Seção: Ouvido Biônico + Síntese -->
+    <section class="py-20 md:py-28 bg-navy-900 relative" id="sensorial">
+        <div class="absolute inset-0 bg-circuit-glow pointer-events-none"></div>
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="text-xs uppercase tracking-[0.2em] text-burned-500 font-semibold">🎧 Ouvido Biônico · Compreensão Sensorial</span>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white mt-3 mb-4">Multimodalidade ativa (áudios + imagens)</h2>
+                <div class="divider-gold w-32 mx-auto"></div>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-6 lg:gap-8">
+                <div class="card-tech-hover bg-navy-800/60 border border-white/5 rounded-2xl p-6 sm:p-8 group hover:bg-navy-800/80 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-burned-600/10 flex items-center justify-center mb-5">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="text-burned-500"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"/><path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Download e Transcrição Sensorial</h3>
+                    <p class="text-gray-500 text-sm">Quando o lead envia áudio, a plataforma faz download OGG, extrai Base64 e injeta no motor IA. A IA interpreta entonação, dores e devolve solução cirúrgica.</p>
+                </div>
+                <div class="card-tech-hover bg-navy-800/60 border border-white/5 rounded-2xl p-6 sm:p-8 group hover:bg-navy-800/80 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-burned-600/10 flex items-center justify-center mb-5">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="text-burned-500"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.5 8.5a3.5 3.5 0 0 1 0 7"/><path d="M18.5 5.5a6 6 0 0 1 0 13"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">FFmpeg PTT real (Mimetismo Humano)</h3>
+                    <p class="text-gray-500 text-sm">Conversão nativa Opus 32kbps com flag `sendAudioAsVoice:true`. Áudio aparece com microfone verde, sem setas de encaminhamento. Conversão em agendamentos até +400%.</p>
+                </div>
+            </div>
+
+            <!-- Síntese de Áudio & Arsenal -->
+            <div class="text-center mt-14 mb-10">
+                <span class="text-xs uppercase tracking-[0.2em] text-burned-500 font-semibold">🎙️ Síntese de Áudio & Arsenal Tático</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white mt-3 mb-4">Mimetismo humano avançado + entrega imediata de materiais</h2>
+                <div class="divider-gold w-32 mx-auto"></div>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-6 lg:gap-8">
+                <div class="card-tech-hover bg-navy-800/60 border border-white/5 rounded-2xl p-6 sm:p-8 group hover:bg-navy-800/80 transition-all duration-300">
+                    <h3 class="text-lg font-bold text-white mb-3">Conversão FFmpeg Nativa</h3>
+                    <p class="text-gray-500 text-sm">Integração direta com motor FFmpeg militar. Compressão para Opus 32kbps, vbr on, compression_level 10. Ilusão de tempo real – o lead acredita que o consultor gravou o áudio exclusivamente para ele.</p>
+                </div>
+                <div class="card-tech-hover bg-navy-800/60 border border-white/5 rounded-2xl p-6 sm:p-8 group hover:bg-navy-800/80 transition-all duration-300">
+                    <h3 class="text-lg font-bold text-white mb-3">Braço Robótico Multimídia</h3>
+                    <p class="text-gray-500 text-sm">Varredura da Knowledge Base e envio imediato de PDFs, imagens, vídeos via API de mídia. Fricção zero: o lead recebe o material antes mesmo de terminar de pedir.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Camuflagem Phantom -->
+    <section class="py-16 md:py-20 bg-anthracite-900 relative overflow-hidden">
+        <div class="absolute inset-0 bg-grid-pattern bg-[length:40px_40px] opacity-25 pointer-events-none"></div>
+        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-xs uppercase tracking-[0.2em] text-burned-500 font-semibold">👻 Camuflagem Phantom</span>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white mt-3 mb-6">Anti-Tracking Meta Shield · Operação silenciosa</h2>
+            <div class="divider-gold w-32 mx-auto mb-8"></div>
+            <p class="text-gray-400 leading-relaxed max-w-2xl mx-auto"><strong class="text-white">Cache de Versão Congelada (Web Version Cache):</strong> A Dominus trava sua operação em uma versão espelho, congelada e estável (ex: 2.2412.54.html) hospedada em repositórios remotos. O sistema age nas sombras, imune aos radares de atualização da Meta, garantindo estabilidade em semanas onde outras ferramentas enfrentam apagões severos.</p>
+        </div>
+    </section>
+
+    <!-- Seção: Outbound Massivo -->
+    <section class="py-20 md:py-28 bg-navy-900 relative" id="outbound">
+        <div class="absolute inset-0 bg-circuit-glow pointer-events-none"></div>
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="text-xs uppercase tracking-[0.2em] text-burned-500 font-semibold">🚀 Outbound Massivo Assíncrono</span>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white mt-3 mb-4">Disparador nativo com cadência biológica</h2>
+                <div class="divider-gold w-32 mx-auto"></div>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-6 lg:gap-8">
+                <div class="card-tech-hover bg-navy-800/60 border border-white/5 rounded-2xl p-6 sm:p-8 group hover:bg-navy-800/80 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-burned-600/10 flex items-center justify-center mb-5">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="text-burned-500"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Rota /api/outbound</h3>
+                    <p class="text-gray-500 text-sm">Insira listas frias (CSV/ERP), faça upload de áudio/texto. O sistema converte áudio para PTT e dispara com delay estocástico (~6s). Escala absoluta: 300 leads por lote.</p>
+                </div>
+                <div class="card-tech-hover bg-navy-800/60 border border-white/5 rounded-2xl p-6 sm:p-8 group hover:bg-navy-800/80 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-burned-600/10 flex items-center justify-center mb-5">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="text-burned-500"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Resposta em Cascata</h3>
+                    <p class="text-gray-500 text-sm">Após o disparo, a IA gerencia a conversa, qualifica e entrega leads quentes para o closer humano.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Command Center + Transbordo VIP -->
+    <section class="py-20 md:py-28 bg-anthracite-900 relative overflow-hidden">
+        <div class="absolute inset-0 bg-grid-pattern bg-[length:40px_40px] opacity-25 pointer-events-none"></div>
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="text-xs uppercase tracking-[0.2em] text-burned-500 font-semibold">🖥️ Command Center & Intervenção VIP</span>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white mt-3 mb-4">Controle total + Transbordo para Closers</h2>
+                <div class="divider-gold w-32 mx-auto"></div>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-6 lg:gap-8">
+                <div class="card-tech-hover bg-navy-800/60 border border-white/5 rounded-2xl p-6 sm:p-8 group hover:bg-navy-800/80 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-burned-600/10 flex items-center justify-center mb-5">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="text-burned-500"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Painel Glassmorphism</h3>
+                    <p class="text-gray-500 text-sm">Sincronização QR Code dinâmico, edição do System Prompt em tempo real, gestor de Knowledge Base, terminal de logs, botão de expurgo e exportação de dossiês .CSV.</p>
+                </div>
+                <div class="card-tech-hover bg-navy-800/60 border border-white/5 rounded-2xl p-6 sm:p-8 group hover:bg-navy-800/80 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-burned-600/10 flex items-center justify-center mb-5">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="text-burned-500"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Protocolo Transbordo</h3>
+                    <p class="text-gray-500 text-sm">Quando a IA detecta intenção de compra clara, aciona gatilho invisível e dispara alerta emergencial no celular do Diretor Comercial. O Closer atua apenas nos 5% que importam.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Depoimentos -->
+    <section class="py-20 md:py-28 bg-navy-900 relative" id="depoimentos">
+        <div class="absolute inset-0 bg-circuit-glow pointer-events-none"></div>
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="text-xs uppercase tracking-[0.2em] text-burned-500 font-semibold">🗣️ Operadores de Elite</span>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white mt-3 mb-4">Resultados reais de quem já utiliza o Dominus SaaS</h2>
+                <div class="divider-gold w-32 mx-auto"></div>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                <div class="card-tech-hover bg-navy-800/60 border border-white/5 rounded-2xl p-6 group hover:bg-navy-800/80 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-full bg-burned-600/10 flex items-center justify-center mb-4 text-burned-500 font-bold">CR</div>
+                    <p class="text-gray-300 italic text-sm mb-4">"A Dominus nos permitiu escalar o atendimento sem perder a alma humana. Os áudios PTT e a memória infinita geraram +230% de agendamentos em 30 dias."</p>
+                    <span class="text-white font-semibold text-sm block">Camila Rocha</span>
+                    <span class="text-burned-500 text-xs">Head de Vendas · Luxo Residencial</span>
+                </div>
+                <div class="card-tech-hover bg-navy-800/60 border border-white/5 rounded-2xl p-6 group hover:bg-navy-800/80 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-full bg-burned-600/10 flex items-center justify-center mb-4 text-burned-500 font-bold">TF</div>
+                    <p class="text-gray-300 italic text-sm mb-4">"Migrei de um chatbot comum para o Dominus e o resultado foi bíblico. O robô fecha dúvidas técnicas e me chama só para fechar. Economizei 40h/mês."</p>
+                    <span class="text-white font-semibold text-sm block">Thiago Franco</span>
+                    <span class="text-burned-500 text-xs">Sócio · Wealth Advisor</span>
+                </div>
+                <div class="card-tech-hover bg-navy-800/60 border border-white/5 rounded-2xl p-6 group hover:bg-navy-800/80 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-full bg-burned-600/10 flex items-center justify-center mb-4 text-burned-500 font-bold">LS</div>
+                    <p class="text-gray-300 italic text-sm mb-4">"Nunca vi nada igual. A redundância tripla salvou nosso Black Friday: os concorrentes pararam e a gente vendeu R$1.2M sem travamentos."</p>
+                    <span class="text-white font-semibold text-sm block">Larissa Sampaio</span>
+                    <span class="text-burned-500 text-xs">CMO · EdTech Premium</span>
+                </div>
+                <div class="card-tech-hover bg-navy-800/60 border border-white/5 rounded-2xl p-6 group hover:bg-navy-800/80 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-full bg-burned-600/10 flex items-center justify-center mb-4 text-burned-500 font-bold">MN</div>
+                    <p class="text-gray-300 italic text-sm mb-4">"O transbordo VIP é genial. A IA filtra 95% do lixo e entrega leads prontos. Meu time de closers agora fecha 3x mais com o mesmo esforço."</p>
+                    <span class="text-white font-semibold text-sm block">Marcelo Nogueira</span>
+                    <span class="text-burned-500 text-xs">Diretor Comercial · Incorporadora</span>
+                </div>
+                <div class="card-tech-hover bg-navy-800/60 border border-white/5 rounded-2xl p-6 group hover:bg-navy-800/80 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-full bg-burned-600/10 flex items-center justify-center mb-4 text-burned-500 font-bold">FS</div>
+                    <p class="text-gray-300 italic text-sm mb-4">"Em 6 meses, nenhum bloqueio. O phantom shield funciona. Recomendo para qualquer operação high-ticket que depende do WhatsApp."</p>
+                    <span class="text-white font-semibold text-sm block">Fernanda Salles</span>
+                    <span class="text-burned-500 text-xs">Sócia · Assessoria de Investimentos</span>
+                </div>
+                <div class="card-tech-hover bg-navy-800/60 border border-white/5 rounded-2xl p-6 group hover:bg-navy-800/80 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-full bg-burned-600/10 flex items-center justify-center mb-4 text-burned-500 font-bold">RD</div>
+                    <p class="text-gray-300 italic text-sm mb-4">"A funcionalidade de outbound com áudio nativo é uma máquina de dinheiro. Disparamos para 500 leads por dia, a conversão triplicou."</p>
+                    <span class="text-white font-semibold text-sm block">Rafael Dantas</span>
+                    <span class="text-burned-500 text-xs">CEO · Lead Gen Agency</span>
+                </div>
+                <div class="card-tech-hover bg-navy-800/60 border border-white/5 rounded-2xl p-6 group hover:bg-navy-800/80 transition-all duration-300 sm:col-span-2 lg:col-span-1">
+                    <div class="w-12 h-12 rounded-full bg-burned-600/10 flex items-center justify-center mb-4 text-burned-500 font-bold">PM</div>
+                    <p class="text-gray-300 italic text-sm mb-4">"O painel Command Center me deu controle total sobre o prompt e os materiais. Nunca mais perdi venda por falta de resposta rápida."</p>
+                    <span class="text-white font-semibold text-sm block">Patrícia Mendes</span>
+                    <span class="text-burned-500 text-xs">Corretora de Imóveis de Alto Padrão</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Conclusão -->
+    <section class="py-16 md:py-20 bg-anthracite-900 relative overflow-hidden">
+        <div class="absolute inset-0 bg-grid-pattern bg-[length:40px_40px] opacity-25 pointer-events-none"></div>
+        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-xs uppercase tracking-[0.2em] text-burned-500 font-semibold">⚡ Conclusão</span>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white mt-3 mb-6">Engenharia Comercial Autônoma</h2>
+            <div class="divider-gold w-32 mx-auto mb-8"></div>
+            <p class="text-gray-400 leading-relaxed max-w-2xl mx-auto">O Dominus SaaS não concorre no mercado de "chatbots". Ele atua na categoria de Engenharia Comercial Autônoma. Empresas que utilizam plataformas de prateleira sofrem com violações da Meta, áudios falsos descobertos e dependência de integrações frágeis.</p>
+            <p class="text-gray-400 leading-relaxed max-w-2xl mx-auto mt-4">A Dominus centraliza Escuta Ativa, Resposta Cognitiva Redundante, Síntese de Voz Real e Entrega de Materiais em uma única instância militarizada, hospedada em infraestrutura própria. O valor de implementação é o investimento na clonagem virtual do seu melhor vendedor operando 24/7, à prova de falhas.</p>
+            <p class="text-burned-500 font-bold mt-6">O apocalipse zumbi dos servidores pode acontecer lá fora. Aqui dentro, a venda não para.</p>
+            <div class="mt-8">
+                <a href="https://wa.me/5519982642481?text=Olá%2C%20vim%20pelo%20Dominus%20SaaS%20e%20quero%20minha%20demonstração%20estratégica." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-burned-600 hover:bg-burned-500 text-white font-bold text-base sm:text-lg px-10 py-5 rounded-xl transition-all duration-300 shadow-gold hover:shadow-xl hover:shadow-burned-700/30 group">
+                    🔥 Agendar Demonstração com Paulo Leads
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5 group-hover:translate-x-1 transition-transform">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: FAQ -->
+    <section class="py-20 md:py-28 bg-navy-900 relative" id="faq">
+        <div class="absolute inset-0 bg-circuit-glow pointer-events-none"></div>
+        <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="text-xs uppercase tracking-[0.2em] text-burned-500 font-semibold">🔒 Dúvidas de Guerra</span>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white mt-3 mb-4">Esclarecimentos sobre a arquitetura Black-Ops</h2>
+                <div class="divider-gold w-32 mx-auto"></div>
+            </div>
+            <div class="space-y-4">
+                <details class="bg-navy-800/60 border border-white/5 rounded-2xl p-5 sm:p-6 group hover:border-burned-600/30 transition-all duration-300">
+                    <summary>Preciso logar minha conta pessoal do WhatsApp?</summary>
+                    <div class="mt-4 pt-4 border-t border-white/5 text-gray-400 text-sm">Não. Utilizamos sessões independentes via QR Code. A Dominus opera com número empresarial dedicado, sem acesso aos seus contatos pessoais.</div>
+                </details>
+                <details class="bg-navy-800/60 border border-white/5 rounded-2xl p-5 sm:p-6 group hover:border-burned-600/30 transition-all duration-300">
+                    <summary>Qual o risco de bloqueio da Meta?</summary>
+                    <div class="mt-4 pt-4 border-t border-white/5 text-gray-400 text-sm">Nossa camuflagem phantom e cadência estocástica tornam a operação indistinguível de um humano. Histórico de zero banimentos em operações high-ticket.</div>
+                </details>
+                <details class="bg-navy-800/60 border border-white/5 rounded-2xl p-5 sm:p-6 group hover:border-burned-600/30 transition-all duration-300">
+                    <summary>Os áudios enviados são realmente "ao vivo"?</summary>
+                    <div class="mt-4 pt-4 border-t border-white/5 text-gray-400 text-sm">Sim, usamos conversão FFmpeg com codec Opus e flag de voz nativa. O lead vê o microfone verde e reage como se você tivesse acabado de gravar.</div>
+                </details>
+                <details class="bg-navy-800/60 border border-white/5 rounded-2xl p-5 sm:p-6 group hover:border-burned-600/30 transition-all duration-300">
+                    <summary>Posso alterar o comportamento da IA sem programar?</summary>
+                    <div class="mt-4 pt-4 border-t border-white/5 text-gray-400 text-sm">Sim. O painel Command Center permite editar o System Prompt, a base de conhecimento e gatilhos de transbordo em tempo real.</div>
+                </details>
+                <details class="bg-navy-800/60 border border-white/5 rounded-2xl p-5 sm:p-6 group hover:border-burned-600/30 transition-all duration-300">
+                    <summary>E se meu número for banido por denúncia?</summary>
+                    <div class="mt-4 pt-4 border-t border-white/5 text-gray-400 text-sm">O banco SQLite mantém toda a memória do lead. Basta conectar um novo chip e a Dominus reassume a conversa de onde parou. Império indestrutível.</div>
+                </details>
+            </div>
+            <div class="text-center mt-10">
+                <a href="https://wa.me/5519982642481?text=Olá%2C%20vim%20pelo%20Dominus%20SaaS%20e%20quero%20minha%20demonstração%20estratégica." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-burned-600 hover:bg-burned-500 text-white font-bold text-base sm:text-lg px-10 py-5 rounded-xl transition-all duration-300 shadow-gold hover:shadow-xl hover:shadow-burned-700/30 group">
+                    🔥 Agendar Demonstração com Paulo Leads
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 border-t border-white/5 py-10 md:py-12">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+                <a href="#" class="text-xl font-black text-white tracking-tight">Dominus<span class="text-burned-600">SaaS</span></a>
+                <div class="flex flex-wrap justify-center gap-4 sm:gap-6 text-xs text-gray-500 font-medium">
+                    <a href="#prefacio" class="hover:text-white transition-colors">Prefácio</a>
+                    <a href="#nucleo" class="hover:text-white transition-colors">Núcleo</a>
+                    <a href="#sensorial" class="hover:text-white transition-colors">Sensorial</a>
+                    <a href="#outbound" class="hover:text-white transition-colors">Outbound</a>
+                    <a href="#depoimentos" class="hover:text-white transition-colors">Resultados</a>
+                </div>
+                <p class="text-[10px] sm:text-xs text-gray-600 text-center sm:text-right">
+                    © 2026 Paulo Leads | Dominus SaaS<br class="sm:hidden">
+                    <span class="text-gray-700">⚡ O apocalipse zumbi pode acontecer lá fora. Aqui dentro, a venda não para.</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Flutuante -->
+    <a href="https://wa.me/5519982642481?text=Olá%2C%20vim%20pelo%20Dominus%20SaaS%20e%20quero%20minha%20demonstração%20estratégica." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-4 sm:bottom-8 sm:right-6 z-50 flex items-center gap-3 bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold text-sm px-5 py-3.5 rounded-full shadow-2xl hover:shadow-[#25D366]/30 transition-all duration-300 group animate-pulse-slow hover:animate-none" aria-label="Falar no WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 sm:w-6 sm:h-6">
+            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2.22 21.28a.75.75 0 0 0 .932.94l4.03-1.005A9.96 9.96 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2Zm.97 14.82c-.345.97-1.415 1.54-2.448 1.265a6.5 6.5 0 0 1-2.756-1.602 6.5 6.5 0 0 1-1.602-2.756c-.275-1.033.295-2.103 1.265-2.448.304-.108.63-.045.87.165.425.373.777.82 1.037 1.32.26.5.37 1.07.28 1.62-.09.55-.38 1.05-.82 1.38.44.76 1.06 1.38 1.82 1.82.33-.44.83-.73 1.38-.82.55-.09 1.12.02 1.62.28.5.26.947.612 1.32 1.037.21.24.273.566.165.87Z" clip-rule="evenodd"/>
+        </svg>
+        <span class="hidden sm:inline">Falar agora</span>
+        <span class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-green-400 border-2 border-navy-900 rounded-full"></span>
+    </a>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenuBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></svg>`;
+            } else {
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>`;
+            }
+        });
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>`;
+            });
+        });
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) navbar.classList.add('shadow-lg', 'shadow-black/20');
+            else navbar.classList.remove('shadow-lg', 'shadow-black/20');
+        });
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - 120;
+                    window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

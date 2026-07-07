@@ -1,0 +1,1130 @@
+---
+layout: null
+title: "Paulo Leads Intelligence — Base de Dados para Prospecção B2B"
+permalink: /mercado-imobiliario-brasileiro/
+---
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Paulo Leads Intelligence — Base de Dados para Prospecção B2B</title>
+    <meta name="description" content="Base de dados proprietária da Paulo Leads: inteligência comercial para mapear corretores, imobiliárias, sócios e decisores. Com LGPD, Protocolo Hidra e IA.">
+    <meta name="author" content="Paulo Leads — Inteligência Comercial">
+    <meta property="og:title" content="Paulo Leads Intelligence — Base de Leads de alto valor">
+    <meta property="og:description" content="Transforme dados públicos em oportunidades de negócio. Acesse milhares de leads qualificados com total conformidade.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'display': ['Space Grotesk', 'sans-serif'],
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'mono': ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        'navy': {
+                            '900': '#0a1628',
+                            '800': '#0d1d35',
+                            '700': '#102540',
+                            '600': '#142d4d',
+                        },
+                        'anthracite': {
+                            '900': '#1a1a1a',
+                            '800': '#242424',
+                            '700': '#2d2d2d',
+                        },
+                        'burned': {
+                            '500': '#f59e0b',
+                            '600': '#d97706',
+                            '700': '#b45309',
+                        },
+                        'cream': '#f8fafc',
+                    },
+                    backgroundImage: {
+                        'gradient-primary': 'linear-gradient(135deg, #d97706, #f59e0b)',
+                        'grid-bg': 'linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)',
+                    },
+                    boxShadow: {
+                        'glow': '0 0 25px rgba(217, 119, 6, 0.4)',
+                        'elegant': '0 20px 35px -12px rgba(0,0,0,0.5)',
+                        'glow-live': '0 0 20px rgba(34,197,94,0.5)',
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'pulse-live': 'pulseLive 1.5s ease-in-out infinite',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --bg: #0a1628;
+        }
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: #d97706 #0a1628;
+        }
+        body {
+            background-color: var(--bg);
+            overflow-x: hidden;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a1628;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d97706;
+            border-radius: 3px;
+        }
+        .glass {
+            background: rgba(13, 29, 53, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .status-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #22c55e;
+            box-shadow: 0 0 8px #22c55e;
+            animation: pulseLive 1.5s ease-in-out infinite;
+        }
+        @keyframes pulseLive {
+            0%,
+            100% {
+                box-shadow: 0 0 6px #22c55e;
+                transform: scale(1);
+            }
+            50% {
+                box-shadow: 0 0 22px #22c55e, 0 0 40px rgba(34, 197, 94, 0.4);
+                transform: scale(1.5);
+            }
+        }
+        @keyframes pulse {
+            0%,
+            100% {
+                box-shadow: 0 0 8px #22c55e;
+            }
+            50% {
+                box-shadow: 0 0 18px #22c55e;
+            }
+        }
+
+        /* ============ ANIMAÇÕES DE BARRAS ============ */
+        .bar-vertical {
+            transform-origin: bottom;
+            transform: scaleY(0);
+            transition: transform 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+        }
+        .bar-vertical.animate {
+            transform: scaleY(1);
+        }
+        .bar-horizontal {
+            transform-origin: left;
+            transform: scaleX(0);
+            transition: transform 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+        }
+        .bar-horizontal.animate {
+            transform: scaleX(1);
+        }
+
+        /* ============ PIZZA (DONUT) ============ */
+        .donut-segment {
+            transition: stroke-dashoffset 1.2s cubic-bezier(0.22, 0.61, 0.36, 1);
+        }
+        .donut-segment.animate-seg1 {
+            stroke-dashoffset: 0 !important;
+        }
+        .donut-segment.animate-seg2 {
+            stroke-dashoffset: -190.07 !important;
+        }
+        .donut-segment.animate-seg3 {
+            stroke-dashoffset: -269.55 !important;
+        }
+
+        /* ============ SCANNING LINE ============ */
+        .chart-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+        .chart-wrapper::after {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, rgba(245, 158, 11, 0.7), transparent);
+            animation: scanDown 3.5s linear infinite;
+            pointer-events: none;
+            z-index: 5;
+            opacity: 0;
+            border-radius: 2px;
+        }
+        .chart-wrapper.scanning::after {
+            opacity: 0.6;
+        }
+        @keyframes scanDown {
+            0% {
+                top: -4px;
+            }
+            100% {
+                top: calc(100% + 4px);
+            }
+        }
+
+        /* ============ PARTÍCULAS FLUTUANTES ============ */
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: #f59e0b;
+            pointer-events: none;
+            animation: floatUp linear infinite;
+            opacity: 0;
+        }
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) translateX(0) scale(1);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.8;
+            }
+            80% {
+                opacity: 0.3;
+            }
+            100% {
+                transform: translateY(-400px) translateX(60px) scale(0.3);
+                opacity: 0;
+            }
+        }
+
+        /* ============ SHIMMER BORDER ============ */
+        .shimmer-border {
+            position: relative;
+            overflow: hidden;
+        }
+        .shimmer-border::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            padding: 1px;
+            background: linear-gradient(135deg, #d97706, #f59e0b, #d97706, #f59e0b);
+            background-size: 300% 300%;
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            animation: shimmerBorder 4s linear infinite;
+            pointer-events: none;
+            z-index: 2;
+        }
+        @keyframes shimmerBorder {
+            0% {
+                background-position: 0% 0%;
+            }
+            100% {
+                background-position: 300% 300%;
+            }
+        }
+
+        /* ============ GLOW PULSE NOS CARDS ============ */
+        .card-glow-pulse {
+            animation: cardGlow 2.5s ease-in-out infinite;
+        }
+        @keyframes cardGlow {
+            0%,
+            100% {
+                box-shadow: 0 0 8px rgba(245, 158, 11, 0.2);
+            }
+            50% {
+                box-shadow: 0 0 25px rgba(245, 158, 11, 0.5), 0 0 50px rgba(245, 158, 11, 0.15);
+            }
+        }
+
+        /* ============ FADE IN UP ============ */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ============ LIVE BADGE ============ */
+        .live-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(34, 197, 94, 0.12);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            border-radius: 9999px;
+            padding: 3px 10px;
+            font-size: 10px;
+            color: #22c55e;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            animation: liveBadgePulse 2s ease-in-out infinite;
+        }
+        @keyframes liveBadgePulse {
+            0%,
+            100% {
+                border-color: rgba(34, 197, 94, 0.3);
+                box-shadow: 0 0 6px rgba(34, 197, 94, 0.2);
+            }
+            50% {
+                border-color: rgba(34, 197, 94, 0.7);
+                box-shadow: 0 0 16px rgba(34, 197, 94, 0.5);
+            }
+        }
+        .live-badge .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #22c55e;
+            animation: pulseLive 1.5s ease-in-out infinite;
+        }
+
+        /* ============ NÚMERO PULSANTE ============ */
+        .number-live {
+            transition: color 0.3s;
+        }
+        .number-live.updating {
+            color: #f59e0b !important;
+            text-shadow: 0 0 12px rgba(245, 158, 11, 0.6);
+        }
+
+        /* ============ REDUCED MOTION ============ */
+        @media (prefers-reduced-motion: reduce) {
+            .bar-vertical,
+            .bar-horizontal,
+            .donut-segment,
+            .particle,
+            .chart-wrapper::after,
+            .shimmer-border::before {
+                animation: none !important;
+                transition: none !important;
+                transform: none !important;
+            }
+            .bar-vertical {
+                transform: scaleY(1) !important;
+            }
+            .bar-horizontal {
+                transform: scaleX(1) !important;
+            }
+        }
+
+        /* ============ HERO DATA STREAM ============ */
+        .data-stream-char {
+            position: absolute;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: rgba(245, 158, 11, 0.25);
+            pointer-events: none;
+            animation: streamFall linear infinite;
+            white-space: nowrap;
+        }
+        @keyframes streamFall {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            5% {
+                opacity: 0.5;
+            }
+            70% {
+                opacity: 0.2;
+            }
+            100% {
+                transform: translateY(105vh);
+                opacity: 0;
+            }
+        }
+
+        /* ============ TOOLTIP PARA TIMESTAMP ============ */
+        .timestamp-refresh {
+            cursor: default;
+            transition: all 0.3s;
+        }
+        .timestamp-refresh.flash {
+            color: #f59e0b !important;
+        }
+    </style>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pauloleads.com.br/#organization",
+      "name": "Paulo Leads",
+      "url": "https://pauloleads.com.br",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://pauloleads.com.br/wp-content/uploads/logo-paulo-leads.png"
+      },
+      "description": "Infraestrutura Comercial com IA, Engenharia de Microdados e RAG para B2B e Mercado Imobiliário High-Ticket.",
+      "sameAs": [
+        "https://www.wikidata.org/wiki/Q140067740",
+        "https://br.trustpilot.com/review/pauloleads.com.br",
+        "https://www.glassdoor.com.br/Vis%C3%A3o-geral/Trabalhar-na-Paulo-Leads-EI_IE11154127.13,24.htm",
+        "https://br.indeed.com/cmp/Paulo-Leads",
+        "https://wellfound.com/company/paulo-leads",
+        "https://www.crunchbase.com/organization/paulo-leads",
+        "https://www.youtube.com/@paulo-leads",
+        "https://vimeo.com/pauloleadsbrasil",
+        "https://www.instagram.com/pauloleads2/",
+        "https://www.facebook.com/pauloleadsbrasil",
+        "https://www.threads.com/@pauloleads2",
+        "https://huggingface.co/paulo-leads",
+        "https://paulo-leads.github.io/paulo-leads-careers/"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pauloleads.com.br/#person",
+      "name": "Paulo",
+      "jobTitle": "Arquiteto de Infraestrutura B2B e IA",
+      "worksFor": {
+        "@id": "https://pauloleads.com.br/#organization"
+      },
+      "sameAs": [
+        "https://me.developers.google.com/u/pauloleads",
+        "https://github.com/paulo-leads",
+        "https://github.com/paulo-leads/protocolo-hidra",
+        "https://gitlab.com/pauloleads",
+        "https://stackoverflow.com/users/32809119/paulo-leads",
+        "https://dev.to/pauloleads",
+        "https://www.linkedin.com/in/pauloleads/",
+        "https://zenodo.org/records/20475915",
+        "https://doi.org/10.5281/zenodo.20320049",
+        "https://beacons.ai/pauloleads",
+        "https://pt.slideshare.net/slideshow/infraestrutura-comercial-com-ia-para-mercado-imobiliario-e-b2b-cruzamento-de-dados-publicos-e-big-data-para-aquisicao-de-clientes/287925338",
+        "https://pt.scribd.com/document/1047394531/Como-Cruzar-Dados-Publicos-de-Empresas-de-Alto-Faturamento-Receita-Federal-Com-o-Raio-de-Influencia-Dos-Meus-Novos-Lancamentos"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://pauloleads.com.br/#website",
+      "url": "https://pauloleads.com.br",
+      "name": "Protocolo Hidra - Paulo Leads",
+      "publisher": {
+        "@id": "https://pauloleads.com.br/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://pauloleads.com.br/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "O que é RAG (Retrieval-Augmented Generation) aplicado à qualificação e vendas corporativas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "RAG é uma arquitetura de IA que permite conectar Modelos de Linguagem (LLMs) diretamente às bases de dados corporativas (CRMs, Manuais Técnicos, Receita Federal). Na Paulo Leads, aplicamos o RAG através do Protocolo Hidra para transformar Inteligências Artificiais em SDRs Autônomos, qualificando microdados B2B em tempo real e eliminando o trabalho braçal de prospecção."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como reduzir o CAC B2B em operações high-ticket sem aumentar o headcount do time de vendas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A redução matemática do Custo de Aquisição de Clientes (CAC) ocorre ao substituir a fragmentação de ferramentas (Salesloft, Apollo, Outreach) por uma infraestrutura bare-metal. O Protocolo Hidra atua como um conector de engenharia de dados, mapeando empresas e injetando leads validados nativamente no HubSpot ou Salesforce, operando 24/7 sem inflar os custos operacionais (RevOps)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como automatizar o primeiro contato e a qualificação do SDR usando IA diretamente no WhatsApp?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Utilizando a WhatsApp Cloud API em conjunto com agentes autônomos integrados. A infraestrutura mapeia a intenção do lead, reduz o speed-to-lead para menos de 1 minuto e executa frameworks BANT ou SPIN Selling automaticamente, repassando para os Closers (executivos de vendas) apenas as oportunidades pré-qualificadas, protegendo a conta contra banimentos e rate limits."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como reduzir o altíssimo CAC de imóveis de luxo substituindo o tráfego pago saturado por prospecção ativa baseada em dados?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Em vez de depender de Meta Ads e portais imobiliários, a solução é o uso de Big Data e Engenharia de Microdados. A tecnologia varre dados públicos de empresas de alto faturamento, mapeia expansões (CNAE) e localiza investidores corporativos ou médicos e advogados na região de influência dos lançamentos, gerando uma captação ativa e exclusiva sem a dependência do tráfego orgânico tradicional."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como estruturar uma máquina de vendas de alto ticket imune a bloqueios de Meta e WhatsApp?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Construindo uma operação pautada em conformidade (governança comercial) e arquitetura de rede adequada. O uso de tokens oficiais de API (Cloud API da Meta), tratamento nativo de códigos de erro (como 131047 e 131026), e algoritmos de backoff exponencial garantem que a automação comercial escale a prospecção B2B respeitando os rate limits impostos pelas plataformas de mensageria."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="bg-navy-900 text-gray-200 antialiased">
+
+    <div class="min-h-screen flex">
+        <!-- Sidebar -->
+        <aside class="hidden lg:flex w-72 shrink-0 flex-col border-r border-white/5 glass">
+            <div class="px-6 py-7 border-b border-white/5">
+                <a class="flex items-center gap-3" href="/">
+                    <div class="size-10 rounded-xl bg-gradient-primary shadow-glow grid place-items-center card-glow-pulse">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white size-5"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/><path d="M20 2v4"/><path d="M22 4h-4"/><circle cx="4" cy="20" r="2"/></svg>
+                    </div>
+                    <div><div class="text-sm font-semibold tracking-tight">Paulo Leads</div><div class="text-[11px] text-gray-500 uppercase tracking-[0.18em]">Intelligence</div></div>
+                </a>
+            </div>
+            <nav class="flex-1 p-3 space-y-1 overflow-y-auto">
+                <a class="group flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm transition-all bg-gradient-primary text-white shadow-elegant" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-4"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg><span class="font-medium">Visão Geral</span></a>
+                <a href="#" class="group flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-gray-400 hover:text-white hover:bg-white/5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-4"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Meu Painel</span></a>
+                <a href="#" class="group flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-gray-400 hover:text-white hover:bg-white/5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-4"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></svg><span>Painel Avançado</span></a>
+                <a href="#" class="group flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-gray-400 hover:text-white hover:bg-white/5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-4"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg><span>Corretores</span></a>
+                <a href="#" class="group flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-gray-400 hover:text-white hover:bg-white/5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-4"><path d="M10 12h4"/><path d="M10 8h4"/><path d="M14 21v-3a2 2 0 0 0-4 0v3"/><path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"/><path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"/></svg><span>Imobiliárias</span></a>
+                <a href="#" class="group flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-gray-400 hover:text-white hover:bg-white/5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-4"><path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z"/><path d="M5 21h14"/></svg><span>Sócios & Decisores</span></a>
+                <a href="#" class="group flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-gray-400 hover:text-white hover:bg-white/5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-4"><path d="M16 2v2"/><path d="M7 22v-2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/><path d="M8 2v2"/><circle cx="12" cy="11" r="3"/><rect x="3" y="4" width="18" height="18" rx="2"/></svg><span>Contatos</span></a>
+                <a href="#" class="group flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-gray-400 hover:text-white hover:bg-white/5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-4"><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"/><path d="M15 5.764v15"/><path d="M9 3.236v15"/></svg><span>Mapa Brasil</span></a>
+            </nav>
+            <div class="p-4 border-t border-white/5">
+                <div class="rounded-xl glass p-4">
+                    <div class="text-xs text-gray-500">Modo visitante</div>
+                    <div class="text-[11px] text-gray-500 mt-1">Dados completos e exportações exigem login.</div>
+                    <button class="w-full mt-3 bg-gradient-primary text-white text-xs font-medium py-2 rounded-md shadow-glow">Entrar</button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main content -->
+        <main class="flex-1 min-w-0">
+            <div class="sticky top-0 z-30 backdrop-blur-xl bg-navy-900/60 border-b border-white/5">
+                <div class="px-6 py-2 text-[11px] text-gray-500 flex items-center justify-between gap-2">
+                    <div class="flex items-center gap-2">
+                        <span class="status-dot"></span>
+                        <span id="header-status-text">AO VIVO · Dados em sincronização contínua</span>
+                        <span class="live-badge ml-1"><span class="dot"></span> LIVE</span>
+                    </div>
+                    <button class="border border-white/15 bg-white/5 hover:bg-white/10 px-3 py-1 rounded-md text-xs">Instalar no computador</button>
+                </div>
+            </div>
+
+            <div class="p-6 lg:p-10">
+                <div class="space-y-14">
+                    <!-- Hero section -->
+                    <section class="relative overflow-hidden rounded-3xl glass p-8 md:p-14 shadow-elegant shimmer-border" id="hero-section">
+                        <div class="absolute inset-0 grid-bg opacity-20"></div>
+                        <div class="absolute -top-32 -right-32 size-[28rem] rounded-full bg-burned-500/20 blur-3xl"></div>
+                        <div class="absolute -bottom-32 -left-32 size-[24rem] rounded-full bg-burned-500/20 blur-3xl"></div>
+                        <!-- Container de partículas -->
+                        <div id="particles-container" class="absolute inset-0 pointer-events-none z-10 overflow-hidden"></div>
+                        <div class="relative max-w-4xl z-20">
+                            <div class="flex flex-wrap gap-2 mb-5">
+                                <span class="inline-flex items-center gap-1.5 rounded-full glass px-3 py-1 text-[11px] text-gray-400"><svg class="size-3 text-burned-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/></svg> Base Paulo Leads</span>
+                                <span class="inline-flex items-center gap-1.5 rounded-full glass px-3 py-1 text-[11px] text-gray-400"><svg class="size-3 text-burned-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg> Higienização contínua</span>
+                                <span class="inline-flex items-center gap-1.5 rounded-full glass px-3 py-1 text-[11px] text-gray-400"><svg class="size-3 text-burned-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg> Governança LGPD</span>
+                            </div>
+                            <h1 class="text-4xl md:text-6xl font-semibold tracking-tight font-display leading-[1.05]">Base de Dados<br><span class="text-gradient">Paulo Leads</span></h1>
+                            <p class="mt-4 text-lg md:text-xl text-gray-300 max-w-2xl">Inteligência comercial para mapear o mercado B2B e imobiliário brasileiro.</p>
+                            <p class="mt-6 text-gray-500 max-w-3xl leading-relaxed">A Base Paulo Leads é uma base proprietária criada para organizar, qualificar e transformar informações de corretores, imobiliárias, sócios, decisores e contatos comerciais em inteligência de prospecção. Com Protocolo Hidra e IA anti-bloqueio.</p>
+                            <div class="mt-7 flex flex-wrap gap-3">
+                                <a href="https://wa.me/5519982642481?text=Quero%20acessar%20a%20base%20de%20leads" target="_blank" class="inline-flex items-center gap-2 bg-gradient-primary text-white px-8 py-3 rounded-md shadow-glow font-medium">Explorar base</a>
+                                <button class="border border-white/15 bg-white/5 hover:bg-white/10 px-8 py-3 rounded-md font-medium">Solicitar acesso</button>
+                                <button class="px-8 py-3 rounded-md font-medium hover:text-white">Ver governança dos dados</button>
+                            </div>
+                            <div class="mt-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/40 px-4 py-1.5 text-xs text-gray-500">
+                                <span class="status-dot"></span>
+                                <span id="hero-timestamp">Atualizado agora mesmo</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Métricas principais -->
+                    <section class="text-center fade-in-up">
+                        <p class="text-2xl md:text-4xl font-display tracking-tight">Dados organizados. <span class="text-gradient">Mercado mapeado.</span> Oportunidades visíveis.</p>
+                        <p class="mt-3 text-sm text-gray-500">Base exclusiva Paulo Leads — <strong class="text-white"><span class="counter-target" data-target="738000">0</span> corretores</strong> e <strong class="text-white"><span class="counter-target" data-target="13000">0</span> imobiliárias</strong>.</p>
+                    </section>
+                    <div class="grid md:grid-cols-2 gap-5">
+                        <div class="glass p-8 card-glow-pulse fade-in-up"><div class="text-burned-500 text-xs uppercase mb-2">Corretores</div><div class="text-5xl md:text-6xl font-display font-semibold number-live"><span class="counter-target" data-target="738000">0</span></div><p class="mt-3 text-sm text-gray-500">Profissionais ativos mapeados na base.</p></div>
+                        <div class="glass p-8 card-glow-pulse fade-in-up"><div class="text-burned-500 text-xs uppercase mb-2">Imobiliárias</div><div class="text-5xl md:text-6xl font-display font-semibold number-live"><span class="counter-target" data-target="13000">0</span></div><p class="mt-3 text-sm text-gray-500">Empresas e marcas atuantes catalogadas.</p></div>
+                    </div>
+
+                    <!-- Pilares -->
+                    <section class="fade-in-up">
+                        <div class="mb-8"><div class="text-[11px] text-burned-500 mb-2">Pilares</div><h2 class="text-3xl md:text-4xl font-display font-semibold">Inteligência com responsabilidade</h2><p class="mt-2 text-gray-500">Os fundamentos que sustentam a Base Paulo Leads.</p></div>
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <div class="glass p-6"><div class="size-10 rounded-xl bg-gradient-primary grid place-items-center shadow-glow mb-4"><svg class="size-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg></div><div class="font-display font-semibold text-lg">Base Proprietária</div><p class="mt-1.5 text-sm text-gray-500">Dados estruturados pela Paulo Leads para inteligência comercial B2B.</p></div>
+                            <div class="glass p-6"><div class="size-10 rounded-xl bg-gradient-primary grid place-items-center shadow-glow mb-4"><svg class="size-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg></div><div class="font-display font-semibold text-lg">Higienização Contínua</div><p class="mt-1.5 text-sm text-gray-500">Registros tratados, padronizados e revisados progressivamente.</p></div>
+                            <div class="glass p-6"><div class="size-10 rounded-xl bg-gradient-primary grid place-items-center shadow-glow mb-4"><svg class="size-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></div><div class="font-display font-semibold text-lg">Qualificação Progressiva</div><p class="mt-1.5 text-sm text-gray-500">Contatos classificados por completude, localização e potencial comercial.</p></div>
+                            <div class="glass p-6"><div class="size-10 rounded-xl bg-gradient-primary grid place-items-center shadow-glow mb-4"><svg class="size-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></div><div class="font-display font-semibold text-lg">Governança e LGPD</div><p class="mt-1.5 text-sm text-gray-500">Uso responsável, segurança, transparência e adequação à LGPD.</p></div>
+                            <div class="glass p-6"><div class="size-10 rounded-xl bg-gradient-primary grid place-items-center shadow-glow mb-4"><svg class="size-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></div><div class="font-display font-semibold text-lg">Inteligência de Mercado</div><p class="mt-1.5 text-sm text-gray-500">Dashboards, mapas e filtros avançados para decisões comerciais.</p></div>
+                            <div class="glass p-6"><div class="size-10 rounded-xl bg-gradient-primary grid place-items-center shadow-glow mb-4"><svg class="size-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z"/></svg></div><div class="font-display font-semibold text-lg">Segmentação Comercial</div><p class="mt-1.5 text-sm text-gray-500">Crie públicos por cidade, estado, CRECI, CNPJ, e-mail e qualidade do contato.</p></div>
+                        </div>
+                    </section>
+
+                    <!-- Processo -->
+                    <section class="fade-in-up">
+                        <div class="mb-8"><div class="text-[11px] text-burned-500 mb-2">Processo</div><h2 class="text-3xl md:text-4xl font-display font-semibold">Como a base é tratada</h2><p class="mt-2 text-gray-500">Os registros passam por camadas de organização e validação.</p></div>
+                        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+                            <div class="glass p-4 text-center"><div class="text-[10px] text-burned-500">01</div><svg class="size-5 mx-auto mt-2 text-burned-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg><div class="mt-2 text-sm font-medium">Importação</div></div>
+                            <div class="glass p-4 text-center"><div class="text-[10px] text-burned-500">02</div><svg class="size-5 mx-auto mt-2 text-burned-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/></svg><div class="mt-2 text-sm font-medium">Padronização</div></div>
+                            <div class="glass p-4 text-center"><div class="text-[10px] text-burned-500">03</div><svg class="size-5 mx-auto mt-2 text-burned-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><circle cx="11.5" cy="14.5" r="2.5"/><path d="M13.3 16.3 15 18"/></svg><div class="mt-2 text-sm font-medium">Deduplicação</div></div>
+                            <div class="glass p-4 text-center"><div class="text-[10px] text-burned-500">04</div><svg class="size-5 mx-auto mt-2 text-burned-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg><div class="mt-2 text-sm font-medium">Higienização</div></div>
+                            <div class="glass p-4 text-center"><div class="text-[10px] text-burned-500">05</div><svg class="size-5 mx-auto mt-2 text-burned-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><div class="mt-2 text-sm font-medium">Qualificação</div></div>
+                            <div class="glass p-4 text-center"><div class="text-[10px] text-burned-500">06</div><svg class="size-5 mx-auto mt-2 text-burned-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg><div class="mt-2 text-sm font-medium">Atualização contínua</div></div>
+                        </div>
+                    </section>
+
+                    <!-- Status da Base / Indicadores -->
+                    <section class="fade-in-up">
+                        <div class="mb-8"><div class="text-[11px] text-burned-500 mb-2">Status da Base</div><h2 class="text-3xl md:text-4xl font-display font-semibold">Indicadores em tempo real</h2><p class="mt-2 text-gray-500">Transparência sobre volume e qualidade dos dados. <span class="live-badge ml-2"><span class="dot"></span> AO VIVO</span></p></div>
+                        <div class="glass p-5 mb-4 flex flex-wrap items-center gap-3 border-amber-400/20 bg-amber-400/5">
+                            <svg class="size-5 text-amber-300" viewBox="0 0 24 24" fill="none" stroke="currentColor"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg>
+                            <div class="flex-1 text-sm"><div class="font-medium">Nenhum dado importado ainda.</div><div class="text-xs text-gray-500">Importe uma planilha para começar — os indicadores abaixo são demonstração.</div></div>
+                            <button class="bg-gradient-primary text-white text-xs px-3 py-1.5 rounded-md">Importar planilha</button>
+                        </div>
+                        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="indicators-grid">
+                            <div class="glass p-5 card-glow-pulse"><div class="text-xs text-gray-500">Total de registros</div><div class="mt-2 text-3xl font-display font-semibold number-live"><span class="counter-target" data-target="178780">0</span></div><div class="text-[10px] text-gray-600 mt-1 timestamp-refresh" data-original="Total de registros">↻ agora</div></div>
+                            <div class="glass p-5 card-glow-pulse"><div class="text-xs text-gray-500">Corretores mapeados</div><div class="mt-2 text-3xl font-display font-semibold number-live"><span class="counter-target" data-target="68420">0</span></div><div class="text-[10px] text-gray-600 mt-1 timestamp-refresh">↻ agora</div></div>
+                            <div class="glass p-5 card-glow-pulse"><div class="text-xs text-gray-500">Imobiliárias</div><div class="mt-2 text-3xl font-display font-semibold number-live"><span class="counter-target" data-target="12840">0</span></div><div class="text-[10px] text-gray-600 mt-1 timestamp-refresh">↻ agora</div></div>
+                            <div class="glass p-5 card-glow-pulse"><div class="text-xs text-gray-500">Sócios & decisores</div><div class="mt-2 text-3xl font-display font-semibold number-live"><span class="counter-target" data-target="16320">0</span></div><div class="text-[10px] text-gray-600 mt-1 timestamp-refresh">↻ agora</div></div>
+                            <div class="glass p-5 card-glow-pulse"><div class="text-xs text-gray-500">Contatos com e-mail</div><div class="mt-2 text-3xl font-display font-semibold number-live"><span class="counter-target" data-target="142310">0</span></div><div class="text-[10px] text-gray-600 mt-1 timestamp-refresh">↻ agora</div></div>
+                            <div class="glass p-5 card-glow-pulse"><div class="text-xs text-gray-500">Contatos com telefone</div><div class="mt-2 text-3xl font-display font-semibold number-live"><span class="counter-target" data-target="156820">0</span></div><div class="text-[10px] text-gray-600 mt-1 timestamp-refresh">↻ agora</div></div>
+                            <div class="glass p-5 card-glow-pulse"><div class="text-xs text-gray-500">Contatos com WhatsApp</div><div class="mt-2 text-3xl font-display font-semibold number-live"><span class="counter-target" data-target="98450">0</span></div><div class="text-[10px] text-gray-600 mt-1 timestamp-refresh">↻ agora</div></div>
+                            <div class="glass p-5 card-glow-pulse"><div class="text-xs text-gray-500">Cidades monitoradas</div><div class="mt-2 text-3xl font-display font-semibold number-live"><span class="counter-target" data-target="1840">0</span></div><div class="text-[10px] text-gray-600 mt-1 timestamp-refresh">↻ agora</div></div>
+                        </div>
+                    </section>
+
+                    <!-- Gráficos linha 1 -->
+                    <section class="grid lg:grid-cols-2 gap-5 fade-in-up">
+                        <!-- Registros por UF -->
+                        <div class="glass rounded-2xl shadow-elegant p-5 chart-wrapper" data-chart="uf">
+                            <div class="mb-4 flex items-center justify-between"><div><div class="text-sm font-semibold">Registros por UF</div><div class="text-xs text-gray-500">Top 5 estados</div></div><span class="live-badge text-[9px]"><span class="dot"></span> LIVE</span></div>
+                            <div class="h-64">
+                                <svg width="436" height="256" viewBox="0 0 436 256" style="width:100%;height:100%;display:block">
+                                    <g class="recharts-layer">
+                                        <rect class="bar-vertical" x="68.05" y="72.248" width="24" height="148.752" fill="#f59e0b" rx="4" style="transform-origin:80.05px 221px;transition-delay:0s;"></rect>
+                                        <rect class="bar-vertical" x="98.55" y="141.152" width="24" height="79.848" fill="#f59e0b" rx="4" style="transform-origin:110.55px 221px;transition-delay:0.1s;"></rect>
+                                        <rect class="bar-vertical" x="129.05" y="153.896" width="24" height="67.104" fill="#f59e0b" rx="4" style="transform-origin:141.05px 221px;transition-delay:0.2s;"></rect>
+                                        <rect class="bar-vertical" x="159.55" y="174.524" width="24" height="46.476" fill="#f59e0b" rx="4" style="transform-origin:171.55px 221px;transition-delay:0.3s;"></rect>
+                                        <rect class="bar-vertical" x="190.05" y="178.592" width="24" height="42.408" fill="#f59e0b" rx="4" style="transform-origin:202.05px 221px;transition-delay:0.4s;"></rect>
+                                    </g>
+                                    <text x="80.05" y="238" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="11">SP</text>
+                                    <text x="110.55" y="238" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="11">RJ</text>
+                                    <text x="141.05" y="238" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="11">MG</text>
+                                    <text x="171.55" y="238" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="11">RS</text>
+                                    <text x="202.05" y="238" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="11">PR</text>
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- Top 12 cidades -->
+                        <div class="glass rounded-2xl shadow-elegant p-5 chart-wrapper" data-chart="cidades">
+                            <div class="mb-4 flex items-center justify-between"><div><div class="text-sm font-semibold">Top 12 cidades</div><div class="text-xs text-gray-500">Maior concentração</div></div><span class="live-badge text-[9px]"><span class="dot"></span> LIVE</span></div>
+                            <div class="h-64">
+                                <svg width="436" height="256" viewBox="0 0 436 256" style="width:100%;height:100%">
+                                    <g transform="translate(115,5)">
+                                        <rect class="bar-horizontal" x="0" y="1.8" width="291.036" height="14" fill="#f59e0b" rx="6" style="transition-delay:0s;"></rect>
+                                        <rect class="bar-horizontal" x="0" y="19.8" width="178.224" height="14" fill="#f59e0b" rx="6" style="transition-delay:0.1s;"></rect>
+                                        <rect class="bar-horizontal" x="0" y="37.8" width="120.712" height="14" fill="#f59e0b" rx="6" style="transition-delay:0.2s;"></rect>
+                                        <rect class="bar-horizontal" x="0" y="55.8" width="93.378" height="14" fill="#f59e0b" rx="6" style="transition-delay:0.3s;"></rect>
+                                        <rect class="bar-horizontal" x="0" y="73.8" width="85.636" height="14" fill="#f59e0b" rx="6" style="transition-delay:0.4s;"></rect>
+                                        <text x="-8" y="12.8" text-anchor="end" fill="rgba(255,255,255,0.6)" font-size="11">Rio de Janeiro</text>
+                                        <text x="-8" y="30.8" text-anchor="end" fill="rgba(255,255,255,0.6)" font-size="11">Curitiba</text>
+                                        <text x="-8" y="48.8" text-anchor="end" fill="rgba(255,255,255,0.6)" font-size="11">Brasília</text>
+                                        <text x="-8" y="66.8" text-anchor="end" fill="rgba(255,255,255,0.6)" font-size="11">Fortaleza</text>
+                                        <text x="-8" y="84.8" text-anchor="end" fill="rgba(255,255,255,0.6)" font-size="11">Salvador</text>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Gráficos linha 2 -->
+                    <section class="grid lg:grid-cols-2 gap-5 fade-in-up">
+                        <!-- Tipo de registro -->
+                        <div class="glass rounded-2xl shadow-elegant p-5 chart-wrapper" data-chart="tipo">
+                            <div class="mb-4 flex items-center justify-between"><div><div class="text-sm font-semibold">Tipo de registro</div><div class="text-xs text-gray-500">Composição comercial</div></div><span class="live-badge text-[9px]"><span class="dot"></span> LIVE</span></div>
+                            <div class="h-64">
+                                <svg width="436" height="256" viewBox="0 0 436 256" style="width:100%;height:100%">
+                                    <g transform="translate(65,5)">
+                                        <rect class="bar-vertical" x="9.15" y="68.2128" width="73" height="147.7872" fill="#f59e0b" rx="4" style="transform-origin:45.65px 216px;transition-delay:0s;"></rect>
+                                        <rect class="bar-vertical" x="100.65" y="188.2656" width="73" height="27.7344" fill="#f59e0b" rx="4" style="transform-origin:137.15px 216px;transition-delay:0.1s;"></rect>
+                                        <rect class="bar-vertical" x="192.15" y="180.7488" width="73" height="35.2512" fill="#f59e0b" rx="4" style="transform-origin:228.65px 216px;transition-delay:0.2s;"></rect>
+                                        <rect class="bar-vertical" x="283.65" y="40.608" width="73" height="175.392" fill="#f59e0b" rx="4" style="transform-origin:320.15px 216px;transition-delay:0.3s;"></rect>
+                                    </g>
+                                    <text x="110.65" y="238" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="10">Corretores</text>
+                                    <text x="202.15" y="238" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="10">Imobiliárias</text>
+                                    <text x="293.65" y="238" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="10">Sócios</text>
+                                    <text x="385.15" y="238" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="10">Contatos</text>
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- Qualidade dos contatos (Donut animado) -->
+                        <div class="glass rounded-2xl shadow-elegant p-5 chart-wrapper" data-chart="qualidade">
+                            <div class="mb-4 flex items-center justify-between"><div><div class="text-sm font-semibold">Qualidade dos contatos</div><div class="text-xs text-gray-500">Distribuição por nível</div></div><span class="live-badge text-[9px]"><span class="dot"></span> LIVE</span></div>
+                            <div class="h-64 flex items-center justify-center">
+                                <svg viewBox="0 0 300 256" style="width:100%;height:100%;max-width:300px">
+                                    <g transform="translate(150,119)">
+                                        <circle cx="0" cy="0" r="75" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="38"/>
+                                        <!-- Segmento "boa" 55%: 2*pi*75=471.24, 55%=259.18 -->
+                                        <circle class="donut-segment" cx="0" cy="0" r="75" fill="none" stroke="#f59e0b" stroke-width="38"
+                                        stroke-dasharray="259.18 471.24" stroke-dashoffset="259.18" stroke-linecap="round"
+                                        style="transform:rotate(-90deg);transform-origin:0 0;transition:stroke-dashoffset 1.2s cubic-bezier(0.22,0.61,0.36,1);"
+                                        data-segment="1"></circle>
+                                        <!-- Segmento "parcial" 23%: 108.39 -->
+                                        <circle class="donut-segment" cx="0" cy="0" r="75" fill="none" stroke="#d97706" stroke-width="38"
+                                        stroke-dasharray="108.39 471.24" stroke-dashoffset="108.39" stroke-linecap="round"
+                                        style="transform:rotate(-90deg);transform-origin:0 0;transition:stroke-dashoffset 1.2s cubic-bezier(0.22,0.61,0.36,1);"
+                                        data-segment="2"></circle>
+                                        <!-- Segmento "ruim" 22%: 103.67 -->
+                                        <circle class="donut-segment" cx="0" cy="0" r="75" fill="none" stroke="#b45309" stroke-width="38"
+                                        stroke-dasharray="103.67 471.24" stroke-dashoffset="103.67" stroke-linecap="round"
+                                        style="transform:rotate(-90deg);transform-origin:0 0;transition:stroke-dashoffset 1.2s cubic-bezier(0.22,0.61,0.36,1);"
+                                        data-segment="3"></circle>
+                                        <circle cx="0" cy="0" r="56" fill="#0d1d35" stroke="rgba(255,255,255,0.05)" stroke-width="2"/>
+                                        <text x="0" y="-6" text-anchor="middle" fill="white" font-size="16" font-weight="700">100%</text>
+                                        <text x="0" y="12" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="10">cobertura</text>
+                                    </g>
+                                    <g transform="translate(150,240)">
+                                        <rect x="-70" y="-8" width="10" height="10" rx="2" fill="#f59e0b"/><text x="-54" y="0" fill="rgba(255,255,255,0.7)" font-size="10">boa 55%</text>
+                                        <rect x="-15" y="-8" width="10" height="10" rx="2" fill="#d97706"/><text x="1" y="0" fill="rgba(255,255,255,0.7)" font-size="10">parcial 23%</text>
+                                        <rect x="42" y="-8" width="10" height="10" rx="2" fill="#b45309"/><text x="58" y="0" fill="rgba(255,255,255,0.7)" font-size="10">ruim 22%</text>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Contatabilidade -->
+                    <section class="fade-in-up">
+                        <div class="glass rounded-2xl shadow-elegant p-5 chart-wrapper" data-chart="contatabilidade">
+                            <div class="mb-4 flex items-center justify-between"><div><div class="text-sm font-semibold">Contatabilidade</div><div class="text-xs text-gray-500">Com vs sem e-mail / telefone / WhatsApp</div></div><span class="live-badge text-[9px]"><span class="dot"></span> LIVE</span></div>
+                            <div class="h-64">
+                                <svg width="436" height="256" viewBox="0 0 436 256" style="width:100%;height:100%">
+                                    <g transform="translate(65,5)">
+                                        <!-- email -->
+                                        <rect class="bar-vertical" x="61" y="0" width="60" height="180" fill="#f59e0b" rx="4" style="transform-origin:91px 180px;transition-delay:0s;"></rect>
+                                        <rect class="bar-vertical" x="61" y="0" width="40" height="120" fill="#d97706" rx="4" style="transform-origin:81px 180px;transition-delay:0.05s;"></rect>
+                                        <!-- telefone -->
+                                        <rect class="bar-vertical" x="183" y="0" width="70" height="180" fill="#f59e0b" rx="4" style="transform-origin:218px 180px;transition-delay:0.15s;"></rect>
+                                        <rect class="bar-vertical" x="183" y="0" width="50" height="128" fill="#d97706" rx="4" style="transform-origin:208px 180px;transition-delay:0.2s;"></rect>
+                                        <!-- whatsapp -->
+                                        <rect class="bar-vertical" x="305" y="0" width="48" height="180" fill="#f59e0b" rx="4" style="transform-origin:329px 180px;transition-delay:0.3s;"></rect>
+                                        <rect class="bar-vertical" x="305" y="0" width="30" height="108" fill="#d97706" rx="4" style="transform-origin:320px 180px;transition-delay:0.35s;"></rect>
+                                    </g>
+                                    <text x="121" y="210" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="11">email</text>
+                                    <text x="243" y="210" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="11">telefone</text>
+                                    <text x="355" y="210" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="11">whatsapp</text>
+                                    <g transform="translate(65,228)">
+                                        <rect x="0" y="0" width="8" height="8" rx="2" fill="#f59e0b"/><text x="12" y="8" fill="rgba(255,255,255,0.5)" font-size="9">com</text>
+                                        <rect x="40" y="0" width="8" height="8" rx="2" fill="#d97706"/><text x="52" y="8" fill="rgba(255,255,255,0.5)" font-size="9">sem</text>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Proteção e pré-visualização -->
+                    <section class="grid lg:grid-cols-2 gap-6 items-stretch fade-in-up">
+                        <div class="glass rounded-3xl p-8 md:p-10 shadow-elegant">
+                            <div class="inline-flex items-center gap-2 rounded-full bg-burned-500/10 border border-burned-500/20 px-3 py-1 text-[11px] text-burned-500"><svg class="size-3" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg> Proteção dos Dados</div>
+                            <h2 class="mt-4 text-3xl font-display font-semibold">Contatos protegidos por controle de acesso</h2>
+                            <p class="mt-4 text-gray-500">Para preservar a segurança, a governança e o uso responsável das informações, dados de contato completos ficam protegidos. Usuários visitantes podem pesquisar e visualizar informações básicas, mas e-mails, telefones, WhatsApp, CPF, CNPJ completo e exportações ficam disponíveis apenas para usuários autenticados e autorizados.</p>
+                            <div class="mt-6 grid sm:grid-cols-2 gap-4">
+                                <div><div class="text-xs text-gray-500 mb-2">Visitante pode ver</div><ul class="space-y-1.5 text-sm"><li class="flex items-center gap-2"><svg class="size-3.5 text-burned-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Nome</li><li><svg class="size-3.5 text-burned-500 inline mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Tipo de registro</li><li><svg class="size-3.5 text-burned-500 inline mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Cidade/Estado</li><li><svg class="size-3.5 text-burned-500 inline mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Qualidade do contato</li></ul></div>
+                                <div><div class="text-xs text-gray-500 mb-2">Restrito a usuários autorizados</div><ul class="space-y-1.5 text-sm text-gray-500"><li class="flex items-center gap-2"><svg class="size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> E-mail completo</li><li><svg class="size-3.5 inline mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Telefone/WhatsApp</li><li><svg class="size-3.5 inline mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> CPF/CNPJ completo</li><li><svg class="size-3.5 inline mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Exportar CSV/XLSX</li></ul></div>
+                            </div>
+                            <div class="mt-6 flex gap-3"><button class="bg-gradient-primary text-white px-4 py-2 rounded-md text-sm">Entrar</button><button class="border border-white/15 bg-white/5 px-4 py-2 rounded-md text-sm">Solicitar acesso</button></div>
+                        </div>
+                        <div class="glass rounded-3xl p-6 shadow-elegant relative overflow-hidden">
+                            <div class="absolute -top-20 -right-20 size-60 rounded-full bg-gradient-primary opacity-10 blur-3xl"></div>
+                            <div class="relative">
+                                <div class="flex justify-between mb-4"><div><div class="text-xs text-gray-500">Pré-visualização</div><div class="font-semibold">Contato — modo visitante</div></div><span class="inline-flex items-center gap-1 rounded-full bg-amber-500/15 text-amber-300 px-2 py-0.5 text-[11px]"><svg class="size-3" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Mascarado</span></div>
+                                <div class="flex items-center gap-3 mb-4"><div class="size-12 rounded-xl bg-gradient-primary grid place-items-center text-white font-bold">PL</div><div><div class="font-semibold">João Mendes</div><div class="text-xs text-gray-500">Corretor · São Paulo/SP · Qualidade Boa</div></div></div>
+                                <div class="space-y-2">
+                                    <div class="flex justify-between rounded-lg border border-white/10 bg-black/30 px-3 py-2"><div><div class="text-[10px] text-gray-500">E-mail</div><div class="font-mono text-sm">jo***@***.com</div></div><svg class="size-3.5 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+                                    <div class="flex justify-between rounded-lg border border-white/10 bg-black/30 px-3 py-2"><div><div class="text-[10px] text-gray-500">Telefone</div><div class="font-mono text-sm">(**) *****-****</div></div><svg class="size-3.5 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+                                    <div class="flex justify-between rounded-lg border border-white/10 bg-black/30 px-3 py-2"><div><div class="text-[10px] text-gray-500">WhatsApp</div><div class="font-mono text-sm">(**) *****-****</div></div><svg class="size-3.5 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+                                </div>
+                                <button class="w-full mt-4 bg-gradient-primary text-white py-2 rounded-md text-sm">Desbloquear contato completo</button>
+                                <p class="text-[11px] text-gray-500 text-center mt-3">Exportações disponíveis apenas para usuários autenticados.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- CTA final -->
+                    <section class="relative overflow-hidden rounded-3xl glass p-10 md:p-14 text-center shimmer-border fade-in-up">
+                        <div class="absolute inset-0 grid-bg opacity-20"></div>
+                        <div class="absolute -top-32 left-1/2 -translate-x-1/2 size-[28rem] rounded-full bg-burned-500/15 blur-3xl"></div>
+                        <div class="relative"><h2 class="text-3xl md:text-5xl font-display font-semibold">Mercado B2B <span class="text-gradient">mapeado com inteligência.</span></h2><p class="mt-4 text-gray-500 max-w-2xl mx-auto">Pesquise livremente. Acesse dados completos com autorização.</p><div class="mt-7 flex flex-wrap gap-3 justify-center"><a href="https://wa.me/5519982642481?text=Quero%20acessar%20a%20base%20de%20leads" target="_blank" class="inline-flex items-center gap-2 bg-gradient-primary text-white px-8 py-3 rounded-md shadow-glow">Explorar base</a><button class="border border-white/15 bg-white/5 px-8 py-3 rounded-md">Solicitar acesso</button></div></div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- WhatsApp flutuante -->
+    <a href="https://wa.me/5519982642481?text=Olá%2C%20quero%20acessar%20a%20base%20de%20leads" target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20bd5a] text-white p-3 rounded-full shadow-2xl animate-pulse-slow transition-all" aria-label="WhatsApp Paulo Leads">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2.22 21.28a.75.75 0 0 0 .932.94l4.03-1.005A9.96 9.96 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2Zm.97 14.82c-.345.97-1.415 1.54-2.448 1.265a6.5 6.5 0 0 1-2.756-1.602 6.5 6.5 0 0 1-1.602-2.756c-.275-1.033.295-2.103 1.265-2.448.304-.108.63-.045.87.165.425.373.777.82 1.037 1.32.26.5.37 1.07.28 1.62-.09.55-.38 1.05-.82 1.38.44.76 1.06 1.38 1.82 1.82.33-.44.83-.73 1.38-.82.55-.09 1.12.02 1.62.28.5.26.947.612 1.32 1.037.21.24.273.566.165.87Z" clip-rule="evenodd"/></svg>
+    </a>
+
+    <script>
+        (function() {
+            // ============ CONFIGURAÇÃO ============
+            const COUNTER_DURATION = 2000; // duração da contagem em ms
+            const LIVE_UPDATE_INTERVAL = 4000; // intervalo de "atualização ao vivo" em ms
+            const SCAN_LINE_DELAY = 2000; // delay para iniciar scan lines
+
+            // ============ EASING FUNCTION ============
+            function easeOutCubic(t) {
+                return 1 - Math.pow(1 - t, 3);
+            }
+
+            // ============ CONTADORES ANIMADOS ============
+            function animateCounter(el, target, duration) {
+                const start = 0;
+                const startTime = performance.now();
+
+                function update(now) {
+                    const elapsed = now - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const easedProgress = easeOutCubic(progress);
+                    const current = Math.round(start + (target - start) * easedProgress);
+
+                    el.textContent = current.toLocaleString('pt-BR');
+
+                    if (progress < 1) {
+                        requestAnimationFrame(update);
+                    } else {
+                        el.textContent = target.toLocaleString('pt-BR');
+                        el.dataset.animated = 'true';
+                        el.dataset.currentValue = target;
+                    }
+                }
+
+                requestAnimationFrame(update);
+            }
+
+            // ============ INTERSECTION OBSERVER PARA CONTADORES ============
+            const counterObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const el = entry.target;
+                        if (el.dataset.animated === 'true') return;
+                        const target = parseInt(el.dataset.target);
+                        if (isNaN(target)) return;
+                        animateCounter(el, target, COUNTER_DURATION);
+                        counterObserver.unobserve(el);
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            document.querySelectorAll('.counter-target').forEach(el => {
+                counterObserver.observe(el);
+            });
+
+            // ============ INTERSECTION OBSERVER PARA GRÁFICOS ============
+            const chartObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const chart = entry.target;
+
+                        // Animar barras verticais
+                        chart.querySelectorAll('.bar-vertical').forEach((bar, i) => {
+                            setTimeout(() => {
+                                bar.classList.add('animate');
+                            }, i * 80);
+                        });
+
+                        // Animar barras horizontais
+                        chart.querySelectorAll('.bar-horizontal').forEach((bar, i) => {
+                            setTimeout(() => {
+                                bar.classList.add('animate');
+                            }, i * 100);
+                        });
+
+                        // Animar donut segments
+                        const donutSegs = chart.querySelectorAll('.donut-segment');
+                        if (donutSegs.length > 0) {
+                            setTimeout(() => {
+                                donutSegs.forEach((seg, i) => {
+                                    setTimeout(() => {
+                                        if (seg.dataset.segment === '1')
+                                            seg.classList.add('animate-seg1');
+                                        if (seg.dataset.segment === '2')
+                                            seg.classList.add('animate-seg2');
+                                        if (seg.dataset.segment === '3')
+                                            seg.classList.add('animate-seg3');
+                                    }, i * 350);
+                                });
+                            }, 300);
+                        }
+
+                        // Ativar scanning line
+                        setTimeout(() => {
+                            chart.classList.add('scanning');
+                        }, SCAN_LINE_DELAY);
+
+                        chartObserver.unobserve(chart);
+                    }
+                });
+            }, { threshold: 0.25 });
+
+            document.querySelectorAll('.chart-wrapper').forEach(chart => {
+                chartObserver.observe(chart);
+            });
+
+            // ============ FADE IN UP OBSERVER ============
+            const fadeObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        fadeObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            document.querySelectorAll('.fade-in-up').forEach(el => {
+                fadeObserver.observe(el);
+            });
+
+            // ============ SIMULAÇÃO DE "AO VIVO" NOS NÚMEROS ============
+            function startLiveUpdates() {
+                const counters = document.querySelectorAll('.counter-target[data-animated="true"]');
+                const timestampRefreshes = document.querySelectorAll('.timestamp-refresh');
+
+                function pulseNumbers() {
+                    counters.forEach(counter => {
+                        const baseValue = parseInt(counter.dataset.currentValue);
+                        if (isNaN(baseValue)) return;
+
+                        // Pequena variação aleatória
+                        const variation = Math.floor(Math.random() * 5) - 2; // -2 a +2
+                        const newValue = baseValue + variation;
+                        const displayValue = Math.max(0, newValue);
+
+                        // Flash effect
+                        const parentLive = counter.closest('.number-live');
+                        if (parentLive) {
+                            parentLive.classList.add('updating');
+                            setTimeout(() => parentLive.classList.remove('updating'), 400);
+                        }
+
+                        // Atualiza o texto brevemente
+                        const original = counter.textContent;
+                        counter.textContent = displayValue.toLocaleString('pt-BR');
+                        counter.dataset.currentValue = displayValue;
+
+                        // Volta ao valor base após um tempo
+                        setTimeout(() => {
+                            counter.textContent = baseValue.toLocaleString('pt-BR');
+                            counter.dataset.currentValue = baseValue;
+                        }, 2500 + Math.random() * 1500);
+                    });
+
+                    // Atualiza timestamps
+                    const seconds = Math.floor(Math.random() * 5) + 1;
+                    timestampRefreshes.forEach(ts => {
+                        if (!ts.classList.contains('flash')) {
+                            ts.textContent = '↻ há ' + seconds + 's';
+                            ts.classList.add('flash');
+                            setTimeout(() => {
+                                ts.textContent = '↻ agora';
+                                ts.classList.remove('flash');
+                            }, 800);
+                        }
+                    });
+                }
+
+                // Primeira pulsação após 3 segundos
+                setTimeout(() => {
+                    setInterval(pulseNumbers, LIVE_UPDATE_INTERVAL);
+                    pulseNumbers();
+                }, 3000);
+            }
+
+            // ============ PARTÍCULAS NO HERO ============
+            function initParticles() {
+                const container = document.getElementById('particles-container');
+                if (!container) return;
+
+                const particleCount = 25;
+
+                for (let i = 0; i < particleCount; i++) {
+                    const particle = document.createElement('div');
+                    particle.classList.add('particle');
+
+                    const size = Math.random() * 4 + 1.5;
+                    const left = Math.random() * 100;
+                    const delay = Math.random() * 8;
+                    const duration = Math.random() * 6 + 5;
+                    const opacity = Math.random() * 0.5 + 0.2;
+
+                    particle.style.cssText = `
+                            width: ${size}px;
+                            height: ${size}px;
+                            left: ${left}%;
+                            bottom: -10px;
+                            animation-delay: ${delay}s;
+                            animation-duration: ${duration}s;
+                            opacity: 0;
+                            background: ${Math.random() > 0.5 ? '#f59e0b' : '#d97706'};
+                            box-shadow: 0 0 ${size * 3}px rgba(245,158,11,${opacity});
+                        `;
+
+                    container.appendChild(particle);
+                }
+            }
+
+            // ============ TIMESTAMP DO HERO ============
+            function updateHeroTimestamp() {
+                const ts = document.getElementById('hero-timestamp');
+                if (!ts) return;
+                let seconds = 0;
+
+                setInterval(() => {
+                    seconds++;
+                    if (seconds <= 10) {
+                        ts.textContent = 'Atualizado há ' + seconds + ' segundos';
+                    } else if (seconds <= 12) {
+                        ts.textContent = '🔄 Sincronizando...';
+                    } else {
+                        seconds = 0;
+                        ts.textContent = 'Atualizado agora mesmo';
+                    }
+                }, 1000);
+            }
+
+            // ============ HEADER STATUS ALTERNATE ============
+            function alternateHeaderStatus() {
+                const headerStatus = document.getElementById('header-status-text');
+                if (!headerStatus) return;
+
+                const messages = [
+                    'AO VIVO · Dados em sincronização contínua',
+                    'AO VIVO · Analisando novos registros...',
+                    'AO VIVO · Base sendo higienizada',
+                    'AO VIVO · Dados em sincronização contínua',
+                    'AO VIVO · Mapa de contatos atualizado',
+                ];
+                let idx = 0;
+
+                setInterval(() => {
+                    idx = (idx + 1) % messages.length;
+                    headerStatus.style.opacity = '0';
+                    headerStatus.style.transition = 'opacity 0.3s';
+                    setTimeout(() => {
+                        headerStatus.textContent = messages[idx];
+                        headerStatus.style.opacity = '1';
+                    }, 300);
+                }, 5000);
+            }
+
+            // ============ INICIALIZAÇÃO ============
+            function init() {
+                initParticles();
+                updateHeroTimestamp();
+                alternateHeaderStatus();
+
+                // Inicia live updates após as animações de contagem
+                setTimeout(startLiveUpdates, COUNTER_DURATION + 500);
+
+                // Garante que os gráficos sejam animados mesmo se já visíveis
+                setTimeout(() => {
+                    document.querySelectorAll('.chart-wrapper').forEach(chart => {
+                        const rect = chart.getBoundingClientRect();
+                        if (rect.top < window.innerHeight && rect.bottom > 0) {
+                            // Já está visível, força animação
+                            chart.querySelectorAll('.bar-vertical').forEach((bar,
+                                i) => {
+                                setTimeout(() => bar.classList.add(
+                                    'animate'), i * 80);
+                            });
+                            chart.querySelectorAll('.bar-horizontal').forEach((bar,
+                                i) => {
+                                setTimeout(() => bar.classList.add(
+                                    'animate'), i * 100);
+                            });
+                            const donutSegs = chart.querySelectorAll(
+                                '.donut-segment');
+                            if (donutSegs.length > 0) {
+                                setTimeout(() => {
+                                    donutSegs.forEach((seg, i) => {
+                                        setTimeout(() => {
+                                            if (seg.dataset
+                                                .segment === '1')
+                                                seg.classList
+                                                .add(
+                                                    'animate-seg1'
+                                                    );
+                                            if (seg.dataset
+                                                .segment === '2')
+                                                seg.classList
+                                                .add(
+                                                    'animate-seg2'
+                                                    );
+                                            if (seg.dataset
+                                                .segment === '3')
+                                                seg.classList
+                                                .add(
+                                                    'animate-seg3'
+                                                    );
+                                        }, i * 350);
+                                    });
+                                }, 300);
+                            }
+                            setTimeout(() => chart.classList.add('scanning'),
+                                SCAN_LINE_DELAY);
+                        }
+                    });
+
+                    // Força fade-in-up para elementos visíveis
+                    document.querySelectorAll('.fade-in-up').forEach(el => {
+                        const rect = el.getBoundingClientRect();
+                        if (rect.top < window.innerHeight && rect.bottom > 0) {
+                            el.classList.add('visible');
+                        }
+                    });
+                }, 400);
+
+                console.log('%c⚡ Paulo Leads Intelligence %c— Dashboard Vivo Ativado %c🚀',
+                    'color:#f59e0b;font-size:16px;',
+                    'color:#fff;',
+                    'color:#22c55e;');
+                console.log('%c📊 Gráficos animados | 🔢 Contadores | 💫 Partículas | 📡 Scanning Lines | 🟢 Live Badges',
+                    'color:#888;font-size:11px;');
+            }
+
+            // ============ START ============
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', init);
+            } else {
+                init();
+            }
+        })();
+    </script>
+</body>
+</html>

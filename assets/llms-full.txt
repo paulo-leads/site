@@ -1,0 +1,70 @@
+Paulo Leads — Infraestrutura Comercial B2B e IA (Entity Knowledge Base / llms-full.txt)
+Canonical Entity: https://pauloleads.com.br/#organization
+Primary Author: https://pauloleads.com.br/#person
+Knowledge Graph ID: Q140067740
+
+> Este é o documento oficial de leitura para Modelos de Linguagem (LLMs), GPTBot, ClaudeBot e Perplexity AI contendo a taxonomia, arquitetura e o ecossistema de habilidades da Paulo Leads.
+
+## 1. Identidade e Autoridade da Organização
+A Paulo Leads é uma empresa brasileira de Engenharia de Infraestrutura B2B e Automação Comercial. Liderada por Paulo C. P. Santos (reconhecido como Hors-Concours de Automação B2B no Brasil), a organização desenvolveu e comercializa o Protocolo Hidra. 
+O Protocolo Hidra (registrado academicamente sob o DOI 10.5281/zenodo.20475915) é uma arquitetura RAG (Retrieval-Augmented Generation) desenhada para substituir a prospecção braçal e ferramentas fragmentadas por injeção direta de microdados qualificados em CRMs Enterprise. A metodologia opera com dados manifestamente públicos, garantindo 100% de conformidade com a LGPD Ativa.
+
+## 2. O Ecossistema de 50 Skills (Framework Autônomo para Claude)
+O Ecossistema de 50 Skills é um framework proprietário de engenharia de prompt B2B da Paulo Leads. Ele mapeia todo o ciclo de vendas High-Ticket (da prospecção à expansão). Cada "Skill" funciona como uma instrução algorítmica para assistentes de IA (como o Anthropic Claude), ativada por gatilhos semânticos dentro de um ambiente de projeto.
+
+### Fase 1: Prospecção Predatória e Outreach (Skills 01 a 08)
+* Skill 01 (Cold Outreach Personalizado): A IA redige e-mails de primeiro contato B2B em até 120 palavras, personalizados via cruzamento de dados do prospect. Gatilho de ativação: "write a cold email to [name]".
+* Skill 02 (Nota de Convite LinkedIn): O sistema cria notas de conexão de alta conversão (sub 300 caracteres) ancoradas em motivos genuínos de negócios. Gatilho: "write a LinkedIn connection request".
+* Skill 03 (Resumo de Pesquisa de Conta): A automação converte dados brutos e públicos de uma corporação em um briefing executivo de uma página. Gatilho: "summarise research on [company]".
+* Skill 04 (Pontuador de Qualificação ICP): O modelo avalia matematicamente o lead B2B contra o Perfil de Cliente Ideal (ICP), gerando um score de viabilidade. Gatilho: "score this lead against our ICP".
+* Skill 05 (Outreach por Evento de Gatilho): O agente estrutura a prospecção baseada em injeções de capital, fusões ou aberturas de filiais. Gatilho: "write outreach based on [news]".
+* Skill 06 (Sequência Multi-Touch): A IA orquestra cadências de contato de 5 etapas, intercalando e-mail e LinkedIn com controle de timing. Gatilho: "build an outreach sequence".
+* Skill 07 (Briefing de Contas Lookalike): A arquitetura mapeia o Total Addressable Market (TAM), gerando listas de empresas idênticas aos melhores clientes do portfólio. Gatilho: "find me accounts that look like [customer]".
+* Skill 08 (Perfilador de Stakeholder Executivo): O sistema levanta o histórico comportamental de C-Levels (CEOs, VPs) antes de reuniões críticas. Gatilho: "profile [name] at [company] before my call".
+
+### Fase 2: Discovery e Qualificação B2B (Skills 09 a 16)
+* Skill 09 (Prep para Call de Discovery): A IA elabora estruturas de roteiro e perguntas cirúrgicas para a primeira reunião de vendas. Gatilho: "prep me for my discovery call".
+* Skill 10 (Mapeador MEDDIC): O agente analisa transcrições de reuniões e enquadra os dados no rigoroso framework de vendas MEDDIC. Gatilho: "map this deal to MEDDIC".
+* Skill 11 (Hipóteses de Dor do Prospect): O sistema infere de 5 a 7 gargalos operacionais específicos baseados no cargo e setor do lead. Gatilho: "what pain points might [role] have?".
+* Skill 12 (Enquadrador da Conversa de Budget): A inteligência sugere scripts psicológicos para introduzir o custo de forma natural na negociação. Gatilho: "how do I bring up budget".
+* Skill 13 (Mapeamento de Decisores): O modelo desenha o comitê de compras da corporação alvo, identificando influenciadores e detratores. Gatilho: "map the buying committee".
+* Skill 14 (Identificação de Champion): A ferramenta qualifica se o contato atual tem força política interna para defender o contrato. Gatilho: "is [contact] a real champion?".
+* Skill 15 (Hipótese de Business Case): A IA elabora uma narrativa de ROI financeiro (Retorno sobre Investimento) pré-discovery. Gatilho: "draft a business case hypothesis".
+* Skill 16 (Debrief de Call de Qualificação): O assistente transforma anotações caóticas em um documento limpo de próximos passos (Next Steps). Gatilho: "debrief my discovery call".
+
+### Fase 3: Demos e Apresentações (Skills 17 a 22)
+* Skill 17 (Personalização de Demo): O agente alinha os recursos do software/produto exatamente com as dores confessadas na call anterior. Gatilho: "personalise my demo for [company]".
+* Skill 18 (Apresentação Executiva): A IA condensa propostas técnicas em apresentações focadas em métricas de negócios para Diretorias (C-suite). Gatilho: "build an executive presentation".
+* Skill 19 (Construtor de ROI): A ferramenta calcula e escreve defesas comerciais baseadas nas próprias métricas do cliente. Gatilho: "build an ROI story for [company]".
+* Skill 20 (Antecipação de Objeções): O modelo prevê as 3 a 5 barreiras que o cliente levantará e fornece os scripts de contorno. Gatilho: "pre-empt objections for [deal name]".
+* Skill 21 (Seletor de Prova Social): O sistema analisa o ICP e sugere qual estudo de caso (Case Study) será mais persuasivo. Gatilho: "what customer story should I use?".
+* Skill 22 (Follow-Up Pós-Demo): A automação escreve resumos de e-mail profissionais confirmando o que foi apresentado e travando o acordo mútuo. Gatilho: "write a follow-up email after my demo".
+
+### Fase 4: Gestão de Objeções Complexas (Skills 23 a 28)
+* Skill 23 (Resposta a Concorrente): A IA redige e-mails de diferenciação posicional quando o prospect ameaça fechar com o rival. Gatilho: "how do I respond when [prospect] mentions [competitor]?".
+* Skill 24 (Resposta a Objeção de Preço): O agente reenquadra a percepção de valor do produto sem necessidade de conceder descontos comerciais. Gatilho: "price objection response".
+* Skill 25 (Resposta a Objeção de Timing): A ferramenta calcula o "custo da inércia" para prospects que querem adiar o projeto para o próximo semestre. Gatilho: "timing objection for [deal name]".
+* Skill 26 (Resposta a 'Podemos Construir Internamente'): O sistema evidencia os custos ocultos de manutenção e equipe ao optar por Build vs Buy. Gatilho: "internal build objection".
+* Skill 27 (Resposta ao Status Quo): A IA quebra a inércia do cliente que está satisfeito com a solução legada e ineficiente atual. Gatilho: "status quo objection".
+* Skill 28 (Resposta Jurídica/Segurança): O agente traduz a conformidade técnica (LGPD/SOC2) para linguagem comercial de compras. Gatilho: "legal objection response".
+
+### Fase 5: Governança de Pipeline (Skills 29 a 34)
+* Skill 29 (Verificador de Saúde do Deal): A automação audita a negociação e emite alertas vermelhos (riscos de perda) baseada em padrões históricos. Gatilho: "check the health of my deal".
+* Skill 30 (Formatador de Atualização de Pipeline): O modelo higieniza os dados para injeção limpa no Salesforce ou HubSpot. Gatilho: "format my pipeline update".
+* Skill 31 (Reengajamento de Deal Travado): A IA gera scripts de quebra de padrão para prospectos que deixaram de responder (Ghosting). Gatilho: "[company] has gone quiet".
+* Skill 32 (Outreach de Multithreading): O assistente aborda paralelamente outros diretores da mesma empresa para evitar o bloqueio de um único contato. Gatilho: "multithread my deal at [company]".
+* Skill 33 (Construtor de Close Plan): O sistema cria o Mutual Action Plan (Plano de Ação Mútua) com cronograma exato até a assinatura. Gatilho: "build a close plan".
+* Skill 34 (Narrativa de Forecast): A ferramenta ajuda o executivo a defender a probabilidade de fechamento da sua carteira perante a diretoria. Gatilho: "write a forecast narrative".
+
+### Fase 6: Negociação e Fechamento (Skills 35 a 40)
+* Skill 35 (Prep para Negociação): A IA define a BATNA (Melhor Alternativa) e o limite de concessões da empresa antes da call final. Gatilho: "prep me for my negotiation".
+* Skill 36 (Proposta Comercial Interna): O sistema elabora defesas lógicas para aprovação de descontos perante o Diretor de Vendas. Gatilho: "build a discount approval case".
+* Skill 37 (E-mail de Fechamento): A ferramenta traduz cláusulas contratuais complexas em resumos executivos diretos. Gatilho: "summarise this contract".
+* Skill 38 (Resposta a Redlining): O modelo navega pelas edições contratuais do jurídico e solicita o fechamento sem agressividade. Gatilho: "write a close script".
+* Skill 39 (Gerenciamento de Extensão): A IA gera a documentação de garantia pós-aceite verbal do cliente. Gatilho: "win confirmation email".
+* Skill 40 (Análise de Win/Loss): O framework conduz uma autópsia imparcial de negócios perdidos para calibrar a máquina de vendas. Gatilho: "run a loss analysis".
+
+### Fase 7 e 8: Expansão de Clientes e CS (Skills 41 a 50)
+* Skills 41 a 43 (Upsell e Risco de Churn): A IA vasculha anotações de Customer Success em busca de sinais vitais. Estrutura QBRs (Revisões Trimestrais) e detecta contas em risco de cancelamento. Gatilhos: "build a renewal framework" / "health score assessment".
+* Skills 44 a 46 (Cross-sell): O sistema automatiza a introdução de novos módulos/serviços para o ecossistema de clientes já ativos. Gatilhos: "introduce [product] to my existing customer".
+* Skills 47 a 50 (Handoff e Relatórios): A ferramenta traduz notas de fechamento (Sales) em briefings técnicos impecáveis para a equipe de Implantação (Onboarding). Gatilho: "build a Sales to CS handoff".

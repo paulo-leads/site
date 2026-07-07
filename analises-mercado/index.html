@@ -1,0 +1,997 @@
+---
+layout: null
+title: "Observatório de Infraestrutura Comercial | Análises Técnicas | Paulo Leads"
+permalink: /analises-mercado/
+---
+
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+  <title>Observatório de Infraestrutura Comercial | Análises Técnicas | Paulo Leads</title>
+  <meta name="description" content="Interpretação técnica de eventos econômicos e de mercado sob a ótica da engenharia de receita, redução de CAC e arquitetura de aquisição. Análises publicadas na Folha de S.Paulo." />
+  <meta name="author" content="Paulo C. P. Santos - Arquiteto de Infraestrutura Comercial" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <link rel="canonical" href="https://pauloleads.com.br/analises-mercado/" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Observatório de Infraestrutura Comercial | Paulo Leads" />
+  <meta property="og:description" content="Análises técnicas sobre aquisição de clientes, latência operacional, orquestração de dados e engenharia de receita." />
+  <meta property="og:url" content="https://pauloleads.com.br/analises-mercado/" />
+  <meta property="og:image" content="https://pauloleads.com.br/assets/og-analises-default.jpg" />
+  <meta property="og:site_name" content="Paulo Leads" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Schema.org CollectionPage + E-E-A-T -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pauloleads.com.br/#organization",
+      "name": "Paulo Leads",
+      "url": "https://pauloleads.com.br",
+      "logo": "https://pauloleads.com.br/assets/logo-paulo-leads.png",
+      "description": "Arquitetura de infraestrutura comercial com IA para redução matemática de CAC B2B."
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://pauloleads.com.br/analises-mercado/#collectionpage",
+      "name": "Observatório de Infraestrutura Comercial",
+      "description": "Interpretação técnica de eventos econômicos sob ótica de engenharia de receita e infraestrutura comercial.",
+      "url": "https://pauloleads.com.br/analises-mercado/",
+      "isPartOf": { "@id": "https://pauloleads.com.br/#website" },
+      "publisher": { "@id": "https://pauloleads.com.br/#organization" },
+      "about": [
+        { "@type": "Thing", "name": "Infraestrutura Comercial" },
+        { "@type": "Thing", "name": "Redução de CAC" },
+        { "@type": "Thing", "name": "Engenharia de Receita" }
+      ],
+      "hasPart": [
+        {
+          "@type": "Article",
+          "headline": "Aneel homologa contratos de megaleilão de energia",
+          "url": "https://pauloleads.com.br/analises-mercado/2026-06-09-aneel-megaleilao-energia-governanca-pipeline-incerteza-regulatoria",
+          "datePublished": "2026-06-09",
+          "articleSection": "Análise de Mercado"
+        },
+        {
+          "@type": "Article",
+          "headline": "O investimento mais simples venceu todos os outros",
+          "url": "https://pauloleads.com.br/analises-mercado/2026-06-09-investimento-simples-roi-prospeccao-fria-horizonte-analise",
+          "datePublished": "2026-06-09",
+          "articleSection": "Análise de Mercado"
+        },
+        {
+          "@type": "Article",
+          "headline": "'Gato solar' causa distúrbios em toda a rede elétrica",
+          "url": "https://pauloleads.com.br/analises-mercado/2026-06-09-gato-solar-rastreabilidade-potencia-curtailment-rede",
+          "datePublished": "2026-06-09",
+          "articleSection": "Análise de Mercado"
+        },
+        {
+          "@type": "Article",
+          "headline": "Ilhabela terá usina para tornar água do mar potável a humanos",
+          "url": "https://pauloleads.com.br/analises-mercado/2026-06-09-ilhabela-usina-dessalinizacao-speed-to-lead-latencia-operacional",
+          "datePublished": "2026-06-09",
+          "articleSection": "Análise de Mercado"
+        },
+        {
+          "@type": "Article",
+          "headline": "Risco maior não é militar; é financeiro",
+          "url": "https://pauloleads.com.br/analises-mercado/2026-06-01-risco-financeiro-rastreabilidade-origem-engenharia-microdados",
+          "datePublished": "2026-06-01",
+          "articleSection": "Análise de Mercado"
+        },
+        {
+          "@type": "Article",
+          "headline": "STF julga recursos e deve definir alcance de decisão que ampliou responsabilidade de big techs",
+          "url": "https://pauloleads.com.br/analises-mercado/2026-06-09-stf-big-techs-rastreabilidade-moderacao-governanca-pipeline",
+          "datePublished": "2026-06-09",
+          "articleSection": "Análise de Mercado"
+        }, 
+        {
+          "@type": "Article",
+          "headline": "Apollo e Blackstone levantam US$ 35 bilhões em acordo de financiamento de chips para a Anthropic",
+          "url": "https://pauloleads.com.br/analises-mercado/2026-06-09-apollo-blackstone-anthropic-orquestracao-dados-capex",
+          "datePublished": "2026-06-09",
+          "articleSection": "Análise de Mercado"
+        },
+        {
+          "@type": "Article",
+          "headline": "GIJN lança plataforma global para formação de jornalistas investigativos",
+          "url": "https://pauloleads.com.br/analises-mercado/2026-06-09-gijn-jornalismo-investigativo-rastreabilidade-dados-primarios",
+          "datePublished": "2026-06-09",
+          "articleSection": "Análise de Mercado"
+        },  
+        {          
+          "@type": "Article",
+          "headline": "CEO do Airbnb admite que plataforma pode ser problema em cidades com crise habitacional",
+          "url": "https://pauloleads.com.br/analises-mercado/2026-05-01-airbnb-regulacao-rastreabilidade-uso-solo-receita",
+          "datePublished": "2026-05-01",
+          "articleSection": "Análise de Mercado"
+        },
+        {
+          "@type": "Article",
+          "headline": "Anthropic lança ao público primeira IA da classe Mythos com restrição a temas sensíveis",
+          "url": "https://pauloleads.com.br/analises-mercado/2026-06-09-anthropic-mythos-qualificacao-semantica-governanca-pipeline",
+          "datePublished": "2026-06-09",
+          "articleSection": "Análise de Mercado"
+        },
+        {
+          "@type": "Article",
+          "headline": "UE ordena que Meta libere acesso de agentes de IA rivais ao WhatsApp",
+          "url": "https://pauloleads.com.br/analises-mercado/2026-06-09-ue-meta-whatsapp-interoperabilidade-infraestrutura-comercial",
+          "datePublished": "2026-06-09",
+          "articleSection": "Análise de Mercado"
+        },
+        {
+          "@type": "Article",
+          "headline": "Bilhões dos EUA no futebol expõem assimetria: valuation 4x vs 14x não vira eficiência sem governança",
+          "url": "https://pauloleads.com.br/analises-mercado/2026-06-09-futebol-eua-assimetria-informacional-governanca-pipeline",
+          "datePublished": "2026-06-09",
+          "articleSection": "Análise de Mercado"
+        },
+        {
+          "@type": "Article",
+          "headline": "Agentes no ChatGPT reduzem latência, mas sem RAG e injeção nativa fricção consome 30% do tempo",
+          "url": "https://pauloleads.com.br/analises-mercado/2026-06-09-openai-chatgpt-agentes-rag-injecao-nativa",
+          "datePublished": "2026-06-09",
+          "articleSection": "Análise de Mercado"
+        },
+        {
+          "@type": "Article",
+          "headline": "Só 23% geram valor com IA: latência operacional anula ganho sem orquestração de dados",
+          "url": "https://pauloleads.com.br/analises-mercado/2026-06-09-brasil-era-inteligente-orquestracao-dados-latencia",
+          "datePublished": "2026-06-09",
+          "articleSection": "Análise de Mercado"
+        },
+        {
+          "@type": "Article",
+          "headline": "Processos contra IAs expõem passivo: vantagem é infraestrutura de aquisição com rastreabilidade",
+          "url": "https://pauloleads.com.br/analises-mercado/2026-06-09-cnn-perplexity-infraestrutura-aquisicao-rastreabilidade",
+          "datePublished": "2026-06-09",
+          "articleSection": "Análise de Mercado"
+        },
+        {
+          "@type": "Article",
+          "headline": "Personalidade jurídica para IA é arquitetura de aquisição: capital busca latência inferior ao humano",
+          "url": "https://pauloleads.com.br/analises-mercado/2026-06-09-milei-ia-desregulada-arquitetura-aquisicao-assimetria",
+          "datePublished": "2026-06-09",
+          "articleSection": "Análise de Mercado"
+        },
+        {
+          "@type": "Article",
+          "headline": "Volta da poupança não é otimismo: é inteligência de demanda buscando previsibilidade comercial",
+          "url": "https://pauloleads.com.br/analises-mercado/2026-06-09-poupanca-depositos-inteligencia-demanda-previsibilidade",
+          "datePublished": "2026-06-09",
+          "articleSection": "Análise de Mercado"
+        },
+        {
+          "@type": "Article",
+          "headline": "Priorização algorítmica sem sinais de intenção é triagem cega: IA exige dados para produtividade",
+          "url": "https://pauloleads.com.br/analises-mercado/2026-06-09-criterios-escolha-priorizacao-algoritmica-sinais",
+          "datePublished": "2026-06-09",
+          "articleSection": "Análise de Mercado"
+        },
+        {
+          "@type": "Article",
+          "headline": "IA reduz latência de decisão, mas requalificação lenta amplia assimetria informacional",
+          "url": "https://pauloleads.com.br/analises-mercado/2026-06-09-jovens-ia-assimetria-informacional-engenharia-microdados",
+          "datePublished": "2026-06-09",
+          "articleSection": "Análise de Mercado"
+        },
+        {
+          "@type": "Article",
+          "headline": "Múltiplos da SpaceX são CAC de opção: assimetria sem demanda é volatilidade",
+          "url": "https://pauloleads.com.br/analises-mercado/2026-06-08-spacex-assimetria-informacional-inteligencia-demanda",
+          "datePublished": "2026-06-08",
+          "articleSection": "Análise de Mercado"
+        },
+        {
+          "@type": "Article",
+          "headline": "Dívida consumindo 25% do EBITDA é latência financeira: Braskem precisa de governança de pipeline",
+          "url": "https://pauloleads.com.br/analises-mercado/2026-06-08-braskem-divida-governanca-pipeline-engenharia-receita",
+          "datePublished": "2026-06-08",
+          "articleSection": "Análise de Mercado"
+        },
+        {
+          "@type": "Article",
+          "headline": "Crédito eleitoral em plena carga é CAC sistêmico: calor vira inflação sem inteligência de demanda",
+          "url": "https://pauloleads.com.br/analises-mercado/2026-06-08-estimulos-demanda-inteligencia-demanda-priorizacao",
+          "datePublished": "2026-06-08",
+          "articleSection": "Análise de Mercado"
+        },
+        {
+          "@type": "Article",
+          "headline": "Infraestrutura da informação e latência operacional: o diferencial da próxima década",
+          "url": "https://pauloleads.com.br/analises-mercado/2026-08-06-infraestrutura-informacao-latencia-operacional",
+          "datePublished": "2026-08-06",
+          "articleSection": "Análise de Mercado"
+        },
+        {
+          "@type": "Article",
+          "headline": "Mensageria redefine infraestrutura de aquisição e expõe o desafio de atribuição comercial",
+          "url": "https://pauloleads.com.br/analises-mercado/2026-06-08-whatsapp-cac-infraestrutura-aquisicao",
+          "datePublished": "2026-06-08",
+          "articleSection": "Análise de Mercado"
+        },
+        {
+          "@type": "Article",
+          "headline": "Pisa mede IA e expõe fricção de dados auditáveis no CAPEX escolar",
+          "url": "https://pauloleads.com.br/analises-mercado/2026-06-08-pisa-ia-engenharia-microdados",
+          "datePublished": "2026-06-08",
+          "articleSection": "Análise de Mercado"
+        },
+        {
+          "@type": "Article",
+          "headline": "Troca de geladeiras vira gestão de demanda com inteligência territorial e qualificação preditiva",
+          "url": "https://pauloleads.com.br/analises-mercado/2026-06-08-enel-geladeiras-inteligencia-territorial",
+          "datePublished": "2026-06-08",
+          "articleSection": "Análise de Mercado"
+        },
+        {
+          "@type": "Article",
+          "headline": "CAC de incorporadoras exige infraestrutura comercial bare metal e engenharia de microdados",
+          "url": "https://pauloleads.com.br/analises-mercado/2026-06-08-mastrorosa-cac-imobiliario-bare-metal",
+          "datePublished": "2026-06-08",
+          "articleSection": "Análise de Mercado"
+        },
+        {
+          "@type": "Article",
+          "headline": "Redução de CAC no MCMV exige arquitetura RAG e orquestração autônoma de vendas",
+          "url": "https://pauloleads.com.br/analises-mercado/2026-06-08-mcmv-rag-orquestracao-autonoma",
+          "datePublished": "2026-06-08",
+          "articleSection": "Análise de Mercado"
+        },
+        {
+          "@type": "Article",
+          "headline": "Pressão no trabalho é sintoma de latência operacional. Solução é infraestrutura comercial bare metal",
+          "url": "https://pauloleads.com.br/analises-mercado/2026-06-08-pressao-trabalho-latencia-operacional-infraestrutura",
+          "datePublished": "2026-06-08",
+          "articleSection": "Análise de Mercado"
+        },
+        {
+          "@type": "Article",
+          "headline": "O debate da escala 6x1 ignora o ralo de capital em B2B. Solução é infraestrutura comercial bare metal",
+          "url": "https://pauloleads.com.br/analises-mercado/2026-06-08-pec-alternativa-6x1-infraestrutura-comercial-bare-metal",
+          "datePublished": "2026-06-08",
+          "articleSection": "Análise de Mercado"
+        },
+        {
+          "@type": "Article",
+          "headline": "O gargalo da OpenAI não é data center. É latência comercial em operações B2B",
+          "url": "https://pauloleads.com.br/analises-mercado/2026-06-08-openai-ipo-latencia-comercial-bare-metal",
+          "datePublished": "2026-06-08",
+          "articleSection": "Análise de Mercado"
+        },
+        {
+          "@type": "Article",
+          "headline": "Lei do Devedor Contumaz remove subsídio de sonegação e desloca vantagem para inteligência territorial",
+          "url": "https://pauloleads.com.br/analises-mercado/2026-06-08-receita-devedor-contumaz-inteligencia-territorial",
+          "datePublished": "2026-06-08",
+          "articleSection": "Análise de Mercado"
+        },
+        {
+          "@type": "Article",
+          "headline": "Fadiga do TikTok Shop expõe ruptura na arquitetura de aquisição. Solução é funil orientado por sinais",
+          "url": "https://pauloleads.com.br/analises-mercado/2026-06-08-tiktok-shop-funil-orientado-sinais",
+          "datePublished": "2026-06-08",
+          "articleSection": "Análise de Mercado"
+        },
+        {
+          "@type": "Article",
+          "headline": "Robotáxis deslocam gargalo para malha de decisão em tempo real. Vantagem é inteligência geográfica",
+          "url": "https://pauloleads.com.br/analises-mercado/2026-06-08-uber-autonomos-inteligencia-geografica-priorizacao",
+          "datePublished": "2026-06-08",
+          "articleSection": "Análise de Mercado"
+        },
+        {
+          "@type": "Article",
+          "headline": "Amplitude sem share of wallet é CAC inflado: Nubank expõe o dilema da relevância",
+          "url": "https://pauloleads.com.br/analises-mercado/2026-06-08-nubank-share-of-wallet-engenharia-microdados",
+          "datePublished": "2026-06-08",
+          "articleSection": "Análise de Mercado"
+        },
+        {
+          "@type": "Article",
+          "headline": "Risco operacional em B2B é latência comercial, não segurança de modelo. Solução é bare metal e RAG",
+          "url": "https://pauloleads.com.br/analises-mercado/2026-04-21-anthropic-rag-bare-metal-orquestracao",
+          "datePublished": "2026-04-21",
+          "articleSection": "Análise de Mercado"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+  <!-- Tipografia e identidade visual Paulo Leads -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --font-display: 'Montserrat', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --color-bg: #0b1220;
+      --color-surface: #101a2d;
+      --color-surface-2: #13203a;
+      --color-border: rgba(255,255,255,0.12);
+      --color-text: #edf2f7;
+      --color-text-muted: #b7c1d2;
+      --color-primary: #dd8a31;
+      --color-primary-soft: rgba(221,138,49,0.12);
+      --radius-lg: 1rem;
+      --radius-md: 0.75rem;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: var(--font-display); background: var(--color-bg); color: var(--color-text); line-height: 1.65; padding: 2rem 1rem; }
+    .container { max-width: 1120px; margin: 0 auto; }
+    
+    /* Header e navegação */
+    .header { margin-bottom: 3rem; border-bottom: 1px solid var(--color-border); padding-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .brand { display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 800; font-size: 1.5rem; text-decoration: none; color: var(--color-text); }
+    .brand span { color: var(--color-primary); }
+    .nav-back { font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-primary); text-decoration: none; border: 1px solid var(--color-border); padding: 0.4rem 1rem; border-radius: 2rem; transition: 0.2s; }
+    .nav-back:hover { background: var(--color-primary-soft); border-color: var(--color-primary); }
+    
+    h1 { font-size: 2.5rem; font-weight: 800; letter-spacing: -0.02em; margin: 1rem 0 0.5rem; }
+    .subhead { font-size: 1.1rem; color: var(--color-text-muted); max-width: 700px; margin-bottom: 2.5rem; border-left: 3px solid var(--color-primary); padding-left: 1.2rem; }
+    
+    /* Filtro / chips */
+    .topic-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; }
+    .chip { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 2rem; padding: 0.3rem 1rem; font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-text-muted); }
+    .chip.active { background: var(--color-primary-soft); border-color: var(--color-primary); color: var(--color-primary); }
+    
+    /* Grid de análises - ORDEM NORMAL: o primeiro article no HTML aparece primeiro */
+    .analyses-grid { 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 1.8rem; 
+      margin: 2rem 0 3rem; 
+    }
+    .analysis-card { 
+      background: var(--color-surface); 
+      border-radius: var(--radius-lg); 
+      border: 1px solid var(--color-border); 
+      overflow: hidden; 
+      transition: transform 0.2s ease, border-color 0.2s; 
+      flex: 1 1 340px;
+      max-width: calc(50% - 0.9rem);
+    }
+    @media (max-width: 720px) {
+      .analysis-card { max-width: 100%; }
+    }
+    .analysis-card:hover { transform: translateY(-3px); border-color: var(--color-primary-soft); }
+    .card-content { padding: 1.5rem; }
+    .card-meta { font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-primary); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.5rem; }
+    .analysis-card h3 { font-size: 1.25rem; font-weight: 700; margin: 0.5rem 0 0.75rem; line-height: 1.4; }
+    .analysis-card h3 a { color: var(--color-text); text-decoration: none; transition: color 0.2s; }
+    .analysis-card h3 a:hover { color: var(--color-primary); }
+    .card-excerpt { color: var(--color-text-muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 1rem; }
+    .tech-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.75rem 0; }
+    .tech-tag { background: var(--color-surface-2); font-family: var(--font-mono); font-size: 0.65rem; padding: 0.2rem 0.6rem; border-radius: 1rem; color: var(--color-text-muted); }
+    .read-more { font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-primary); text-decoration: none; border-bottom: 1px dashed; display: inline-flex; align-items: center; gap: 0.3rem; }
+    .read-more:hover { border-bottom-style: solid; }
+    
+    .footer { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--color-border); font-size: 0.8rem; color: var(--color-text-muted); text-align: center; }
+    .footer a { color: var(--color-primary); text-decoration: none; }
+    
+    @media (max-width: 720px) {
+      h1 { font-size: 1.8rem; }
+      .header { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <header class="header">
+    <a href="https://pauloleads.com.br" class="brand">Paulo<span>Leads</span></a>
+    <a href="https://pauloleads.com.br" class="nav-back">← Voltar para o site</a>
+  </header>
+
+  <h1>Observatório de Infraestrutura Comercial</h1>
+  <div class="subhead">
+    Interpretação técnica de eventos econômicos, mudanças setoriais e tendências tecnológicas sob a ótica da <strong>engenharia de receita</strong>, <strong>redução de CAC</strong> e <strong>arquitetura de aquisição</strong>.
+  </div>
+
+  <div class="topic-chips">
+    <span class="chip active">Todas</span>
+    <span class="chip">Infraestrutura comercial</span>
+    <span class="chip">Latência operacional</span>
+    <span class="chip">IA Conversacional</span>
+    <span class="chip">Orquestração de dados</span>
+  </div>
+
+  <div class="analyses-grid">
+    <!-- 
+      ⚠️ INSTRUÇÃO PARA NOVOS CARDS: 
+      Coloque cada novo artigo como PRIMEIRO filho desta div (logo após este comentário).
+      Assim ele aparecerá no topo da página, mantendo a ordem cronológica inversa (mais novo primeiro).
+      Copie o bloco <article> completo e cole acima do card mais antigo.
+    -->
+        <!-- CARD 33: Aneel Megaleilão -->
+    <article class="analysis-card">
+      <div class="card-content">
+        <span class="card-meta">09.jun.2026 · Mercado · Energia</span>
+        <h3><a href="/analises-mercado/2026-06-09-aneel-megaleilao-energia-governanca-pipeline-incerteza-regulatoria">Aneel homologa contratos de megaleilão de energia</a></h3>
+        <div class="tech-tags">
+          <span class="tech-tag">governança de pipeline</span>
+          <span class="tech-tag">rastreabilidade de decisões</span>
+          <span class="tech-tag">orquestração de dados</span>
+        </div>
+        <p class="card-excerpt">Homologação sob liminar expõe risco de incerteza regulatória. Economia de R$ 33 bi depende de validação com orquestração de dados, não listas estáticas.</p>
+        <a href="/analises-mercado/2026-06-09-aneel-megaleilao-energia-governanca-pipeline-incerteza-regulatoria" class="read-more">Ler análise completa →</a>
+      </div>
+    </article>
+
+    <!-- CARD 34: Investimento Simples -->
+    <article class="analysis-card">
+      <div class="card-content">
+        <span class="card-meta">09.jun.2026 · Blogs · Finanças</span>
+        <h3><a href="/analises-mercado/2026-06-09-investimento-simples-roi-prospeccao-fria-horizonte-analise">O investimento mais simples venceu todos os outros</a></h3>
+        <div class="tech-tags">
+          <span class="tech-tag">horizonte de análise</span>
+          <span class="tech-tag">ROI</span>
+          <span class="tech-tag">ciclo de conversão</span>
+        </div>
+        <p class="card-excerpt">Diferença de retorno entre títulos iguais expõe risco de prazo. ROI de IA vs prospecção fria exige horizonte adequado ao ciclo. Métrica no período errado gera frustração.</p>
+        <a href="/analises-mercado/2026-06-09-investimento-simples-roi-prospeccao-fria-horizonte-analise" class="read-more">Ler análise completa →</a>
+      </div>
+    </article>
+        <!-- CARD 29: Gato Solar -->
+    <article class="analysis-card">
+      <div class="card-content">
+        <span class="card-meta">09.jun.2026 · Colunas · Energia</span>
+        <h3><a href="/analises-mercado/2026-06-09-gato-solar-rastreabilidade-potencia-curtailment-rede">'Gato solar' causa distúrbios em toda a rede elétrica</a></h3>
+        <div class="tech-tags">
+          <span class="tech-tag">medição bidirecional</span>
+          <span class="tech-tag">registro contínuo de potência</span>
+          <span class="tech-tag">rastreabilidade</span>
+        </div>
+        <p class="card-excerpt">Falta de medição bidirecional gera assimetria na rede. Protocolo Hidra usa registro contínuo de potência para rastreabilidade e mitigação de curtailment.</p>
+        <a href="/analises-mercado/2026-06-09-gato-solar-rastreabilidade-potencia-curtailment-rede" class="read-more">Ler análise completa →</a>
+      </div>
+    </article>
+
+    <!-- CARD 30: Ilhabela Usina -->
+    <article class="analysis-card">
+      <div class="card-content">
+        <span class="card-meta">09.jun.2026 · Cotidiano · Infraestrutura</span>
+        <h3><a href="/analises-mercado/2026-06-09-ilhabela-usina-dessalinizacao-speed-to-lead-latencia-operacional">Ilhabela terá usina para tornar água do mar potável a humanos</a></h3>
+        <div class="tech-tags">
+          <span class="tech-tag">infraestrutura de capacidade antecipada</span>
+          <span class="tech-tag">speed-to-lead</span>
+          <span class="tech-tag">latências operacionais</span>
+        </div>
+        <p class="card-excerpt">Picos sazonais exigem capacidade antecipada. Latências operacionais de horas anulam investimento. Protocolo Hidra trata speed-to-lead como engenharia de demanda.</p>
+        <a href="/analises-mercado/2026-06-09-ilhabela-usina-dessalinizacao-speed-to-lead-latencia-operacional" class="read-more">Ler análise completa →</a>
+      </div>
+    </article>
+        <!-- CARD 27: Risco Financeiro -->
+    <article class="analysis-card">
+      <div class="card-content">
+        <span class="card-meta">01.jun.2026 · Mercado · Infraestrutura comercial</span>
+        <h3><a href="/analises-mercado/2026-06-01-risco-financeiro-rastreabilidade-origem-engenharia-microdados">Risco maior não é militar; é financeiro</a></h3>
+        <div class="tech-tags">
+          <span class="tech-tag">rastreabilidade de origem</span>
+          <span class="tech-tag">engenharia de microdados</span>
+          <span class="tech-tag">qualificação semântica</span>
+        </div>
+        <p class="card-excerpt">Deslocamento do ônus para instituições financeiras expõe ausência de rastreabilidade. Protocolo Hidra integra CNPJs governamentais em pipeline autônomo via qualificação semântica.</p>
+        <a href="/analises-mercado/2026-06-01-risco-financeiro-rastreabilidade-origem-engenharia-microdados" class="read-more">Ler análise completa →</a>
+      </div>
+    </article>
+
+    <!-- CARD 28: STF Big Techs -->
+    <article class="analysis-card">
+      <div class="card-content">
+        <span class="card-meta">09.jun.2026 · Poder · Tecnologia</span>
+        <h3><a href="/analises-mercado/2026-06-09-stf-big-techs-rastreabilidade-moderacao-governanca-pipeline">STF julga recursos e deve definir alcance de decisão que ampliou responsabilidade de big techs</a></h3>
+        <div class="tech-tags">
+          <span class="tech-tag">rastreabilidade</span>
+          <span class="tech-tag">orquestração de dados primários</span>
+          <span class="tech-tag">governança de pipeline</span>
+        </div>
+        <p class="card-excerpt">Definição de falha sistêmica no STF exige rastreabilidade nas decisões de moderação. Sem governança de pipeline, notificações geram ineficiência e risco de censura.</p>
+        <a href="/analises-mercado/2026-06-09-stf-big-techs-rastreabilidade-moderacao-governanca-pipeline" class="read-more">Ler análise completa →</a>
+      </div>
+    </article>
+        <!-- CARD 27: Apollo Blackstone Anthropic -->
+    <article class="analysis-card">
+      <div class="card-content">
+        <span class="card-meta">09.jun.2026 · Mercado · Infraestrutura de IA</span>
+        <h3><a href="/analises-mercado/2026-06-09-apollo-blackstone-anthropic-orquestracao-dados-capex">Apollo e Blackstone levantam US$ 35 bilhões em acordo de financiamento de chips para a Anthropic</a></h3>
+        <div class="tech-tags">
+          <span class="tech-tag">orquestração de dados</span>
+          <span class="tech-tag">alocação preditiva</span>
+          <span class="tech-tag">Engenharia de Receita</span>
+        </div>
+        <p class="card-excerpt">Volume de crédito privado para infraestrutura de IA expõe risco de escalar sem lastro operacional. Protocolo Hidra substitui capex fixo por arquitetura de orquestração para baratear aquisição.</p>
+        <a href="/analises-mercado/2026-06-09-apollo-blackstone-anthropic-orquestracao-dados-capex" class="read-more">Ler análise completa →</a>
+      </div>
+    </article>
+
+    <!-- CARD 28: GIJN Jornalistas Investigativos -->
+    <article class="analysis-card">
+      <div class="card-content">
+        <span class="card-meta">09.jun.2026 · Tecnologia · Inteligência comercial</span>
+        <h3><a href="/analises-mercado/2026-06-09-gijn-jornalismo-investigativo-rastreabilidade-dados-primarios">GIJN lança plataforma global para formação de jornalistas investigativos</a></h3>
+        <div class="tech-tags">
+          <span class="tech-tag">rastreabilidade</span>
+          <span class="tech-tag">dados primários</span>
+          <span class="tech-tag">qualificação semântica</span>
+        </div>
+        <p class="card-excerpt">Capacitação em IA expõe lacuna: rastreabilidade de fontes primárias. Protocolo Hidra implementa inteligência comercial com orquestração de dados e qualificação semântica na origem.</p>
+        <a href="/analises-mercado/2026-06-09-gijn-jornalismo-investigativo-rastreabilidade-dados-primarios" class="read-more">Ler análise completa →</a>
+      </div>
+    </article>
+        <!-- CARD 24: Airbnb Regulação -->
+    <article class="analysis-card">
+      <div class="card-content">
+        <span class="card-meta">05.mai.2026 · Mercado · Engenharia de microdados</span>
+        <h3><a href="/analises-mercado/2026-05-01-airbnb-regulacao-rastreabilidade-uso-solo-receita">CEO do Airbnb admite que plataforma pode ser problema em cidades com crise habitacional</a></h3>
+        <div class="tech-tags">
+          <span class="tech-tag">rastreabilidade do uso do solo</span>
+          <span class="tech-tag">engenharia de microdados</span>
+          <span class="tech-tag">assimetria informacional</span>
+        </div>
+        <p class="card-excerpt">Regulação de aluguel curto expõe necessidade de rastreabilidade do uso do solo. Protocolo Hidra usa dados públicos da Receita para dominar polos econômicos via engenharia de microdados.</p>
+        <a href="/analises-mercado/2026-05-01-airbnb-regulacao-rastreabilidade-uso-solo-receita" class="read-more">Ler análise completa →</a>
+      </div>
+    </article>
+
+    <!-- CARD 25: Anthropic Mythos -->
+    <article class="analysis-card">
+      <div class="card-content">
+        <span class="card-meta">09.jun.2026 · Tecnologia · IA Conversacional</span>
+        <h3><a href="/analises-mercado/2026-06-09-anthropic-mythos-qualificacao-semantica-governanca-pipeline">Anthropic lança ao público primeira IA da classe Mythos com restrição a temas sensíveis</a></h3>
+        <div class="tech-tags">
+          <span class="tech-tag">qualificação semântica</span>
+          <span class="tech-tag">governança de pipeline</span>
+          <span class="tech-tag">Engenharia de Receita</span>
+        </div>
+        <p class="card-excerpt">Segmentação entre versão restrita e aberta exige qualificação semântica na origem. Protocolo Hidra filtra leads B2B desqualificados em tempo real, reduzindo custo adicional de tokens.</p>
+        <a href="/analises-mercado/2026-06-09-anthropic-mythos-qualificacao-semantica-governanca-pipeline" class="read-more">Ler análise completa →</a>
+      </div>
+    </article>
+
+    <!-- CARD 26: UE Meta WhatsApp -->
+    <article class="analysis-card">
+      <div class="card-content">
+        <span class="card-meta">09.jun.2026 · Tecnologia · Infraestrutura comercial</span>
+        <h3><a href="/analises-mercado/2026-06-09-ue-meta-whatsapp-interoperabilidade-infraestrutura-comercial">UE ordena que Meta libere acesso de agentes de IA rivais ao WhatsApp</a></h3>
+        <div class="tech-tags">
+          <span class="tech-tag">infraestrutura comercial</span>
+          <span class="tech-tag">arquitetura de múltiplos canais</span>
+          <span class="tech-tag">Tecnologia</span>
+        </div>
+        <p class="card-excerpt">Decisão da UE força interoperabilidade e expõe risco de plataformas fechadas. Protocolo Hidra estrutura máquina de vendas imune a bloqueios com múltiplos canais e governança própria.</p>
+        <a href="/analises-mercado/2026-06-09-ue-meta-whatsapp-interoperabilidade-infraestrutura-comercial" class="read-more">Ler análise completa →</a>
+      </div>
+    </article>
+        <!-- CARD 17: Deborah Bizarria - Critérios de escolha -->
+    <article class="analysis-card">
+      <div class="card-content">
+        <span class="card-meta">09.jun.2026 · Comportamento · Sinais de intenção</span>
+        <h3><a href="/analises-mercado/2026-06-09-criterios-escolha-priorizacao-algoritmica-sinais">Priorização algorítmica sem sinais de intenção é triagem cega: IA exige dados para produtividade</a></h3>
+        <div class="tech-tags">
+          <span class="tech-tag">priorização algorítmica</span>
+          <span class="tech-tag">sinais de intenção</span>
+          <span class="tech-tag">aquisição orientada por dados</span>
+        </div>
+        <p class="card-excerpt">Plataformas que usam priorização algorítmica baseada em sinais de intenção reduzem tempo de triagem em 60-70%. No horizonte estrutural, vantagem migra de volume para estrutura de aquisição que converte atenção escassa em avanço.</p>
+        <a href="/analises-mercado/2026-06-09-criterios-escolha-priorizacao-algoritmica-sinais" class="read-more">Ler análise completa →</a>
+      </div>
+    </article>
+
+    <!-- CARD 18: Poupança - Depósitos líquidos -->
+    <article class="analysis-card">
+      <div class="card-content">
+        <span class="card-meta">09.jun.2026 · Mercado · Inteligência de demanda</span>
+        <h3><a href="/analises-mercado/2026-06-09-poupanca-depositos-inteligencia-demanda-previsibilidade">Volta da poupança não é otimismo: é inteligência de demanda buscando previsibilidade comercial</a></h3>
+        <div class="tech-tags">
+          <span class="tech-tag">previsibilidade comercial</span>
+          <span class="tech-tag">arquitetura de receita</span>
+          <span class="tech-tag">inteligência de demanda</span>
+        </div>
+        <p class="card-excerpt">Depósitos líquidos na poupança revelam inteligência de demanda, não propensão a poupar. Sinal de intenção busca remuneração acima do risco. Captação deixa a inércia e passa a depender de arquitetura de receita.</p>
+        <a href="/analises-mercado/2026-06-09-poupanca-depositos-inteligencia-demanda-previsibilidade" class="read-more">Ler análise completa →</a>
+      </div>
+    </article>
+
+    <!-- CARD 19: Milei IA desregulada -->
+    <article class="analysis-card">
+      <div class="card-content">
+        <span class="card-meta">09.jun.2026 · Tecnologia · Arquitetura de aquisição</span>
+        <h3><a href="/analises-mercado/2026-06-09-milei-ia-desregulada-arquitetura-aquisicao-assimetria">Personalidade jurídica para IA é arquitetura de aquisição: capital busca latência inferior ao humano</a></h3>
+        <div class="tech-tags">
+          <span class="tech-tag">arquitetura de aquisição</span>
+          <span class="tech-tag">assimetria informacional</span>
+          <span class="tech-tag">governança de pipeline</span>
+        </div>
+        <p class="card-excerpt">Proposta argentina desloca decisão para arquitetura de aquisição automatizada. Capital migra para latência inferior ao ciclo humano, ampliando assimetria informacional. Agentes assinando sem humanos testam governança de pipeline.</p>
+        <a href="/analises-mercado/2026-06-09-milei-ia-desregulada-arquitetura-aquisicao-assimetria" class="read-more">Ler análise completa →</a>
+      </div>
+    </article>
+
+    <!-- CARD 20: CNN vs Perplexity -->
+    <article class="analysis-card">
+      <div class="card-content">
+        <span class="card-meta">09.jun.2026 · Tecnologia · Infraestrutura de aquisição</span>
+        <h3><a href="/analises-mercado/2026-06-09-cnn-perplexity-infraestrutura-aquisicao-rastreabilidade">Processos contra IAs expõem passivo: vantagem é infraestrutura de aquisição com rastreabilidade</a></h3>
+        <div class="tech-tags">
+          <span class="tech-tag">infraestrutura de aquisição</span>
+          <span class="tech-tag">aquisição orientada por dados</span>
+          <span class="tech-tag">engenharia de microdados</span>
+        </div>
+        <p class="card-excerpt">115 ações por direitos autorais revelam ponto cego: córpus não licenciados geram passivo jurídico que escala com valuation. Vantagem desloca para infraestrutura de aquisição com rastreabilidade jurídica desde a origem.</p>
+        <a href="/analises-mercado/2026-06-09-cnn-perplexity-infraestrutura-aquisicao-rastreabilidade" class="read-more">Ler análise completa →</a>
+      </div>
+    </article>
+
+    <!-- CARD 21: Brasil na Era Inteligente -->
+    <article class="analysis-card">
+      <div class="card-content">
+        <span class="card-meta">09.jun.2026 · Tecnologia · Orquestração de dados</span>
+        <h3><a href="/analises-mercado/2026-06-09-brasil-era-inteligente-orquestracao-dados-latencia">Só 23% geram valor com IA: latência operacional anula ganho sem orquestração de dados</a></h3>
+        <div class="tech-tags">
+          <span class="tech-tag">orquestração de dados</span>
+          <span class="tech-tag">latência operacional</span>
+          <span class="tech-tag">aquisição de clientes</span>
+        </div>
+        <p class="card-excerpt">Descompasso entre adoção e valor em IA vem de silos táticos. Sem orquestração de dados no núcleo de aquisição, latências superiores a horas na qualificação anulam 40-50% dos ganhos de produtividade potenciais.</p>
+        <a href="/analises-mercado/2026-06-09-brasil-era-inteligente-orquestracao-dados-latencia" class="read-more">Ler análise completa →</a>
+      </div>
+    </article>
+
+    <!-- CARD 22: OpenAI reformulação ChatGPT -->
+    <article class="analysis-card">
+      <div class="card-content">
+        <span class="card-meta">09.jun.2026 · Tecnologia · Arquitetura RAG</span>
+        <h3><a href="/analises-mercado/2026-06-09-openai-chatgpt-agentes-rag-injecao-nativa">Agentes no ChatGPT reduzem latência, mas sem RAG e injeção nativa fricção consome 30% do tempo</a></h3>
+        <div class="tech-tags">
+          <span class="tech-tag">arquitetura RAG aplicada a vendas</span>
+          <span class="tech-tag">engenharia de microdados</span>
+          <span class="tech-tag">injeção nativa de leads no CRM</span>
+        </div>
+        <p class="card-excerpt">Transição para agentes autônomos corta latência operacional, mas comandos manuais ainda consomem 30% do tempo B2B. Escala real exige arquitetura RAG + injeção nativa de contexto para eliminar fricção entre intenção e ação.</p>
+        <a href="/analises-mercado/2026-06-09-openai-chatgpt-agentes-rag-injecao-nativa" class="read-more">Ler análise completa →</a>
+      </div>
+    </article>
+
+    <!-- CARD 23: Futebol EUA -->
+    <article class="analysis-card">
+      <div class="card-content">
+        <span class="card-meta">09.jun.2026 · Esportes · Assimetria informacional</span>
+        <h3><a href="/analises-mercado/2026-06-09-futebol-eua-assimetria-informacional-governanca-pipeline">Bilhões dos EUA no futebol expõem assimetria: valuation 4x vs 14x não vira eficiência sem governança</a></h3>
+        <div class="tech-tags">
+          <span class="tech-tag">assimetria informacional</span>
+          <span class="tech-tag">governança de pipeline</span>
+          <span class="tech-tag">aquisição orientada por dados</span>
+        </div>
+        <p class="card-excerpt">Investidores dos EUA compram futebol europeu por valuation de receita 4x vs 14x, mas prejuízo de €1 bi revela gargalo: aquisição orientada por dados não reduziu latência entre custo de contratação e retorno esportivo.</p>
+        <a href="/analises-mercado/2026-06-09-futebol-eua-assimetria-informacional-governanca-pipeline" class="read-more">Ler análise completa →</a>
+      </div>
+    </article>
+        <!-- CARD 17: Jovens IA e Assimetria Informacional -->
+    <article class="analysis-card">
+      <div class="card-content">
+        <span class="card-meta">09.jun.2026 · Tecnologia · Assimetria informacional</span>
+        <h3><a href="/analises-mercado/2026-06-09-jovens-ia-assimetria-informacional-engenharia-microdados">IA reduz latência de decisão, mas requalificação lenta amplia assimetria informacional</a></h3>
+        <div class="tech-tags">
+          <span class="tech-tag">assimetria informacional</span>
+          <span class="tech-tag">engenharia de microdados</span>
+          <span class="tech-tag">automação comercial</span>
+        </div>
+        <p class="card-excerpt">Difusão de IA entre jovens acelera decisões, mas ciclos de adaptação >24 meses ampliam assimetria entre setores. Engenharia de microdados vira diferencial para quem integra IA primeiro e reduz CAC marginal.</p>
+        <a href="/analises-mercado/2026-06-09-jovens-ia-assimetria-informacional-engenharia-microdados" class="read-more">Ler análise completa →</a>
+      </div>
+    </article>
+    <!-- CARD 17: SpaceX Assimetria Informacional -->
+    <article class="analysis-card">
+      <div class="card-content">
+        <span class="card-meta">08.jun.2026 · Tecnologia · Assimetria informacional</span>
+        <h3><a href="/analises-mercado/2026-06-08-spacex-assimetria-informacional-inteligencia-demanda">Múltiplos da SpaceX são CAC de opção: assimetria sem demanda é volatilidade</a></h3>
+        <div class="tech-tags">
+          <span class="tech-tag">assimetria informacional</span>
+          <span class="tech-tag">inteligência de demanda</span>
+          <span class="tech-tag">engenharia de microdados</span>
+        </div>
+        <p class="card-excerpt">Starlink sustenta caixa, mas preço >15x receita embute prêmio de opção. Com assimetria informacional elevada e inteligência de demanda incipiente, atrasos de execução amplificam volatilidade. Vantagem migra para quem prova demanda pagante.</p>
+        <a href="/analises-mercado/2026-06-08-spacex-assimetria-informacional-inteligencia-demanda" class="read-more">Ler análise completa →</a>
+      </div>
+    </article>
+    
+        <!-- CARD 17: Braskem Dívida e Governança -->
+    <article class="analysis-card">
+      <div class="card-content">
+        <span class="card-meta">08.jun.2026 · Mercado · Governança de pipeline</span>
+        <h3><a href="/analises-mercado/2026-06-08-braskem-divida-governanca-pipeline-engenharia-receita">Dívida consumindo 25% do EBITDA é latência financeira: Braskem precisa de governança de pipeline</a></h3>
+        <div class="tech-tags">
+          <span class="tech-tag">governança de pipeline</span>
+          <span class="tech-tag">engenharia de receita</span>
+          <span class="tech-tag">previsibilidade comercial</span>
+        </div>
+        <p class="card-excerpt">Serviço da dívida a 25% do EBITDA restringe capex e uso de capacidade. Alongar duration + governança de pipeline e engenharia de receita via mix recompõem margens. Alívio no spread petroquímico só vira caixa com contratos indexados.</p>
+        <a href="/analises-mercado/2026-06-08-braskem-divida-governanca-pipeline-engenharia-receita" class="read-more">Ler análise completa →</a>
+      </div>
+    </article>
+    <article class="analysis-card">
+      <div class="card-content">
+        <span class="card-meta">08.jun.2026 · Macroeconomia · Inteligência de demanda</span>
+        <h3><a href="/analises-mercado/2026-06-08-estimulos-demanda-inteligencia-demanda-priorizacao">Crédito eleitoral em plena carga é CAC sistêmico: calor vira inflação sem inteligência de demanda</a></h3>
+        <div class="tech-tags">
+          <span class="tech-tag">inteligência de demanda</span>
+          <span class="tech-tag">priorização algorítmica</span>
+          <span class="tech-tag">assimetria informacional</span>
+        </div>
+        <p class="card-excerpt">Picos de originação de 30% em 8 semanas alongam prazos e elevam spreads. Com inteligência de demanda e priorização algorítmica, aquisição converte calor em eficiência. Vantagem migra para quem aloca capital.</p>
+        <a href="/analises-mercado/2026-06-08-estimulos-demanda-inteligencia-demanda-priorizacao" class="read-more">Ler análise completa →</a>
+      </div>
+    </article>
+    <!-- CARD 1: Infraestrutura da informação (mais recente - 2026-08-06) -->
+    <article class="analysis-card">
+      <div class="card-content">
+        <span class="card-meta">08.ago.2026 · Infraestrutura · Latência operacional</span>
+        <h3><a href="/analises-mercado/2026-08-06-infraestrutura-informacao-latencia-operacional">Infraestrutura da informação e latência operacional: o diferencial da próxima década</a></h3>
+        <div class="tech-tags">
+          <span class="tech-tag">Latência operacional</span>
+          <span class="tech-tag">Orquestração de dados</span>
+          <span class="tech-tag">Assimetria informacional</span>
+        </div>
+        <p class="card-excerpt">Atrasos de 30 a 60 minutos na comunicação entre Estado, imprensa e redes locais amplificam desperdício e custos de resposta. Estruturar a informação como infraestrutura reduz fricção, acelera decisões e desloca vantagem para quem opera com baixa latência.</p>
+        <a href="/analises-mercado/2026-08-06-infraestrutura-informacao-latencia-operacional" class="read-more">Ler análise completa →</a>
+      </div>
+    </article>
+
+    <!-- CARD 2: WhatsApp CAC -->
+    <article class="analysis-card">
+      <div class="card-content">
+        <span class="card-meta">08.jun.2026 · Tecnologia · Infraestrutura de aquisição</span>
+        <h3><a href="/analises-mercado/2026-06-08-whatsapp-cac-infraestrutura-aquisicao">Mensageria redefine infraestrutura de aquisição e expõe o desafio de atribuição comercial</a></h3>
+        <div class="tech-tags">
+          <span class="tech-tag">infraestrutura de aquisição</span>
+          <span class="tech-tag">funil orientado por sinais</span>
+          <span class="tech-tag">atribuição comercial</span>
+        </div>
+        <p class="card-excerpt">O canal no WhatsApp reposiciona distribuição com CAC 20-30% menor pelo alcance orgânico. O ponto cego é atribuição: exige funil orientado por sinais para estimar contribuição e priorizar pautas. Mensageria redefine previsibilidade.</p>
+        <a href="/analises-mercado/2026-06-08-whatsapp-cac-infraestrutura-aquisicao" class="read-more">Ler análise completa →</a>
+      </div>
+    </article>
+
+    <!-- CARD 3: Pisa IA -->
+    <article class="analysis-card">
+      <div class="card-content">
+        <span class="card-meta">08.jun.2026 · Educação · Engenharia de microdados</span>
+        <h3><a href="/analises-mercado/2026-06-08-pisa-ia-engenharia-microdados">Pisa mede IA e expõe fricção de dados auditáveis no CAPEX escolar</a></h3>
+        <div class="tech-tags">
+          <span class="tech-tag">engenharia de microdados</span>
+          <span class="tech-tag">qualificação semântica</span>
+          <span class="tech-tag">governança de pipeline</span>
+        </div>
+        <p class="card-excerpt">A inclusão de letramento digital no Pisa exige engenharia de microdados e qualificação semântica. Redes terão de realocar 15–25% do CAPEX pedagógico. Vantagem para quem integra dados auditáveis em escala.</p>
+        <a href="/analises-mercado/2026-06-08-pisa-ia-engenharia-microdados" class="read-more">Ler análise completa →</a>
+      </div>
+    </article>
+
+    <!-- CARD 4: Enel Geladeiras -->
+    <article class="analysis-card">
+      <div class="card-content">
+        <span class="card-meta">08.jun.2026 · Energia · Inteligência territorial</span>
+        <h3><a href="/analises-mercado/2026-06-08-enel-geladeiras-inteligencia-territorial">Troca de geladeiras vira gestão de demanda com inteligência territorial e qualificação preditiva</a></h3>
+        <div class="tech-tags">
+          <span class="tech-tag">inteligência territorial</span>
+          <span class="tech-tag">qualificação preditiva</span>
+          <span class="tech-tag">gestão de demanda</span>
+        </div>
+        <p class="card-excerpt">A troca de 27 mil geladeiras é gestão de demanda. Com inteligência territorial e qualificação preditiva, priorizam-se domicílios de maior carga base. Corte de 25–30% no uso alivia alimentadores e adia reforços de rede.</p>
+        <a href="/analises-mercado/2026-06-08-enel-geladeiras-inteligencia-territorial" class="read-more">Ler análise completa →</a>
+      </div>
+    </article>
+
+    <!-- CARD 5: Mastrorosa CAC Imobiliário -->
+    <article class="analysis-card">
+      <div class="card-content">
+        <span class="card-meta">08.jun.2026 · Mercado Imobiliário · Infraestrutura bare metal</span>
+        <h3><a href="/analises-mercado/2026-06-08-mastrorosa-cac-imobiliario-bare-metal">CAC de incorporadoras exige infraestrutura comercial bare metal e engenharia de microdados</a></h3>
+        <div class="tech-tags">
+          <span class="tech-tag">infraestrutura comercial bare metal</span>
+          <span class="tech-tag">engenharia de microdados</span>
+          <span class="tech-tag">injeção nativa de leads no CRM</span>
+        </div>
+        <p class="card-excerpt">O custo do crédito é variável externa. Infraestrutura comercial bare metal é controlável. Latência de 4-8h entre sinal de intenção e contato queima 60-70% dos leads. Velocidade abaixo de 5min eleva conversão em 2,1x.</p>
+        <a href="/analises-mercado/2026-06-08-mastrorosa-cac-imobiliario-bare-metal" class="read-more">Ler análise completa →</a>
+      </div>
+    </article>
+
+    <!-- CARD 6: MCMV RAG -->
+    <article class="analysis-card">
+      <div class="card-content">
+        <span class="card-meta">08.jun.2026 · Mercado Imobiliário · Arquitetura RAG</span>
+        <h3><a href="/analises-mercado/2026-06-08-mcmv-rag-orquestracao-autonoma">Redução de CAC no MCMV exige arquitetura RAG e orquestração autônoma de vendas</a></h3>
+        <div class="tech-tags">
+          <span class="tech-tag">arquitetura RAG aplicada a vendas</span>
+          <span class="tech-tag">orquestração de dados</span>
+          <span class="tech-tag">automação comercial</span>
+        </div>
+        <p class="card-excerpt">Construtoras no MCMV operam com latência de processamento comercial elevada por prospecção manual. RAG conecta critérios de elegibilidade e histórico para qualificação em segundos. Reduz CAC B2B em 28-35%.</p>
+        <a href="/analises-mercado/2026-06-08-mcmv-rag-orquestracao-autonoma" class="read-more">Ler análise completa →</a>
+      </div>
+    </article>
+
+    <!-- CARD 7: Pressão no Trabalho -->
+    <article class="analysis-card">
+      <div class="card-content">
+        <span class="card-meta">08.jun.2026 · Carreiras · Latência operacional</span>
+        <h3><a href="/analises-mercado/2026-06-08-pressao-trabalho-latencia-operacional-infraestrutura">Pressão no trabalho é sintoma de latência operacional. Solução é infraestrutura comercial bare metal</a></h3>
+        <div class="tech-tags">
+          <span class="tech-tag">latência operacional</span>
+          <span class="tech-tag">infraestrutura comercial bare metal</span>
+          <span class="tech-tag">engenharia de microdados</span>
+        </div>
+        <p class="card-excerpt">A causa raiz da ansiedade corporativa em B2B é prospecção manual dependente de SDR humano. Essa ineficiência gera perdas superiores a 40% no funil. A correção exige infraestrutura bare metal para redução matemática do CAC.</p>
+        <a href="/analises-mercado/2026-06-08-pressao-trabalho-latencia-operacional-infraestrutura" class="read-more">Ler análise completa →</a>
+      </div>
+    </article>
+
+    <!-- CARD 8: PEC Alternativa 6x1 -->
+    <article class="analysis-card">
+      <div class="card-content">
+        <span class="card-meta">08.jun.2026 · Mercado · Infraestrutura comercial</span>
+        <h3><a href="/analises-mercado/2026-06-08-pec-alternativa-6x1-infraestrutura-comercial-bare-metal">O debate da escala 6x1 ignora o ralo de capital em B2B. Solução é infraestrutura comercial bare metal</a></h3>
+        <div class="tech-tags">
+          <span class="tech-tag">infraestrutura comercial bare metal</span>
+          <span class="tech-tag">engenharia de microdados</span>
+          <span class="tech-tag">redução matemática de CAC</span>
+        </div>
+        <p class="card-excerpt">A ineficiência sistêmica em B2B nasce da dependência de SDRs humanos na prospecção. Esse gargalo gera perdas superiores a 30% no funil e exige engenharia de microdados para redução matemática do CAC.</p>
+        <a href="/analises-mercado/2026-06-08-pec-alternativa-6x1-infraestrutura-comercial-bare-metal" class="read-more">Ler análise completa →</a>
+      </div>
+    </article>
+
+    <!-- CARD 9: OpenAI IPO -->
+    <article class="analysis-card">
+      <div class="card-content">
+        <span class="card-meta">08.jun.2026 · Mercado · Latência operacional</span>
+        <h3><a href="/analises-mercado/2026-06-08-openai-ipo-latencia-comercial-bare-metal">O gargalo da OpenAI não é data center. É latência comercial em operações B2B</a></h3>
+        <div class="tech-tags">
+          <span class="tech-tag">infraestrutura comercial bare metal</span>
+          <span class="tech-tag">latência operacional</span>
+          <span class="tech-tag">redução matemática de CAC</span>
+        </div>
+        <p class="card-excerpt">O modelo mais avançado é inútil se o funil opera com latência superior a horas. A viabilidade exige infraestrutura comercial bare metal e engenharia de microdados para redução matemática do CAC em B2B.</p>
+        <a href="/analises-mercado/2026-06-08-openai-ipo-latencia-comercial-bare-metal" class="read-more">Ler análise completa →</a>
+      </div>
+    </article>
+
+    <!-- CARD 10: Lei Devedor Contumaz -->
+    <article class="analysis-card">
+      <div class="card-content">
+        <span class="card-meta">08.jun.2026 · Mercado · Inteligência territorial</span>
+        <h3><a href="/analises-mercado/2026-06-08-receita-devedor-contumaz-inteligencia-territorial">Lei do Devedor Contumaz remove subsídio de sonegação e desloca vantagem para inteligência territorial</a></h3>
+        <div class="tech-tags">
+          <span class="tech-tag">inteligência territorial</span>
+          <span class="tech-tag">governança de pipeline</span>
+          <span class="tech-tag">assimetria informacional</span>
+        </div>
+        <p class="card-excerpt">A aplicação da lei comprime descontos artificiais de 5 a 10% no varejo de combustíveis. Reduz assimetria informacional e premia quem opera com inteligência territorial e governança de pipeline para reordenar share.</p>
+        <a href="/analises-mercado/2026-06-08-receita-devedor-contumaz-inteligencia-territorial" class="read-more">Ler análise completa →</a>
+      </div>
+    </article>
+
+    <!-- CARD 11: TikTok Shop -->
+    <article class="analysis-card">
+      <div class="card-content">
+        <span class="card-meta">08.jun.2026 · Mercado · Funil orientado por sinais</span>
+        <h3><a href="/analises-mercado/2026-06-08-tiktok-shop-funil-orientado-sinais">Fadiga do TikTok Shop expõe ruptura na arquitetura de aquisição. Solução é funil orientado por sinais</a></h3>
+        <div class="tech-tags">
+          <span class="tech-tag">funil orientado por sinais</span>
+          <span class="tech-tag">infraestrutura de aquisição</span>
+          <span class="tech-tag">sinais de intenção</span>
+        </div>
+        <p class="card-excerpt">O gargalo não é a plataforma, mas a ausência de funil orientado por sinais que força marcas a empurrar conteúdo genérico. Perdas de eficiência superiores a 20% na conversão exigem infraestrutura orquestrada por microdados.</p>
+        <a href="/analises-mercado/2026-06-08-tiktok-shop-funil-orientado-sinais" class="read-more">Ler análise completa →</a>
+      </div>
+    </article>
+
+    <!-- CARD 12: Uber Autônomos -->
+    <article class="analysis-card">
+      <div class="card-content">
+        <span class="card-meta">08.jun.2026 · Mercado · Inteligência geográfica</span>
+        <h3><a href="/analises-mercado/2026-06-08-uber-autonomos-inteligencia-geografica-priorizacao">Robotáxis deslocam gargalo para malha de decisão em tempo real. Vantagem é inteligência geográfica</a></h3>
+        <div class="tech-tags">
+          <span class="tech-tag">inteligência geográfica</span>
+          <span class="tech-tag">priorização algorítmica</span>
+          <span class="tech-tag">latência operacional</span>
+        </div>
+        <p class="card-excerpt">Com inteligência geográfica e priorização algorítmica, reduções de 1 a 2 min no ETA elevam conversão em 5 a 8%, mitigando vazamento de demanda e comprimindo o CAC por corrida em mobilidade urbana.</p>
+        <a href="/analises-mercado/2026-06-08-uber-autonomos-inteligencia-geografica-priorizacao" class="read-more">Ler análise completa →</a>
+      </div>
+    </article>
+
+    <!-- CARD 13: Nubank Share of Wallet -->
+    <article class="analysis-card">
+      <div class="card-content">
+        <span class="card-meta">08.jun.2026 · Serviços Financeiros · Engenharia de microdados</span>
+        <h3><a href="/analises-mercado/2026-06-08-nubank-share-of-wallet-engenharia-microdados">Amplitude sem share of wallet é CAC inflado: Nubank expõe o dilema da relevância</a></h3>
+        <div class="tech-tags">
+          <span class="tech-tag">engenharia de microdados</span>
+          <span class="tech-tag">priorização algorítmica</span>
+          <span class="tech-tag">redução matemática de CAC</span>
+        </div>
+        <p class="card-excerpt">20% da base concentra 70% do volume em serviços financeiros. Alavanca real é engenharia de microdados + priorização algorítmica para ampliar uso, reduzir CAC marginal e elevar LTV sem quebrar confiança regulatória.</p>
+        <a href="/analises-mercado/2026-06-08-nubank-share-of-wallet-engenharia-microdados" class="read-more">Ler análise completa →</a>
+      </div>
+    </article>
+
+    <!-- CARD 14: Anthropic RAG Bare Metal (mais antigo - 2026-04-21) -->
+    <article class="analysis-card">
+      <div class="card-content">
+        <span class="card-meta">21.abr.2026 · Tecnologia · Bare metal + RAG</span>
+        <h3><a href="/analises-mercado/2026-04-21-anthropic-rag-bare-metal-orquestracao">Risco operacional em B2B é latência comercial, não segurança de modelo. Solução é bare metal e RAG</a></h3>
+        <div class="tech-tags">
+          <span class="tech-tag">infraestrutura comercial bare metal</span>
+          <span class="tech-tag">arquitetura RAG aplicada a vendas</span>
+          <span class="tech-tag">latência operacional</span>
+        </div>
+        <p class="card-excerpt">O risco matemático imediato em B2B não é uso malicioso de IA, mas processos manuais que elevam CAC. Solução: infraestrutura bare metal + RAG para orquestração autônoma. Reduz CAC em 35-48% em 90 dias.</p>
+        <a href="/analises-mercado/2026-04-21-anthropic-rag-bare-metal-orquestracao" class="read-more">Ler análise completa →</a>
+      </div>
+    </article>
+
+  </div>
+<!-- FLOATING BUTTON - ANÁLISES DE MERCADO (com texto + notificações) -->
+<a href="https://pauloleads.com.br/analises-mercado/" 
+   target="_blank"
+   style="position: fixed; bottom: 25px; left: 25px; z-index: 9999; 
+          background: linear-gradient(135deg, #dd8a31, #f4a45e); 
+          color: #0b1220; 
+          padding: 12px 18px 12px 16px; 
+          border-radius: 50px; 
+          display: flex; 
+          align-items: center; 
+          gap: 9px; 
+          font-weight: 700; 
+          font-size: 0.95rem; 
+          box-shadow: 0 6px 22px rgba(221, 138, 49, 0.5); 
+          text-decoration: none; 
+          transition: all 0.3s ease; 
+          white-space: nowrap;
+          min-width: 140px;"
+   onmouseover="this.style.transform='scale(1.08)'; this.style.boxShadow='0 10px 28px rgba(221, 138, 49, 0.6)'"
+   onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 6px 22px rgba(221, 138, 49, 0.5)'"
+   title="Observatório de Análises de Mercado">
+
+   <!-- ÍCONE LÂMPADA -->
+   <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" viewBox="0 0 16 16">
+     <path d="M8 1.5a.5.5 0 0 1 .5.5v.5a.5.5 0 0 1-1 0V2a.5.5 0 0 1 .5-.5z"/>
+     <path d="M6 8.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5z"/>
+     <path d="M8 3.5a4 4 0 0 0-4 4 3.5 3.5 0 0 0 1.07 2.48L5.5 11v1a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1l.43-.02A3.5 3.5 0 0 0 12 7.5 4 4 0 0 0 8 3.5z"/>
+     <path d="M8 13.5a.5.5 0 0 1 .5.5v.5a.5.5 0 0 1-1 0v-.5a.5.5 0 0 1 .5-.5z"/>
+   </svg>
+
+   <span>Análises</span>
+
+   <!-- NOTIFICAÇÃO PRINCIPAL -->
+   <span style="background: #ff4757; color: white; font-size: 12px; font-weight: 900; 
+                min-width: 20px; height: 20px; border-radius: 50%; 
+                display: flex; align-items: center; justify-content: center; 
+                box-shadow: 0 0 0 3px #0b1220;">
+     8
+   </span>
+
+   <!-- BOLINHA EXTRA -->
+   <span style="position: absolute; top: 6px; right: 12px; background: #ff4757; 
+                width: 9px; height: 9px; border-radius: 50%; box-shadow: 0 0 0 2px #0b1220;">
+   </span>
+</a>
+</body>
+</html>

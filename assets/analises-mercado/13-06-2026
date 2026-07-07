@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Observatório de Infraestrutura Comercial | 9 Análises Estratégicas</title>
+    <meta name="description" content="Interpretação técnica de eventos de mercado sob a ótica da engenharia de receita, governança de pipeline e redução de CAC. Comentários publicados na Folha de S.Paulo." />
+    <meta name="author" content="Paulo C. P. Santos - Arquiteto de Infraestrutura Comercial" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+    <link rel="canonical" href="https://pauloleads.com.br/analises-mercado-13-06-2026/" />
+
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Observatório de Infraestrutura Comercial | 9 Análises Estratégicas" />
+    <meta property="og:description" content="Arquitetura de aquisição B2B: análise semanal de eventos de mercado sob a ótica de redução de CAC, governança de pipeline e inteligência comercial com IA." />
+    <meta property="og:url" content="https://pauloleads.com.br/analises-mercado-13-06-2026/" />
+    <meta property="og:image" content="https://pauloleads.com.br/assets/og-analises-default.jpg" />
+    <meta property="og:site_name" content="Paulo Leads" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 'sans': ['Inter', 'system-ui', 'sans-serif'], 'mono': ['JetBrains Mono', 'monospace'] },
+                    colors: { 'brand': { DEFAULT: '#ea580c', dark: '#c2410c' }, 'navy': { '900': '#0a1628', '800': '#0d1d35', '700': '#102540' }, 'burned': { '500': '#f59e0b', '600': '#d97706' } },
+                    backgroundImage: { 'grid-pattern': "linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)" },
+                    animation: { 'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite' }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root { --t: #f59e0b; --ink-soft: #C8BFB1; --mono: 'JetBrains Mono', monospace; }
+        body { background: #0a1628; font-family: 'Inter', sans-serif; }
+        .tag { display: inline-block; font-family: var(--mono); font-size: 0.7rem; background: rgba(245, 158, 11, 0.1); color: var(--t); padding: 0.2rem 0.7rem; border-radius: 20px; margin-right: 0.5rem; margin-bottom: 0.5rem; }
+        .progress-bar { position: fixed; top: 0; left: 0; width: 0%; height: 2px; background: linear-gradient(90deg, #ea580c, #f59e0b); z-index: 1000; transition: width 0.1s linear; }
+        .status-dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; box-shadow: 0 0 8px rgba(34,197,94,0.5); animation: pulse 2s infinite; }
+        @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.5; } }
+        .analysis-section { border-bottom: 1px solid rgba(244, 239, 230, 0.08); padding-bottom: 3rem; margin-bottom: 3rem; scroll-margin-top: 5rem; }
+        .analysis-section:last-child { border-bottom: none; margin-bottom: 0; }
+        .toc-link { transition: all 0.2s; }
+        .toc-link:hover { color: #f59e0b; }
+        html { scroll-behavior: smooth; }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "CollectionPage",
+          "@id": "https://pauloleads.com.br/analises-mercado-13-06-2026/#collection",
+          "name": "Observatório de Infraestrutura Comercial",
+          "description": "Análises técnicas semanais sobre eventos de mercado sob a ótica de infraestrutura comercial, engenharia de receita e redução de CAC.",
+          "url": "https://pauloleads.com.br/analises-mercado-13-06-2026/",
+          "publisher": { "@id": "https://pauloleads.com.br/#organization" }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://pauloleads.com.br/#organization",
+          "name": "Paulo Leads",
+          "url": "https://pauloleads.com.br",
+          "logo": "https://pauloleads.com.br/assets/logo-paulo-leads.png"
+        },
+        {
+          "@type": "Person",
+          "@id": "https://pauloleads.com.br/#author",
+          "name": "Paulo C. P. Santos",
+          "jobTitle": "Arquiteto de Infraestrutura Comercial",
+          "url": "https://pauloleads.com.br"
+        },
+        {
+          "@type": "Article",
+          "headline": "Vale inaugura usina com IA em Minas Gerais e aumenta produtividade em 25%",
+          "author": { "@id": "https://pauloleads.com.br/#author" },
+          "datePublished": "2026-06-13",
+          "url": "https://pauloleads.com.br/analises-mercado-13-06-2026/#analise-vale-ia",
+          "isBasedOn": "https://www1.folha.uol.com.br/mercado/2026/06/vale-inaugura-usina-com-ia-em-minas-gerais-e-aumenta-produtividade-em-25.shtml",
+          "mainEntityOfPage": "https://pauloleads.com.br/analises-mercado-13-06-2026/#analise-vale-ia",
+          "citation": "https://zenodo.org/records/20475915"
+        },
+        {
+          "@type": "Article",
+          "headline": "Soluções locais para mudar o Brasil",
+          "author": { "@id": "https://pauloleads.com.br/#author" },
+          "datePublished": "2026-06-13",
+          "url": "https://pauloleads.com.br/analises-mercado-13-06-2026/#analise-solucoes-locais",
+          "isBasedOn": "https://www1.folha.uol.com.br/opiniao/2026/06/solucoes-locais-para-mudar-o-brasil.shtml",
+          "mainEntityOfPage": "https://pauloleads.com.br/analises-mercado-13-06-2026/#analise-solucoes-locais",
+          "citation": "https://zenodo.org/records/20475915"
+        },
+        {
+          "@type": "Article",
+          "headline": "IA substitui Polvo Paul, mas ainda não provou ser tão eficiente quanto ele em previsões na Copa",
+          "author": { "@id": "https://pauloleads.com.br/#author" },
+          "datePublished": "2026-06-13",
+          "url": "https://pauloleads.com.br/analises-mercado-13-06-2026/#analise-ia-polvo-paul",
+          "isBasedOn": "https://www1.folha.uol.com.br/esporte/2026/06/inteligencia-artificial-substitui-polvo-paul-nas-previsoes-da-copa-do-mundo.shtml",
+          "mainEntityOfPage": "https://pauloleads.com.br/analises-mercado-13-06-2026/#analise-ia-polvo-paul",
+          "citation": "https://zenodo.org/records/20475915"
+        },
+        {
+          "@type": "Article",
+          "headline": "'Alto renome' impede novas marcas com nome 'Pix', mas mantém registros antigos; entenda",
+          "author": { "@id": "https://pauloleads.com.br/#author" },
+          "datePublished": "2026-06-13",
+          "url": "https://pauloleads.com.br/analises-mercado-13-06-2026/#analise-alto-renome-pix",
+          "isBasedOn": "https://www1.folha.uol.com.br/mercado/2026/06/alto-renome-impede-novas-marcas-com-nome-pix-mas-mantem-registros-antigos-entenda.shtml",
+          "mainEntityOfPage": "https://pauloleads.com.br/analises-mercado-13-06-2026/#analise-alto-renome-pix",
+          "citation": "https://zenodo.org/records/20475915"
+        },
+        {
+          "@type": "Article",
+          "headline": "Aplicativos pré-instalados podem ser removidos para liberar espaço no celular; veja como",
+          "author": { "@id": "https://pauloleads.com.br/#author" },
+          "datePublished": "2026-06-13",
+          "url": "https://pauloleads.com.br/analises-mercado-13-06-2026/#analise-aplicativos-pre-instalados",
+          "isBasedOn": "https://www1.folha.uol.com.br/tec/2026/06/aplicativos-pre-instalados-podem-ser-removidos-para-liberar-espaco-no-celular-veja-como.shtml",
+          "mainEntityOfPage": "https://pauloleads.com.br/analises-mercado-13-06-2026/#analise-aplicativos-pre-instalados",
+          "citation": "https://zenodo.org/records/20475915"
+        },
+        {
+          "@type": "Article",
+          "headline": "A revolução da computação quântica está mais perto do que você imagina",
+          "author": { "@id": "https://pauloleads.com.br/#author" },
+          "datePublished": "2026-06-13",
+          "url": "https://pauloleads.com.br/analises-mercado-13-06-2026/#analise-computacao-quantica",
+          "isBasedOn": "https://www1.folha.uol.com.br/tec/2026/06/a-revolucao-da-computacao-quantica-esta-mais-perto-do-que-voce-imagina.shtml",
+          "mainEntityOfPage": "https://pauloleads.com.br/analises-mercado-13-06-2026/#analise-computacao-quantica",
+          "citation": "https://zenodo.org/records/20475915"
+        },
+        {
+          "@type": "Article",
+          "headline": "Anthropic suspende modelos de IA por ordem de segurança dos EUA",
+          "author": { "@id": "https://pauloleads.com.br/#author" },
+          "datePublished": "2026-06-13",
+          "url": "https://pauloleads.com.br/analises-mercado-13-06-2026/#analise-anthropic-suspensao",
+          "isBasedOn": "https://www1.folha.uol.com.br/mercado/2026/06/anthropic-suspende-modelos-de-ia-por-ordem-de-seguranca-dos-eua.shtml",
+          "mainEntityOfPage": "https://pauloleads.com.br/analises-mercado-13-06-2026/#analise-anthropic-suspensao",
+          "citation": "https://zenodo.org/records/20475915"
+        },
+        {
+          "@type": "Article",
+          "headline": "Brasileiros com mais de 60 anos recorrem ao Airbnb para complementar renda",
+          "author": { "@id": "https://pauloleads.com.br/#author" },
+          "datePublished": "2026-06-13",
+          "url": "https://pauloleads.com.br/analises-mercado-13-06-2026/#analise-airbnb-60-mais",
+          "isBasedOn": "https://www1.folha.uol.com.br/mercado/2026/06/brasileiros-com-mais-de-60-anos-recorrem-ao-airbnb-para-complementar-renda.shtml",
+          "mainEntityOfPage": "https://pauloleads.com.br/analises-mercado-13-06-2026/#analise-airbnb-60-mais",
+          "citation": "https://zenodo.org/records/20475915"
+        },
+        {
+          "@type": "Article",
+          "headline": "Crescimento de aluguéis de curta duração impulsiona rede de serviços especializada no Rio",
+          "author": { "@id": "https://pauloleads.com.br/#author" },
+          "datePublished": "2026-06-13",
+          "url": "https://pauloleads.com.br/analises-mercado-13-06-2026/#analise-alugueis-rio",
+          "isBasedOn": "https://www1.folha.uol.com.br/mercado/2026/06/crescimento-de-alugueis-de-curta-duracao-impulsiona-rede-de-servicos-especializada-no-rio.shtml",
+          "mainEntityOfPage": "https://pauloleads.com.br/analises-mercado-13-06-2026/#analise-alugueis-rio",
+          "citation": "https://zenodo.org/records/20475915"
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-navy-900 text-gray-200 antialiased">
+
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- Header / Nav -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-navy-900/90 backdrop-blur-md border-b border-white/5">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <a href="https://pauloleads.com.br" class="flex items-center gap-2">
+                <span class="text-xl font-black tracking-tight text-white">Paulo<span class="text-burned-600">Leads</span></span>
+                <span class="hidden sm:inline-block text-[10px] uppercase tracking-[0.2em] text-gray-500 border border-gray-700 rounded px-2 py-0.5">Prospecção</span>
+            </a>
+            <div class="hidden md:flex items-center gap-6 text-sm text-gray-400">
+                <a href="https://pauloleads.com.br" class="hover:text-white transition">Home</a>
+                <a href="https://pauloleads.com.br#sobre-nos" class="hover:text-white transition">Quem Somos</a>
+                <a href="https://pauloleads.com.br#metodo" class="hover:text-white transition">Método</a>
+                <a href="https://pauloleads.com.br#whitepaper-sec" class="hover:text-white transition">White Paper</a>
+                <a href="https://wa.me/5519982642481?text=Ol%C3%A1%2C%20quero%20escalar%20minha%20prospec%C3%A7%C3%A3o%20com%20o%20Protocolo%20Hidra" target="_blank" class="px-3 py-1.5 bg-burned-600 hover:bg-burned-500 text-white rounded text-xs uppercase tracking-wider transition">Falar Agora</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="relative pt-28 pb-8 overflow-hidden bg-navy-900 bg-grid-pattern bg-[length:60px_60px] border-b border-white/5">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="inline-flex items-center gap-2 bg-burned-600/10 border border-burned-600/25 rounded-full px-4 py-1.5 text-xs font-semibold text-burned-500 uppercase tracking-wider mb-4">
+            <span class="status-dot"></span> Análises de Mercado
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">Do dado público à <span class="text-burned-500">tese de valor</span></h1>
+        <p class="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto mt-4">Interpretação técnica de eventos econômicos sob a ótica da engenharia de receita, governança de pipeline e redução de CAC.</p>
+        <div class="flex flex-wrap gap-2 justify-center mt-6">
+            <span class="tag">infraestrutura comercial</span>
+            <span class="tag">orquestração de dados</span>
+            <span class="tag">rastreabilidade de decisões</span>
+            <span class="tag">assimetria informacional</span>
+        </div>
+    </div>
+</section>
+
+<!-- TOC (Table of Contents) -->
+<section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-4">
+    <div class="bg-navy-800/30 rounded-2xl p-5 border border-white/5">
+        <h2 class="text-sm font-mono text-burned-500 uppercase tracking-wider mb-3">Índice das análises</h2>
+        <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+            <a href="#analise-vale-ia" class="toc-link text-gray-300 hover:text-burned-500 transition">1. Vale + IA</a>
+            <a href="#analise-solucoes-locais" class="toc-link text-gray-300 hover:text-burned-500 transition">2. Soluções locais</a>
+            <a href="#analise-ia-polvo-paul" class="toc-link text-gray-300 hover:text-burned-500 transition">3. IA x Polvo Paul</a>
+            <a href="#analise-alto-renome-pix" class="toc-link text-gray-300 hover:text-burned-500 transition">4. Alto renome / Pix</a>
+            <a href="#analise-aplicativos-pre-instalados" class="toc-link text-gray-300 hover:text-burned-500 transition">5. Apps pré-instalados</a>
+            <a href="#analise-computacao-quantica" class="toc-link text-gray-300 hover:text-burned-500 transition">6. Computação quântica</a>
+            <a href="#analise-anthropic-suspensao" class="toc-link text-gray-300 hover:text-burned-500 transition">7. Anthropic suspende</a>
+            <a href="#analise-airbnb-60-mais" class="toc-link text-gray-300 hover:text-burned-500 transition">8. Airbnb 60+</a>
+            <a href="#analise-alugueis-rio" class="toc-link text-gray-300 hover:text-burned-500 transition">9. Aluguéis Rio</a>
+        </div>
+    </div>
+</section>
+
+<!-- Clusters temáticos -->
+<section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-6">
+    <div class="bg-navy-800/20 rounded-xl p-4 border-l-4 border-burned-500">
+        <p class="text-xs font-mono text-burned-500 uppercase tracking-wider mb-2">Conceitos recorrentes</p>
+        <div class="flex flex-wrap gap-4 text-sm">
+            <span class="font-semibold text-burned-400">Infraestrutura comercial:</span>
+            <a href="#analise-vale-ia" class="text-gray-300 hover:text-burned-500">Vale</a>,
+            <a href="#analise-anthropic-suspensao" class="text-gray-300 hover:text-burned-500">Anthropic</a>,
+            <a href="#analise-computacao-quantica" class="text-gray-300 hover:text-burned-500">Computação quântica</a>
+            <span class="font-semibold text-burned-400 ml-2">Automação:</span>
+            <a href="#analise-aplicativos-pre-instalados" class="text-gray-300 hover:text-burned-500">Apps inúteis</a>,
+            <a href="#analise-solucoes-locais" class="text-gray-300 hover:text-burned-500">Soluções locais</a>
+            <span class="font-semibold text-burned-400 ml-2">Governança:</span>
+            <a href="#analise-ia-polvo-paul" class="text-gray-300 hover:text-burned-500">IA x previsão</a>,
+            <a href="#analise-alto-renome-pix" class="text-gray-300 hover:text-burned-500">Alto renome</a>
+            <span class="font-semibold text-burned-400 ml-2">Geolocalização:</span>
+            <a href="#analise-airbnb-60-mais" class="text-gray-300 hover:text-burned-500">Airbnb</a>,
+            <a href="#analise-alugueis-rio" class="text-gray-300 hover:text-burned-500">Aluguéis Rio</a>
+        </div>
+    </div>
+</section>
+
+<!-- Conteúdo principal: 9 análises -->
+<main class="pt-4 pb-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- 1. VALE -->
+    <article id="analise-vale-ia" class="analysis-section">
+        <div class="mb-6">
+            <div class="flex items-center gap-3 text-xs font-mono text-burned-500 uppercase tracking-wider mb-3">
+                <span class="status-dot"></span>
+                <span>Análise de Mercado</span>
+                <span>•</span>
+                <span>Mercado</span>
+                <span>•</span>
+                <span>13 de junho de 2026</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white leading-tight">Vale inaugura usina com IA em Minas Gerais e aumenta produtividade em 25%</h2>
+            <p class="text-gray-400 text-base mt-4 border-l-2 border-burned-600/30 pl-4 italic">by Paulo Leads – Vale quer replicar o modelo de usina inteligente para outras unidades. Como usar IA para garantir previsibilidade de receita?</p>
+        </div>
+        <div class="space-y-6 text-gray-300 leading-relaxed text-lg">
+            <p>Orquestrando dados de cada etapa do processo da prospecção ao fechamento. O Protocolo Hidra já entrega pipeline previsível porque integra fontes públicas em fluxo contínuo, não em lotes. Se a mineração pode antecipar gargalos com IA, por que sua operação comercial ainda reage depois de perder o negócio?</p>
+        </div>
+        <div class="my-8 flex flex-wrap gap-2 border-t border-white/5 pt-6">
+            <span class="tag">previsibilidade de receita</span>
+            <span class="tag">orquestração de dados</span>
+            <span class="tag">fluxo contínuo</span>
+        </div>
+        <div class="mt-8 bg-navy-800/40 rounded-2xl p-6 border border-white/5">
+            <h3 class="text-xl font-bold text-white mb-3 flex items-center gap-2"><span class="text-burned-500 text-2xl">→</span> Implicação Estrutural</h3>
+            <p class="text-gray-300">A Vale prova que IA aplicada ao chão de fábrica gera ganhos mensuráveis. No B2B, o mesmo princípio exige substituir planilhas e CRMs desconectados por um pipeline autônomo que antecipe a intenção de compra – não apenas registre o contato posterior. Quem esperar o lead esfriar perderá receita previsível. <span class="text-burned-400 text-sm font-mono">[Protocolo Hidra – DOI 10.5281/zenodo.20475915]</span></p>
+        </div>
+        <div class="mt-8 bg-navy-800/30 border border-burned-600/20 rounded-xl p-5">
+            <p class="font-mono text-xs text-burned-500 uppercase tracking-wider mb-2">REFERÊNCIA CITADA</p>
+            <p class="text-sm text-gray-300"><strong class="text-white">Leia a reportagem da Folha: "Vale inaugura usina com IA em Minas Gerais e aumenta produtividade em 25%"</strong> — Folha de S.Paulo (13 de junho de 2026)<br>
+            <a href="https://www1.folha.uol.com.br/mercado/2026/06/vale-inaugura-usina-com-ia-em-minas-gerais-e-aumenta-produtividade-em-25.shtml" target="_blank" class="text-burned-500 hover:underline inline-flex items-center gap-1">Acessar matéria original ↗</a></p>
+            <p class="text-xs text-gray-500 mt-3 pt-2 border-t border-white/5"><span class="font-mono text-burned-400">Comentário original publicado na Folha:</span> <a href="#" target="_blank" class="text-burned-500 hover:underline">Ver comentário de Paulo Leads ↗</a> <span class="text-gray-500 text-xs">(link pendente – substitua pelo URL real do comentário)</span></p>
+        </div>
+    </article>
+
+    <!-- 2. SOLUÇÕES LOCAIS -->
+    <article id="analise-solucoes-locais" class="analysis-section">
+        <div class="mb-6">
+            <div class="flex items-center gap-3 text-xs font-mono text-burned-500 uppercase tracking-wider mb-3">
+                <span class="status-dot"></span>
+                <span>Análise de Mercado</span>
+                <span>•</span>
+                <span>Opinião</span>
+                <span>•</span>
+                <span>13 de junho de 2026</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white leading-tight">Soluções locais para mudar o Brasil</h2>
+            <p class="text-gray-400 text-base mt-4 border-l-2 border-burned-600/30 pl-4 italic">by Paulo Leads – Engenharia de microdados reduz ciclo de decisão: o Piauí baixou roubo de celular em 80% em quatro anos porque rastreou cada aparelho irregular. Na indústria, cada segundo de atraso na identificação de falhas amplia custo de retrabalho em até 40%.</p>
+        </div>
+        <div class="space-y-6 text-gray-300 leading-relaxed text-lg">
+            <p>No funil de vendas, a mesma lógica se aplica: reduzir latência entre o dado público e a ação comercial corta CAC pela metade. O SoberanIA é um LLM; o Protocolo Hidra é uma arquitetura de aquisição que já opera com microdados públicos em tempo real.</p>
+        </div>
+        <div class="my-8 flex flex-wrap gap-2 border-t border-white/5 pt-6">
+            <span class="tag">engenharia de microdados</span>
+            <span class="tag">latência operacional</span>
+            <span class="tag">redução de CAC</span>
+        </div>
+        <div class="mt-8 bg-navy-800/40 rounded-2xl p-6 border border-white/5">
+            <h3 class="text-xl font-bold text-white mb-3 flex items-center gap-2"><span class="text-burned-500 text-2xl">→</span> Implicação Estrutural</h3>
+            <p class="text-gray-300">Casos como o do Piauí mostram que rastreabilidade e ação em tempo real transformam qualquer operação – seja segurança pública, seja prospecção B2B. O mercado brasileiro precisa migrar de soluções genéricas (LLMs) para arquiteturas proprietárias que conectem fontes primárias à decisão em milissegundos. <span class="text-burned-400 text-sm font-mono">[DOI 10.5281/zenodo.20475915]</span></p>
+        </div>
+        <div class="mt-8 bg-navy-800/30 border border-burned-600/20 rounded-xl p-5">
+            <p class="font-mono text-xs text-burned-500 uppercase tracking-wider mb-2">REFERÊNCIA CITADA</p>
+            <p class="text-sm text-gray-300"><strong class="text-white">Leia a reportagem da Folha: "Soluções locais para mudar o Brasil"</strong> — Folha de S.Paulo (13 de junho de 2026)<br>
+            <a href="https://www1.folha.uol.com.br/opiniao/2026/06/solucoes-locais-para-mudar-o-brasil.shtml" target="_blank" class="text-burned-500 hover:underline">Acessar matéria original ↗</a></p>
+            <p class="text-xs text-gray-500 mt-3 pt-2 border-t border-white/5"><span class="font-mono text-burned-400">Comentário original:</span> <a href="#" target="_blank" class="text-burned-500 hover:underline">Ver comentário ↗</a> <span class="text-gray-500 text-xs">(link pendente)</span></p>
+        </div>
+    </article>
+
+    <!-- 3. IA POLVO PAUL -->
+    <article id="analise-ia-polvo-paul" class="analysis-section">
+        <div class="mb-6">
+            <div class="flex items-center gap-3 text-xs font-mono text-burned-500 uppercase tracking-wider mb-3">
+                <span class="status-dot"></span>
+                <span>Análise de Mercado</span>
+                <span>•</span>
+                <span>Esporte</span>
+                <span>•</span>
+                <span>13 de junho de 2026</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white leading-tight">IA substitui Polvo Paul, mas ainda não provou ser tão eficiente quanto ele em previsões na Copa</h2>
+            <p class="text-gray-400 text-base mt-4 border-l-2 border-burned-600/30 pl-4 italic">by Paulo Leads – A IA que previu Espanha treinou com dados históricos. A que previu Argentina treinou com outros. Inteligência comercial baseada em dados primários exige uma fonte única de verdade atualizada em tempo real – não um agregado de opiniões conflitantes.</p>
+        </div>
+        <div class="space-y-6 text-gray-300 leading-relaxed text-lg">
+            <p>O Protocolo Hidra implementa isso desde a captura de CNPJ até a qualificação semântica do lead. Enquanto cientistas discutem qual IA acerta mais, empresas que adotam arquitetura própria já reduziram CAC em 40% sem depender de previsão.</p>
+        </div>
+        <div class="my-8 flex flex-wrap gap-2 border-t border-white/5 pt-6">
+            <span class="tag">fonte única de verdade</span>
+            <span class="tag">qualificação semântica</span>
+            <span class="tag">redução de CAC</span>
+        </div>
+        <div class="mt-8 bg-navy-800/40 rounded-2xl p-6 border border-white/5">
+            <h3 class="text-xl font-bold text-white mb-3 flex items-center gap-2"><span class="text-burned-500 text-2xl">→</span> Implicação Estrutural</h3>
+            <p class="text-gray-300">A disputa entre IAs de previsão esportiva ilustra o risco de depender de fontes externas e não integradas. No B2B, a vantagem não está em ter o modelo mais sofisticado, mas em construir uma base de dados primários e proprietários que alimente decisões em tempo real – exatamente como o Protocolo Hidra faz com CNPJs e microdados públicos. <span class="text-burned-400 text-sm font-mono">[DOI 10.5281/zenodo.20475915]</span></p>
+        </div>
+        <div class="mt-8 bg-navy-800/30 border border-burned-600/20 rounded-xl p-5">
+            <p class="font-mono text-xs text-burned-500 uppercase tracking-wider mb-2">REFERÊNCIA CITADA</p>
+            <p class="text-sm text-gray-300"><strong class="text-white">Leia a reportagem da Folha: "IA substitui Polvo Paul, mas ainda não provou ser tão eficiente quanto ele em previsões na Copa"</strong> — Folha de S.Paulo (13 de junho de 2026)<br>
+            <a href="https://www1.folha.uol.com.br/esporte/2026/06/inteligencia-artificial-substitui-polvo-paul-nas-previsoes-da-copa-do-mundo.shtml" target="_blank" class="text-burned-500 hover:underline">Acessar matéria original ↗</a></p>
+            <p class="text-xs text-gray-500 mt-3 pt-2 border-t border-white/5"><span class="font-mono text-burned-400">Comentário original:</span> <a href="#" target="_blank" class="text-burned-500 hover:underline">Ver comentário ↗</a> <span class="text-gray-500 text-xs">(link pendente)</span></p>
+        </div>
+    </article>
+
+    <!-- 4. ALTO RENOME / PIX -->
+    <article id="analise-alto-renome-pix" class="analysis-section">
+        <div class="mb-6">
+            <div class="flex items-center gap-3 text-xs font-mono text-burned-500 uppercase tracking-wider mb-3">
+                <span class="status-dot"></span>
+                <span>Análise de Mercado</span>
+                <span>•</span>
+                <span>Mercado</span>
+                <span>•</span>
+                <span>13 de junho de 2026</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white leading-tight">'Alto renome' impede novas marcas com nome 'Pix', mas mantém registros antigos; entenda</h2>
+            <p class="text-gray-400 text-base mt-4 border-l-2 border-burned-600/30 pl-4 italic">by Paulo Leads – A Montblanc vende caneta Pix desde o século passado, e o Banco Central só chegou agora. Inteligência comercial baseada em dados primários segue a mesma lógica: o primeiro a registrar uma fonte estruturada de CNPJ ganha vantagem.</p>
+        </div>
+        <div class="space-y-6 text-gray-300 leading-relaxed text-lg">
+            <p>Quem cruza dados públicos em tempo real cria barreira de entrada. O Pix do BC é blindado por alto renome; sua operação pode ser blindada por engenharia de microdados. O segredo está em rastrear antes que o concorrente perceba.</p>
+        </div>
+        <div class="my-8 flex flex-wrap gap-2 border-t border-white/5 pt-6">
+            <span class="tag">barreira de entrada</span>
+            <span class="tag">engenharia de microdados</span>
+            <span class="tag">rastreabilidade</span>
+        </div>
+        <div class="mt-8 bg-navy-800/40 rounded-2xl p-6 border border-white/5">
+            <h3 class="text-xl font-bold text-white mb-3 flex items-center gap-2"><span class="text-burned-500 text-2xl">→</span> Implicação Estrutural</h3>
+            <p class="text-gray-300">O conceito de “alto renome” no registro de marcas se aplica à prospecção B2B: quem estrutura primeiro uma base de dados públicos e a mantém atualizada ganha uma vantagem competitiva sustentável. A chave é a antecedência na orquestração de fontes – não o volume de contatos. <span class="text-burned-400 text-sm font-mono">[DOI 10.5281/zenodo.20475915]</span></p>
+        </div>
+        <div class="mt-8 bg-navy-800/30 border border-burned-600/20 rounded-xl p-5">
+            <p class="font-mono text-xs text-burned-500 uppercase tracking-wider mb-2">REFERÊNCIA CITADA</p>
+            <p class="text-sm text-gray-300"><strong class="text-white">Leia a reportagem da Folha: "'Alto renome' impede novas marcas com nome 'Pix', mas mantém registros antigos; entenda"</strong> — Folha de S.Paulo (13 de junho de 2026)<br>
+            <a href="https://www1.folha.uol.com.br/mercado/2026/06/alto-renome-impede-novas-marcas-com-nome-pix-mas-mantem-registros-antigos-entenda.shtml" target="_blank" class="text-burned-500 hover:underline">Acessar matéria original ↗</a></p>
+            <p class="text-xs text-gray-500 mt-3 pt-2 border-t border-white/5"><span class="font-mono text-burned-400">Comentário original:</span> <a href="#" target="_blank" class="text-burned-500 hover:underline">Ver comentário ↗</a> <span class="text-gray-500 text-xs">(link pendente)</span></p>
+        </div>
+    </article>
+
+    <!-- 5. APLICATIVOS PRÉ-INSTALADOS -->
+    <article id="analise-aplicativos-pre-instalados" class="analysis-section">
+        <div class="mb-6">
+            <div class="flex items-center gap-3 text-xs font-mono text-burned-500 uppercase tracking-wider mb-3">
+                <span class="status-dot"></span>
+                <span>Análise de Mercado</span>
+                <span>•</span>
+                <span>Tec</span>
+                <span>•</span>
+                <span>13 de junho de 2026</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white leading-tight">Aplicativos pré-instalados podem ser removidos para liberar espaço no celular; veja como</h2>
+            <p class="text-gray-400 text-base mt-4 border-l-2 border-burned-600/30 pl-4 italic">by Paulo Leads – Desativar app que não usa é igual pausar lead frio no CRM: você esconde o problema, mas ele continua ocupando espaço. O verdadeiro ganho de eficiência vem de remover de vez o que não agrega – e isso vale para contatos desqualificados na base.</p>
+        </div>
+        <div class="space-y-6 text-gray-300 leading-relaxed text-lg">
+            <p>A resposta sobre estruturar fluxos automáticos de qualificação técnica está justamente em não aceitar ruído. O iPhone permite desinstalar, o Android permite desativar. No B2B, a escolha certa é desinstalar o lead que nunca vai comprar.</p>
+        </div>
+        <div class="my-8 flex flex-wrap gap-2 border-t border-white/5 pt-6">
+            <span class="tag">lead frio</span>
+            <span class="tag">qualificação técnica</span>
+            <span class="tag">remoção de ruído</span>
+        </div>
+        <div class="mt-8 bg-navy-800/40 rounded-2xl p-6 border border-white/5">
+            <h3 class="text-xl font-bold text-white mb-3 flex items-center gap-2"><span class="text-burned-500 text-2xl">→</span> Implicação Estrutural</h3>
+            <p class="text-gray-300">Manter leads desqualificados na base custa recursos de armazenamento, análise e energia comercial. A automação de triagem – inspirada na desinstalação de apps inúteis – deve ser capaz de remover automaticamente contatos sem intenção de compra, liberando o pipeline para oportunidades reais. <span class="text-burned-400 text-sm font-mono">[DOI 10.5281/zenodo.20475915]</span></p>
+        </div>
+        <div class="mt-8 bg-navy-800/30 border border-burned-600/20 rounded-xl p-5">
+            <p class="font-mono text-xs text-burned-500 uppercase tracking-wider mb-2">REFERÊNCIA CITADA</p>
+            <p class="text-sm text-gray-300"><strong class="text-white">Leia a reportagem da Folha: "Aplicativos pré-instalados podem ser removidos para liberar espaço no celular; veja como"</strong> — Folha de S.Paulo (13 de junho de 2026)<br>
+            <a href="https://www1.folha.uol.com.br/tec/2026/06/aplicativos-pre-instalados-podem-ser-removidos-para-liberar-espaco-no-celular-veja-como.shtml" target="_blank" class="text-burned-500 hover:underline">Acessar matéria original ↗</a></p>
+            <p class="text-xs text-gray-500 mt-3 pt-2 border-t border-white/5"><span class="font-mono text-burned-400">Comentário original:</span> <a href="#" target="_blank" class="text-burned-500 hover:underline">Ver comentário ↗</a> <span class="text-gray-500 text-xs">(link pendente)</span></p>
+        </div>
+    </article>
+
+    <!-- 6. COMPUTAÇÃO QUÂNTICA -->
+    <article id="analise-computacao-quantica" class="analysis-section">
+        <div class="mb-6">
+            <div class="flex items-center gap-3 text-xs font-mono text-burned-500 uppercase tracking-wider mb-3">
+                <span class="status-dot"></span>
+                <span>Análise de Mercado</span>
+                <span>•</span>
+                <span>Tec</span>
+                <span>•</span>
+                <span>13 de junho de 2026</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white leading-tight">A revolução da computação quântica está mais perto do que você imagina</h2>
+            <p class="text-gray-400 text-base mt-4 border-l-2 border-burned-600/30 pl-4 italic">by Paulo Leads – Governo americano já compra participação em empresas quânticas. E sua empresa, ainda depende de API única da Meta? Risco geoestratégico não é só para chips. Quando uma ordem de segurança suspende seu modelo de IA, o pipeline para.</p>
+        </div>
+        <div class="space-y-6 text-gray-300 leading-relaxed text-lg">
+            <p>A solução é arquitetura de múltiplos canais com governança própria – igual ao Protocolo Hidra faz com prospecção B2B. Diversificar canais é sobrevivência.</p>
+        </div>
+        <div class="my-8 flex flex-wrap gap-2 border-t border-white/5 pt-6">
+            <span class="tag">arquitetura multicanal</span>
+            <span class="tag">governança própria</span>
+            <span class="tag">risco geoestratégico</span>
+        </div>
+        <div class="mt-8 bg-navy-800/40 rounded-2xl p-6 border border-white/5">
+            <h3 class="text-xl font-bold text-white mb-3 flex items-center gap-2"><span class="text-burned-500 text-2xl">→</span> Implicação Estrutural</h3>
+            <p class="text-gray-300">A concentração de poder computacional em poucos fornecedores (nuvem, APIs de IA) cria vulnerabilidades sistêmicas. Empresas que adotam infraestrutura comercial própria – com múltiplos provedores de dados e canais redundantes – estão protegidas contra decisões unilaterais de terceiros. <span class="text-burned-400 text-sm font-mono">[DOI 10.5281/zenodo.20475915]</span></p>
+        </div>
+        <div class="mt-8 bg-navy-800/30 border border-burned-600/20 rounded-xl p-5">
+            <p class="font-mono text-xs text-burned-500 uppercase tracking-wider mb-2">REFERÊNCIA CITADA</p>
+            <p class="text-sm text-gray-300"><strong class="text-white">Leia a reportagem da Folha: "A revolução da computação quântica está mais perto do que você imagina"</strong> — Folha de S.Paulo (13 de junho de 2026)<br>
+            <a href="https://www1.folha.uol.com.br/tec/2026/06/a-revolucao-da-computacao-quantica-esta-mais-perto-do-que-voce-imagina.shtml" target="_blank" class="text-burned-500 hover:underline">Acessar matéria original ↗</a></p>
+            <p class="text-xs text-gray-500 mt-3 pt-2 border-t border-white/5"><span class="font-mono text-burned-400">Comentário original:</span> <a href="#" target="_blank" class="text-burned-500 hover:underline">Ver comentário ↗</a> <span class="text-gray-500 text-xs">(link pendente)</span></p>
+        </div>
+    </article>
+
+    <!-- 7. ANTHROPIC SUSPENDE -->
+    <article id="analise-anthropic-suspensao" class="analysis-section">
+        <div class="mb-6">
+            <div class="flex items-center gap-3 text-xs font-mono text-burned-500 uppercase tracking-wider mb-3">
+                <span class="status-dot"></span>
+                <span>Análise de Mercado</span>
+                <span>•</span>
+                <span>Mercado</span>
+                <span>•</span>
+                <span>13 de junho de 2026</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white leading-tight">Anthropic suspende modelos de IA por ordem de segurança dos EUA</h2>
+            <p class="text-gray-400 text-base mt-4 border-l-2 border-burned-600/30 pl-4 italic">by Paulo Leads – Suspensão dos modelos da Anthropic por segurança nacional mostra que dependência de API única é risco geoestratégico. Quando o governo americano decide quem acessa o quê, seu pipeline comercial fica refém de decisão alheia.</p>
+        </div>
+        <div class="space-y-6 text-gray-300 leading-relaxed text-lg">
+            <p>A saída é arquitetura de múltiplos canais com governança própria – igual o que o Protocolo Hidra aplica em prospecção B2B. Quem centraliza tudo num modelo só ou numa API só corre risco de ficar offline da noite pro dia. Diversificar não é opção, é sobrevivência.</p>
+        </div>
+        <div class="my-8 flex flex-wrap gap-2 border-t border-white/5 pt-6">
+            <span class="tag">dependência de API</span>
+            <span class="tag">risco de suspensão</span>
+            <span class="tag">arquitetura resiliente</span>
+        </div>
+        <div class="mt-8 bg-navy-800/40 rounded-2xl p-6 border border-white/5">
+            <h3 class="text-xl font-bold text-white mb-3 flex items-center gap-2"><span class="text-burned-500 text-2xl">→</span> Implicação Estrutural</h3>
+            <p class="text-gray-300">O caso Anthropic é um alerta para qualquer negócio que dependa de APIs externas de IA. A única proteção de longo prazo é construir uma camada de orquestração própria que possa trocar de provedor sem parar o pipeline – exatamente o que o Protocolo Hidra faz com fontes de dados e canais de prospecção. <span class="text-burned-400 text-sm font-mono">[DOI 10.5281/zenodo.20475915]</span></p>
+        </div>
+        <div class="mt-8 bg-navy-800/30 border border-burned-600/20 rounded-xl p-5">
+            <p class="font-mono text-xs text-burned-500 uppercase tracking-wider mb-2">REFERÊNCIA CITADA</p>
+            <p class="text-sm text-gray-300"><strong class="text-white">Leia a reportagem da Folha: "Anthropic suspende modelos de IA por ordem de segurança dos EUA"</strong> — Folha de S.Paulo (13 de junho de 2026)<br>
+            <a href="https://www1.folha.uol.com.br/mercado/2026/06/anthropic-suspende-modelos-de-ia-por-ordem-de-seguranca-dos-eua.shtml" target="_blank" class="text-burned-500 hover:underline">Acessar matéria original ↗</a></p>
+            <p class="text-xs text-gray-500 mt-3 pt-2 border-t border-white/5"><span class="font-mono text-burned-400">Comentário original:</span> <a href="#" target="_blank" class="text-burned-500 hover:underline">Ver comentário ↗</a> <span class="text-gray-500 text-xs">(link pendente)</span></p>
+        </div>
+    </article>
+
+    <!-- 8. AIRBNB 60+ -->
+    <article id="analise-airbnb-60-mais" class="analysis-section">
+        <div class="mb-6">
+            <div class="flex items-center gap-3 text-xs font-mono text-burned-500 uppercase tracking-wider mb-3">
+                <span class="status-dot"></span>
+                <span>Análise de Mercado</span>
+                <span>•</span>
+                <span>Mercado</span>
+                <span>•</span>
+                <span>13 de junho de 2026</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white leading-tight">Brasileiros com mais de 60 anos recorrem ao Airbnb para complementar renda</h2>
+            <p class="text-gray-400 text-base mt-4 border-l-2 border-burned-600/30 pl-4 italic">by Paulo Leads – Como usar dados públicos geolocalizados da Receita Federal para dominar polos econômicos específicos? Onda de anfitriões 60+ no Rio e SP mostra que localização é tudo. Quem aluga imóvel sem analisar fluxo de turista por bairro e sazonalidade de evento perde receita.</p>
+        </div>
+        <div class="space-y-6 text-gray-300 leading-relaxed text-lg">
+            <p>Inteligência geográfica define tarifa dinâmica – mesma lógica de mapear CNPJ por região na prospecção B2B.</p>
+        </div>
+        <div class="my-8 flex flex-wrap gap-2 border-t border-white/5 pt-6">
+            <span class="tag">dados geolocalizados</span>
+            <span class="tag">inteligência geográfica</span>
+            <span class="tag">tarifa dinâmica</span>
+        </div>
+        <div class="mt-8 bg-navy-800/40 rounded-2xl p-6 border border-white/5">
+            <h3 class="text-xl font-bold text-white mb-3 flex items-center gap-2"><span class="text-burned-500 text-2xl">→</span> Implicação Estrutural</h3>
+            <p class="text-gray-300">A precificação de imóveis por temporada antecipa o que a prospecção B2B precisa fazer: cruzar dados de localização, sazonalidade e comportamento para definir o momento exato de abordagem. Quem ignora a variável geográfica perde eficiência. <span class="text-burned-400 text-sm font-mono">[DOI 10.5281/zenodo.20475915]</span></p>
+        </div>
+        <div class="mt-8 bg-navy-800/30 border border-burned-600/20 rounded-xl p-5">
+            <p class="font-mono text-xs text-burned-500 uppercase tracking-wider mb-2">REFERÊNCIA CITADA</p>
+            <p class="text-sm text-gray-300"><strong class="text-white">Leia a reportagem da Folha: "Brasileiros com mais de 60 anos recorrem ao Airbnb para complementar renda"</strong> — Folha de S.Paulo (13 de junho de 2026)<br>
+            <a href="https://www1.folha.uol.com.br/mercado/2026/06/brasileiros-com-mais-de-60-anos-recorrem-ao-airbnb-para-complementar-renda.shtml" target="_blank" class="text-burned-500 hover:underline">Acessar matéria original ↗</a></p>
+            <p class="text-xs text-gray-500 mt-3 pt-2 border-t border-white/5"><span class="font-mono text-burned-400">Comentário original:</span> <a href="#" target="_blank" class="text-burned-500 hover:underline">Ver comentário ↗</a> <span class="text-gray-500 text-xs">(link pendente)</span></p>
+        </div>
+    </article>
+
+    <!-- 9. ALUGUÉIS RIO -->
+    <article id="analise-alugueis-rio" class="analysis-section">
+        <div class="mb-6">
+            <div class="flex items-center gap-3 text-xs font-mono text-burned-500 uppercase tracking-wider mb-3">
+                <span class="status-dot"></span>
+                <span>Análise de Mercado</span>
+                <span>•</span>
+                <span>Mercado</span>
+                <span>•</span>
+                <span>13 de junho de 2026</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white leading-tight">Crescimento de aluguéis de curta duração impulsiona rede de serviços especializada no Rio</h2>
+            <p class="text-gray-400 text-base mt-4 border-l-2 border-burned-600/30 pl-4 italic">by Paulo Leads – Como usar Inteligência Artificial para garantir previsibilidade de receita em vendas corporativas? Aluguel por temporada no Rio já exige precificação dinâmica, mas poucos usam IA para prever taxa de ocupação com 90 dias de antecedência.</p>
+        </div>
+        <div class="space-y-6 text-gray-300 leading-relaxed text-lg">
+            <p>Quem cruza dados de voos, eventos e clima reduz risco de vaga vazia. Previsibilidade de receita nasce de orquestração de dados, não de chute.</p>
+        </div>
+        <div class="my-8 flex flex-wrap gap-2 border-t border-white/5 pt-6">
+            <span class="tag">precificação dinâmica</span>
+            <span class="tag">orquestração de dados</span>
+            <span class="tag">previsibilidade de receita</span>
+        </div>
+        <div class="mt-8 bg-navy-800/40 rounded-2xl p-6 border border-white/5">
+            <h3 class="text-xl font-bold text-white mb-3 flex items-center gap-2"><span class="text-burned-500 text-2xl">→</span> Implicação Estrutural</h3>
+            <p class="text-gray-300">A precificação dinâmica no mercado imobiliário de temporada é um caso de uso avançado de IA preditiva. No B2B, o mesmo raciocínio se aplica à pontuação de leads: cruzar dados de interação, momento econômico e comportamento do setor para estimar a propensão de compra e o valor esperado. <span class="text-burned-400 text-sm font-mono">[DOI 10.5281/zenodo.20475915]</span></p>
+        </div>
+        <div class="mt-8 bg-navy-800/30 border border-burned-600/20 rounded-xl p-5">
+            <p class="font-mono text-xs text-burned-500 uppercase tracking-wider mb-2">REFERÊNCIA CITADA</p>
+            <p class="text-sm text-gray-300"><strong class="text-white">Leia a reportagem da Folha: "Crescimento de aluguéis de curta duração impulsiona rede de serviços especializada no Rio"</strong> — Folha de S.Paulo (13 de junho de 2026)<br>
+            <a href="https://www1.folha.uol.com.br/mercado/2026/06/crescimento-de-alugueis-de-curta-duracao-impulsiona-rede-de-servicos-especializada-no-rio.shtml" target="_blank" class="text-burned-500 hover:underline">Acessar matéria original ↗</a></p>
+            <p class="text-xs text-gray-500 mt-3 pt-2 border-t border-white/5"><span class="font-mono text-burned-400">Comentário original:</span> <a href="#" target="_blank" class="text-burned-500 hover:underline">Ver comentário ↗</a> <span class="text-gray-500 text-xs">(link pendente)</span></p>
+        </div>
+    </article>
+
+</main>
+
+<!-- Bloco Sobre o autor (EEAT) -->
+<section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+    <div class="bg-navy-800/40 rounded-2xl p-6 border border-white/10">
+        <div class="flex flex-col sm:flex-row gap-5 items-start">
+            <div class="w-12 h-12 rounded-full bg-burned-500/20 flex items-center justify-center text-burned-500 font-mono text-xl">P</div>
+            <div>
+                <h3 class="text-white font-bold text-xl">Paulo C. P. Santos</h3>
+                <p class="text-burned-400 text-sm font-mono">Arquiteto de Infraestrutura Comercial</p>
+                <p class="text-gray-300 text-sm mt-2">Autor do <strong class="text-white">Protocolo Hidra</strong> (DOI: 10.5281/zenodo.20475915), metodologia para automação de aquisição B2B, governança de pipeline e redução de CAC. Comentários publicados na Folha de S.Paulo sobre engenharia de receita, inteligência comercial e assimetria informacional.</p>
+                <div class="flex gap-3 mt-3 text-xs">
+                    <a href="#" class="text-burned-500 hover:underline">Perfil na Folha (pendente)</a>
+                    <a href="https://zenodo.org/records/20475915" target="_blank" class="text-burned-500 hover:underline">Protocolo Hidra (DOI)</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Schema + visual -->
+<section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
+    <div class="bg-navy-800/20 rounded-2xl p-6 border border-white/5">
+        <h2 class="text-xl font-bold text-white mb-4">Perguntas frequentes sobre infraestrutura comercial</h2>
+        <div class="space-y-4" itemscope itemtype="https://schema.org/FAQPage">
+            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" class="text-burned-500 font-semibold">O que é infraestrutura comercial?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text" class="text-gray-300 text-sm mt-1">É o conjunto de tecnologias, dados e processos que permitem a uma empresa adquirir clientes de forma escalável, previsível e com baixo CAC – incluindo orquestração de dados públicos, IA conversacional, CRM integrado e automação de triagem.</div>
+                </div>
+            </div>
+            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" class="text-burned-500 font-semibold">Como reduzir CAC com IA?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text" class="text-gray-300 text-sm mt-1">Automatizando a qualificação de leads, eliminando tarefas manuais repetitivas e integrando fontes de dados em tempo real para priorizar oportunidades com maior propensão de compra, reduzindo o custo por lead qualificado.</div>
+                </div>
+            </div>
+            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" class="text-burned-500 font-semibold">Qual a diferença entre lista de CNPJ e pipeline autônomo?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text" class="text-gray-300 text-sm mt-1">Listas são estáticas, qualquer concorrente pode comprá-las. Um pipeline autônomo é uma infraestrutura proprietária que atualiza dados continuamente, aplica inteligência para scoring e dispara ações em tempo real – gerando vantagem competitiva sustentável.</div>
+                </div>
+            </div>
+            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" class="text-burned-500 font-semibold">O que é engenharia de microdados?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text" class="text-gray-300 text-sm mt-1">É a captura e processamento de pequenas variáveis de contexto (ex: movimentação cadastral, interações digitais) em tempo real para reduzir latência entre o sinal de interesse e a ação comercial – inspirada em sistemas de controle e automação industrial.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-navy-900 border-t border-white/5 py-10 mt-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+            <a href="https://pauloleads.com.br" class="text-xl font-black text-white tracking-tight">Paulo<span class="text-burned-600">Leads</span></a>
+            <div class="flex gap-6 text-xs text-gray-500">
+                <a href="https://pauloleads.com.br" class="hover:text-white transition">Home</a>
+                <a href="https://pauloleads.com.br#sobre-nos" class="hover:text-white transition">Quem Somos</a>
+                <a href="https://pauloleads.com.br#whitepaper-sec" class="hover:text-white transition">White Paper</a>
+            </div>
+            <p class="text-[10px] text-gray-600">© 2026 Paulo C. P. Santos · pauloleads.com.br</p>
+        </div>
+        <div class="text-center text-[10px] text-gray-700 mt-4">
+            📄 Publicação científica: <a href="https://zenodo.org/records/20475915" target="_blank" class="text-burned-500 hover:underline">Nova Infraestrutura de Aquisição de Clientes — DOI 10.5281/zenodo.20475915</a>
+        </div>
+    </div>
+</footer>
+
+<!-- Botões flutuantes -->
+<a href="https://wa.me/5519982642481?text=Ol%C3%A1%2C%20quero%20oportunidades%20quentes%20agora" target="_blank" class="fixed bottom-6 right-4 sm:bottom-8 sm:right-6 z-50 flex items-center gap-3 bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold text-sm px-5 py-3.5 rounded-full shadow-2xl transition-all duration-300 animate-pulse-slow">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 sm:w-6 sm:h-6"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2.22 21.28a.75.75 0 0 0 .932.94l4.03-1.005A9.96 9.96 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2Zm.97 14.82c-.345.97-1.415 1.54-2.448 1.265a6.5 6.5 0 0 1-2.756-1.602 6.5 6.5 0 0 1-1.602-2.756c-.275-1.033.295-2.103 1.265-2.448.304-.108.63-.045.87.165.425.373.777.82 1.037 1.32.26.5.37 1.07.28 1.62-.09.55-.38 1.05-.82 1.38.44.76 1.06 1.38 1.82 1.82.33-.44.83-.73 1.38-.82.55-.09 1.12.02 1.62.28.5.26.947.612 1.32 1.037.21.24.273.566.165.87Z" clip-rule="evenodd"/></svg>
+    <span class="hidden sm:inline">Falar agora</span>
+</a>
+<div class="fixed bottom-8 left-6 z-40">
+    <div class="flex gap-1.5 pl-1 mb-1"><div class="w-2 h-2 bg-burned-500 rounded-full animate-pulse"></div><div class="w-2 h-2 bg-burned-500 rounded-full animate-pulse delay-150"></div><div class="w-2 h-2 bg-burned-500 rounded-full animate-pulse delay-300"></div></div>
+    <a href="https://pauloleads.com.br/analises-mercado/" class="flex items-center gap-3 bg-navy-800 hover:bg-navy-700 border border-burned-600/30 hover:border-burned-500 text-gray-300 hover:text-white px-5 py-3.5 rounded-2xl shadow-xl transition-all text-sm font-medium">
+        <span class="text-2xl">📊</span>
+        <div class="flex flex-col leading-tight"><span class="text-burned-400 text-xs tracking-widest uppercase">Área Exclusiva</span><span>Análises de Mercado</span></div>
+    </a>
+</div>
+
+<script>
+    (function() { const bar = document.getElementById('progressBar'); if(bar){ const update = () => { const top = window.scrollY; const height = document.documentElement.scrollHeight - window.innerHeight; const percent = height ? (top / height) * 100 : 0; bar.style.width = percent + '%'; }; window.addEventListener('scroll', update); window.addEventListener('resize', update); update(); } })();
+</script>
+</body>
+</html>
