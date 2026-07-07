@@ -1,5 +1,0 @@
-<IfModule mod_headers.c>
-    <FilesMatch "\.txt$">
-        Header set Content-Type "text/plain; charset=utf-8"
-    </FilesMatch>
-</IfModule>
