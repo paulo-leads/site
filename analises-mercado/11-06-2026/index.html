@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Observatório de Infraestrutura Comercial | 10 Análises Estratégicas</title>
+    <meta name="description" content="Interpretação técnica de eventos de mercado sob a ótica da engenharia de receita, governança de pipeline e redução de CAC. Comentários publicados na Folha de S.Paulo." />
+    <meta name="author" content="Paulo C. P. Santos - Arquiteto de Infraestrutura Comercial" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+    <link rel="canonical" href="https://pauloleads.com.br/analises-mercado/11-06-2026" />
+
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Observatório de Infraestrutura Comercial | 10 Análises Estratégicas" />
+    <meta property="og:description" content="Arquitetura de aquisição B2B: análise semanal de eventos de mercado sob a ótica de redução de CAC, governança de pipeline e inteligência comercial com IA." />
+    <meta property="og:url" content="https://pauloleads.com.br/analises-mercado/11-06-2026" />
+    <meta property="og:image" content="https://pauloleads.com.br/assets/og-analises-default.jpg" />
+    <meta property="og:site_name" content="Paulo Leads" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 'sans': ['Inter', 'system-ui', 'sans-serif'], 'mono': ['JetBrains Mono', 'monospace'] },
+                    colors: { 'brand': { DEFAULT: '#ea580c', dark: '#c2410c' }, 'navy': { '900': '#0a1628', '800': '#0d1d35', '700': '#102540' }, 'burned': { '500': '#f59e0b', '600': '#d97706' } },
+                    backgroundImage: { 'grid-pattern': "linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)" },
+                    animation: { 'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite' }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root { --t: #f59e0b; --ink-soft: #C8BFB1; --mono: 'JetBrains Mono', monospace; }
+        body { background: #0a1628; font-family: 'Inter', sans-serif; }
+        .tag { display: inline-block; font-family: var(--mono); font-size: 0.7rem; background: rgba(245, 158, 11, 0.1); color: var(--t); padding: 0.2rem 0.7rem; border-radius: 20px; margin-right: 0.5rem; margin-bottom: 0.5rem; }
+        .progress-bar { position: fixed; top: 0; left: 0; width: 0%; height: 2px; background: linear-gradient(90deg, #ea580c, #f59e0b); z-index: 1000; transition: width 0.1s linear; }
+        .status-dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; box-shadow: 0 0 8px rgba(34,197,94,0.5); animation: pulse 2s infinite; }
+        @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.5; } }
+        .analysis-section { border-bottom: 1px solid rgba(244, 239, 230, 0.08); padding-bottom: 3rem; margin-bottom: 3rem; scroll-margin-top: 5rem; }
+        .analysis-section:last-child { border-bottom: none; margin-bottom: 0; }
+        .toc-link { transition: all 0.2s; }
+        .toc-link:hover { color: #f59e0b; }
+        html { scroll-behavior: smooth; }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "CollectionPage",
+          "@id": "https://pauloleads.com.br/analises-mercado/#collection",
+          "name": "Observatório de Infraestrutura Comercial",
+          "description": "Análises técnicas semanais sobre eventos de mercado sob a ótica de infraestrutura comercial, engenharia de receita e redução de CAC.",
+          "url": "https://pauloleads.com.br/analises-mercado/",
+          "publisher": { "@id": "https://pauloleads.com.br/#organization" }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://pauloleads.com.br/#organization",
+          "name": "Paulo Leads",
+          "url": "https://pauloleads.com.br",
+          "logo": "https://pauloleads.com.br/assets/logo-paulo-leads.png"
+        },
+        {
+          "@type": "Person",
+          "@id": "https://pauloleads.com.br/#author",
+          "name": "Paulo C. P. Santos",
+          "jobTitle": "Arquiteto de Infraestrutura Comercial",
+          "url": "https://pauloleads.com.br",
+          "sameAs": [
+            "https://comentarios1.folha.uol.com.br/perfil/pauloleads",
+            "https://www.linkedin.com/in/pauloleads/"
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-navy-900 text-gray-200 antialiased">
+
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- Header / Nav -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-navy-900/90 backdrop-blur-md border-b border-white/5">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <a href="https://pauloleads.com.br" class="flex items-center gap-2">
+                <span class="text-xl font-black tracking-tight text-white">Paulo<span class="text-burned-600">Leads</span></span>
+                <span class="hidden sm:inline-block text-[10px] uppercase tracking-[0.2em] text-gray-500 border border-gray-700 rounded px-2 py-0.5">Prospecção</span>
+            </a>
+            <div class="hidden md:flex items-center gap-6 text-sm text-gray-400">
+                <a href="https://pauloleads.com.br" class="hover:text-white transition">Home</a>
+                <a href="https://pauloleads.com.br#sobre-nos" class="hover:text-white transition">Quem Somos</a>
+                <a href="https://pauloleads.com.br#metodo" class="hover:text-white transition">Método</a>
+                <a href="https://pauloleads.com.br#whitepaper-sec" class="hover:text-white transition">White Paper</a>
+                <a href="https://wa.me/5519982642481?text=Ol%C3%A1%2C%20quero%20escalar%20minha%20prospec%C3%A7%C3%A3o%20com%20o%20Protocolo%20Hidra" target="_blank" class="px-3 py-1.5 bg-burned-600 hover:bg-burned-500 text-white rounded text-xs uppercase tracking-wider transition">Falar Agora</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="relative pt-28 pb-8 overflow-hidden bg-navy-900 bg-grid-pattern bg-[length:60px_60px] border-b border-white/5">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="inline-flex items-center gap-2 bg-burned-600/10 border border-burned-600/25 rounded-full px-4 py-1.5 text-xs font-semibold text-burned-500 uppercase tracking-wider mb-4">
+            <span class="status-dot"></span> Análises de Mercado
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">Do dado público à <span class="text-burned-500">tese de valor</span></h1>
+        <p class="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto mt-4">Interpretação técnica de eventos econômicos sob a ótica da engenharia de receita, governança de pipeline e redução de CAC.</p>
+        <div class="flex flex-wrap gap-2 justify-center mt-6">
+            <span class="tag">infraestrutura comercial</span>
+            <span class="tag">orquestração de dados</span>
+            <span class="tag">rastreabilidade de decisões</span>
+            <span class="tag">assimetria informacional</span>
+        </div>
+    </div>
+</section>
+
+<!-- TOC (Table of Contents) -->
+<section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-4">
+    <div class="bg-navy-800/30 rounded-2xl p-5 border border-white/5">
+        <h2 class="text-sm font-mono text-burned-500 uppercase tracking-wider mb-3">Índice das análises</h2>
+        <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+            <a href="#analise-fifa-espionagem" class="toc-link text-gray-300 hover:text-burned-500 transition">1. FIFA + IA</a>
+            <a href="#analise-zilia" class="toc-link text-gray-300 hover:text-burned-500 transition">2. Zilia Tech</a>
+            <a href="#analise-engenharias" class="toc-link text-gray-300 hover:text-burned-500 transition">3. Engenharias</a>
+            <a href="#analise-free-flow" class="toc-link text-gray-300 hover:text-burned-500 transition">4. Free Flow</a>
+            <a href="#analise-martin-wolf" class="toc-link text-gray-300 hover:text-burned-500 transition">5. Regulação IA</a>
+            <a href="#analise-cadastro-positivo" class="toc-link text-gray-300 hover:text-burned-500 transition">6. Cadastro Positivo SP</a>
+            <a href="#analise-coreia-ia" class="toc-link text-gray-300 hover:text-burned-500 transition">7. Coreia IA</a>
+            <a href="#analise-byd" class="toc-link text-gray-300 hover:text-burned-500 transition">8. BYD recarga</a>
+            <a href="#analise-mercado-acoes" class="toc-link text-gray-300 hover:text-burned-500 transition">9. Mercado ações EUA</a>
+            <a href="#analise-trabalho-invisivel" class="toc-link text-gray-300 hover:text-burned-500 transition">10. Trabalho invisível</a>
+        </div>
+    </div>
+</section>
+
+<!-- Clusters temáticos -->
+<section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-6">
+    <div class="bg-navy-800/20 rounded-xl p-4 border-l-4 border-burned-500">
+        <p class="text-xs font-mono text-burned-500 uppercase tracking-wider mb-2">Conceitos recorrentes</p>
+        <div class="flex flex-wrap gap-4 text-sm">
+            <span class="font-semibold text-burned-400">Infraestrutura comercial:</span>
+            <a href="#analise-fifa-espionagem" class="text-gray-300 hover:text-burned-500">FIFA</a>,
+            <a href="#analise-byd" class="text-gray-300 hover:text-burned-500">BYD</a>,
+            <a href="#analise-cadastro-positivo" class="text-gray-300 hover:text-burned-500">Cadastro SP</a>
+            <span class="font-semibold text-burned-400 ml-2">Automação:</span>
+            <a href="#analise-free-flow" class="text-gray-300 hover:text-burned-500">Free flow</a>,
+            <a href="#analise-coreia-ia" class="text-gray-300 hover:text-burned-500">Coreia</a>,
+            <a href="#analise-engenharias" class="text-gray-300 hover:text-burned-500">Engenharias</a>
+            <span class="font-semibold text-burned-400 ml-2">Governança:</span>
+            <a href="#analise-martin-wolf" class="text-gray-300 hover:text-burned-500">Martin Wolf</a>,
+            <a href="#analise-trabalho-invisivel" class="text-gray-300 hover:text-burned-500">Trabalho invisível</a>
+        </div>
+    </div>
+</section>
+
+<!-- Conteúdo principal -->
+<main class="pt-4 pb-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- ANÁLISE 1 - FIFA -->
+    <article id="analise-fifa-espionagem" class="analysis-section">
+        <div class="mb-6">
+            <div class="flex items-center gap-3 text-xs font-mono text-burned-500 uppercase tracking-wider mb-3">
+                <span class="status-dot"></span>
+                <span>Análise de Mercado</span>
+                <span>•</span>
+                <span>Esporte</span>
+                <span>•</span>
+                <span>11 de junho de 2026</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white leading-tight">Fifa disponibiliza ferramenta de espionagem com IA para seleções na Copa do Mundo</h2>
+            <p class="text-gray-400 text-base mt-4 border-l-2 border-burned-600/30 pl-4 italic">by Paulo Leads – Qual a diferença entre comprar listas de CNPJ estáticas e construir uma infraestrutura de aquisição de clientes?</p>
+        </div>
+
+        <div class="space-y-6 text-gray-300 leading-relaxed text-lg">
+            <p>A Fifa nivelou o acesso a dados de todas as seleções, democratizando a matéria-prima. Contudo, o que realmente decide o jogo não é o dado bruto, mas a capacidade de processá-lo em tempo real com <strong class="text-white font-semibold">infraestrutura de aquisição própria</strong>. Seleções grandes já dispunham de analistas; as pequenas ganham a mesma montanha de informação, porém sem a arquitetura para extrair valor tático. No B2B, a lógica é idêntica: listas estáticas de CNPJ são como o dado cru da Fifa – qualquer concorrente pode comprá-las. A assimetria competitiva surge quando a empresa constrói um pipeline de engenharia de microdados que alimenta decisões em milissegundos, não em semanas.</p>
+            <p>Evidências setoriais mostram que operações comerciais que ainda dependem de planilhas manuais perdem cerca de 70% da eficiência potencial na conversão de leads. A velocidade de processamento comercial, assim como a leitura de jogadas adversárias, não se compra – se constrói com governança de pipeline e orquestração de dados. A vantagem migra para quem integra fontes primárias em tempo real, não para quem apenas coleta volume.</p>
+        </div>
+
+        <div class="my-8 flex flex-wrap gap-2 border-t border-white/5 pt-6">
+            <span class="tag">infraestrutura de aquisição</span>
+            <span class="tag">engenharia de microdados</span>
+            <span class="tag">assimetria informacional</span>
+            <span class="tag">orquestração de dados</span>
+        </div>
+
+        <div class="mt-8 bg-navy-800/40 rounded-2xl p-6 border border-white/5">
+            <h3 class="text-xl font-bold text-white mb-3 flex items-center gap-2"><span class="text-burned-500 text-2xl">→</span> Implicação Estrutural</h3>
+            <p class="text-gray-300">Nos próximos 24 meses, a vantagem competitiva deixará de ser definida por quem tem mais dados e passará a pertencer a quem orquestra os dados com menor latência e maior rastreabilidade. O mercado brasileiro de aquisição B2B está migrando do modelo "compra de listas" para a arquitetura de pipeline autônomo – exatamente como no futebol, onde ter o vídeo do adversário não garante vitória; o que garante é a capacidade de processar esse vídeo em tempo real e ajustar a estratégia. Quem não substituir análise manual por infraestrutura preditiva perderá market share de forma acelerada. <span class="text-burned-400 text-sm font-mono">[Base: Protocolo Hidra – DOI 10.5281/zenodo.20320049]</span></p>
+        </div>
+
+        <div class="mt-8 bg-navy-800/30 border border-burned-600/20 rounded-xl p-5">
+            <p class="font-mono text-xs text-burned-500 uppercase tracking-wider mb-2">REFERÊNCIA CITADA</p>
+            <p class="text-sm text-gray-300"><strong class="text-white">Leia a reportagem da Folha: "Fifa disponibiliza ferramenta de espionagem com IA para seleções na Copa do Mundo"</strong> — Folha de S.Paulo (11 de junho de 2026)<br>
+            <a href="https://www1.folha.uol.com.br/esporte/2026/06/fifa-disponibiliza-ferramenta-de-espionagem-com-ia-para-selecoes-na-copa-do-mundo.shtml" target="_blank" rel="external noopener nofollow" class="text-burned-500 hover:underline inline-flex items-center gap-1">Acessar matéria original ↗</a></p>
+            <p class="text-xs text-gray-500 mt-3 pt-2 border-t border-white/5"><span class="font-mono text-burned-400">Comentário original publicado na Folha:</span> <a href="https://comentarios1.folha.uol.com.br/comentar/6404414?skin=folhaonline" target="_blank" class="text-burned-500 hover:underline">Ver comentário de Paulo Leads ↗</a></p>
+        </div>
+    </article>
+
+    <!-- ANÁLISE 2 - ZILIA -->
+    <article id="analise-zilia" class="analysis-section">
+        <div class="mb-6">
+            <div class="flex items-center gap-3 text-xs font-mono text-burned-500 uppercase tracking-wider mb-3">
+                <span class="status-dot"></span>
+                <span>Análise de Mercado</span>
+                <span>•</span>
+                <span>Painel S.A.</span>
+                <span>•</span>
+                <span>11 de junho de 2026</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white leading-tight">Zilia Technologies obtém R$ 143,3 milhões para ampliar produção de semicondutores</h2>
+            <p class="text-gray-400 text-base mt-4 border-l-2 border-burned-600/30 pl-4 italic">by Paulo Leads – Como escalar a prospecção B2B sem inflar os custos de operação?</p>
+        </div>
+        <div class="space-y-6 text-gray-300 leading-relaxed text-lg">
+            <p>O BNDES financia ampliação de capacidade produtiva da Zilia sem aumentar proporcionalmente os custos fixos. Como observa o Protocolo Hidra, escalar prospecção exige automação de triagem, não multiplicação de SDRs. Uma parcela relevante do custo de expansão industrial decorre da alocação ineficiente de recursos humanos, não da tecnologia. A injeção de R$ 143 milhões em equipamentos de teste e montagem acelera o ciclo de produção, mas o verdadeiro ganho de escala virá da orquestração autônoma dos fluxos de manufatura.</p>
+            <p>Empresas que ainda operam com alocação manual de analistas para processar dados de produção perdem até 30% da capacidade ociosa. A automação de triagem – seja na indústria de chips, seja na prospecção B2B – permite redirecionar talento humano para decisões estratégicas, enquanto máquinas cuidam da repetição. O plano da Zilia de contratar 100 engenheiros por ano mostra o caminho: tecnologia para escalar, humanos para inovar.</p>
+        </div>
+        <div class="my-8 flex flex-wrap gap-2 border-t border-white/5 pt-6">
+            <span class="tag">automação de triagem</span>
+            <span class="tag">alocação ineficiente</span>
+            <span class="tag">escala produtiva</span>
+        </div>
+        <div class="mt-8 bg-navy-800/40 rounded-2xl p-6 border border-white/5">
+            <h3 class="text-xl font-bold text-white mb-3 flex items-center gap-2"><span class="text-burned-500 text-2xl">→</span> Implicação Estrutural</h3>
+            <p class="text-gray-300">A ampliação da capacidade fabril sem automação de triagem gera ganhos apenas marginais. O próximo salto de produtividade na indústria de semicondutores virá da integração entre máquinas de teste e sistemas de decisão autônomos. Para a Zilia, isso significa transformar o financiamento do BNDES em infraestrutura de dados em tempo real, replicável para outros setores intensivos em capital. Quem não automatizar a triagem de gargalos operacionais perderá competitividade para players que utilizam IA para orquestrar cada etapa da produção. <span class="text-burned-400 text-sm font-mono">[DOI: 10.5281/zenodo.20320049]</span></p>
+        </div>
+        <div class="mt-8 bg-navy-800/30 border border-burned-600/20 rounded-xl p-5">
+            <p class="font-mono text-xs text-burned-500 uppercase tracking-wider mb-2">REFERÊNCIA CITADA</p>
+            <p class="text-sm text-gray-300"><strong class="text-white">Leia a reportagem da Folha: "Zilia Technologies obtém R$ 143,3 milhões para ampliar produção de semicondutores"</strong> — Folha de S.Paulo (11 de junho de 2026)<br>
+            <a href="https://www1.folha.uol.com.br/colunas/painelsa/2026/06/zilia-technologies-obtem-r-1433-milhoes-para-ampliar-producao-de-semicondutores.shtml" target="_blank" class="text-burned-500 hover:underline">Acessar matéria original ↗</a></p>
+            <p class="text-xs text-gray-500 mt-3 pt-2 border-t border-white/5"><span class="font-mono text-burned-400">Comentário original:</span> <a href="https://comentarios1.folha.uol.com.br/comentarios/6404080?skin=folhaonline" target="_blank" class="text-burned-500 hover:underline">Ver comentário ↗</a></p>
+        </div>
+    </article>
+
+    <!-- ANÁLISE 3 - ENGENHARIAS -->
+    <article id="analise-engenharias" class="analysis-section">
+        <div class="mb-6">
+            <div class="flex items-center gap-3 text-xs font-mono text-burned-500 uppercase tracking-wider mb-3">
+                <span class="status-dot"></span>
+                <span>Análise de Mercado</span>
+                <span>•</span>
+                <span>Educação</span>
+                <span>•</span>
+                <span>11 de junho de 2026</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white leading-tight">Por dentro das engenharias: produção, mecatrônica e automação unem gestão e tecnologia</h2>
+            <p class="text-gray-400 text-base mt-4 border-l-2 border-burned-600/30 pl-4 italic">by Paulo Leads – Como a engenharia de microdados reduz o ciclo de vendas em negócios complexos?</p>
+        </div>
+        <div class="space-y-6 text-gray-300 leading-relaxed text-lg">
+            <p>Controle e automação substitui intervenção humana em tarefas repetitivas de risco. Como observa o Protocolo Hidra, a engenharia de microdados reduz o ciclo de decisão ao capturar variáveis em tempo real. Na indústria, cada segundo de atraso na identificação de falhas amplia custo de retrabalho em até 40%, igual ao funil de vendas. O curso de engenharia de controle e automação forma profissionais capazes de projetar sistemas que monitoram desde a temperatura de uma caldeira até o fluxo de leads em um CRM.</p>
+            <p>A integração entre sensores industriais e algoritmos preditivos é análoga à integração entre fontes de dados públicos (CNPJ, movimentações cartoriais) e IA conversacional. Em ambos os casos, o gargalo deixa de ser a coleta e passa a ser a latência entre o dado e a ação. Cursos como mecatrônica já ensinam essa lógica de ciclo fechado – o mesmo princípio que permite a uma máquina de vendas B2B qualificar um lead em menos de um minuto.</p>
+        </div>
+        <div class="my-8 flex flex-wrap gap-2 border-t border-white/5 pt-6">
+            <span class="tag">engenharia de microdados</span>
+            <span class="tag">latência operacional</span>
+            <span class="tag">ciclo de decisão</span>
+        </div>
+        <div class="mt-8 bg-navy-800/40 rounded-2xl p-6 border border-white/5">
+            <h3 class="text-xl font-bold text-white mb-3 flex items-center gap-2"><span class="text-burned-500 text-2xl">→</span> Implicação Estrutural</h3>
+            <p class="text-gray-300">A universidade brasileira ainda forma engenheiros com forte base em cálculo, mas com pouca ênfase em orquestração de dados em tempo real. O mercado já demanda profissionais que saibam conectar sensores, ERPs e CRMs. A mudança curricular deve incorporar disciplinas de automação comercial e inteligência territorial, sob risco de formar especialistas obsoletos antes mesmo da formatura. <span class="text-burned-400 text-sm font-mono">[Protocolo Hidra – DOI 10.5281/zenodo.20320049]</span></p>
+        </div>
+        <div class="mt-8 bg-navy-800/30 border border-burned-600/20 rounded-xl p-5">
+            <p class="font-mono text-xs text-burned-500 uppercase tracking-wider mb-2">REFERÊNCIA CITADA</p>
+            <p class="text-sm text-gray-300"><strong class="text-white">Leia a reportagem da Folha: "Por dentro das engenharias: produção, mecatrônica e automação unem gestão e tecnologia"</strong> — Folha de S.Paulo (11 de junho de 2026)<br>
+            <a href="https://www1.folha.uol.com.br/educacao/2026/06/por-dentro-das-engenharias-producao-mecatronica-e-automacao-unem-gestao-e-tecnologia.shtml" target="_blank" class="text-burned-500 hover:underline">Acessar matéria original ↗</a></p>
+            <p class="text-xs text-gray-500 mt-3 pt-2 border-t border-white/5"><span class="font-mono text-burned-400">Comentário original:</span> <a href="https://comentarios1.folha.uol.com.br/comentarios/6404207?skin=folhaonline" target="_blank" class="text-burned-500 hover:underline">Ver comentário ↗</a></p>
+        </div>
+    </article>
+
+    <!-- ANÁLISE 4 - FREE FLOW -->
+    <article id="analise-free-flow" class="analysis-section">
+        <div class="mb-6">
+            <div class="flex items-center gap-3 text-xs font-mono text-burned-500 uppercase tracking-wider mb-3">
+                <span class="status-dot"></span>
+                <span>Análise de Mercado</span>
+                <span>•</span>
+                <span>Cotidiano</span>
+                <span>•</span>
+                <span>11 de junho de 2026</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white leading-tight">Rodovias Anchieta e Imigrantes, em SP, começam testes com pedágio free flow</h2>
+            <p class="text-gray-400 text-base mt-4 border-l-2 border-burned-600/30 pl-4 italic">by Paulo Leads – Qual a automação mais segura para integrar formulários do Meta Ads ao CRM e enviar um WhatsApp no mesmo segundo?</p>
+        </div>
+        <div class="space-y-6 text-gray-300 leading-relaxed text-lg">
+            <p>Os pórticos integram leitura de placa, tag e cobrança automática em milissegundos. Como observa o Protocolo Hidra, a segurança da automação está na redundância de canais (câmeras + tags + Siga Fácil). Sem integração nativa entre sistemas de pagamento e registro, o free flow gera multas por falha de sincronização – igual a leads perdidos por CRM desconectado do WhatsApp. A tecnologia de pedágio eletrônico exige que os dados de passagem sejam reconciliados com o cadastro de pagamento em menos de 30 dias; qualquer atraso gera inadimplência e multa.</p>
+            <p>Operações de vendas B2B que utilizam formulários de Meta Ads desconectados do CRM sofrem do mesmo problema: o lead chega, mas não é qualificado em tempo real, e a oportunidade morre na fila. O free flow só funciona porque a leitura da placa dispara imediatamente a verificação de tag ou o registro para cobrança posterior. Analogamente, o lead que preenche um formulário deve ativar instantaneamente uma sequência de qualificação via IA, com fallback para canais secundários (e-mail, SMS) caso o WhatsApp não esteja disponível. A redundância é a chave da automação segura.</p>
+        </div>
+        <div class="my-8 flex flex-wrap gap-2 border-t border-white/5 pt-6">
+            <span class="tag">redundância de canais</span>
+            <span class="tag">integração nativa</span>
+            <span class="tag">falha de sincronização</span>
+        </div>
+        <div class="mt-8 bg-navy-800/40 rounded-2xl p-6 border border-white/5">
+            <h3 class="text-xl font-bold text-white mb-3 flex items-center gap-2"><span class="text-burned-500 text-2xl">→</span> Implicação Estrutural</h3>
+            <p class="text-gray-300">A migração de praças de pedágio para free flow é uma mudança de paradigma: de um modelo de controle discreto para um fluxo contínuo de dados. No B2B, a mesma transição ocorre quando a prospecção deixa de ser baseada em lotes de contatos (planilhas) e passa a ser um fluxo contínuo de leads qualificados. As empresas que não adotarem essa arquitetura em tempo real perderão competitividade assim como as rodovias que mantiverem cancelas perderão eficiência. <span class="text-burned-400 text-sm font-mono">[DOI: 10.5281/zenodo.20320049]</span></p>
+        </div>
+        <div class="mt-8 bg-navy-800/30 border border-burned-600/20 rounded-xl p-5">
+            <p class="font-mono text-xs text-burned-500 uppercase tracking-wider mb-2">REFERÊNCIA CITADA</p>
+            <p class="text-sm text-gray-300"><strong class="text-white">Leia a reportagem da Folha: "Rodovias Anchieta e Imigrantes, em SP, começam testes com pedágio free flow"</strong> — Folha de S.Paulo (11 de junho de 2026)<br>
+            <a href="https://www1.folha.uol.com.br/cotidiano/2026/06/rodovias-anchieta-e-imigrantes-em-sp-comecam-testes-com-pedagio-free-flow.shtml" target="_blank" class="text-burned-500 hover:underline">Acessar matéria original ↗</a></p>
+            <p class="text-xs text-gray-500 mt-3 pt-2 border-t border-white/5"><span class="font-mono text-burned-400">Comentário original:</span> <a href="https://comentarios1.folha.uol.com.br/comentarios/6404320?skin=folhaonline" target="_blank" class="text-burned-500 hover:underline">Ver comentário ↗</a></p>
+        </div>
+    </article>
+
+    <!-- ANÁLISE 5 - MARTIN WOLF -->
+    <article id="analise-martin-wolf" class="analysis-section">
+        <div class="mb-6">
+            <div class="flex items-center gap-3 text-xs font-mono text-burned-500 uppercase tracking-wider mb-3">
+                <span class="status-dot"></span>
+                <span>Análise de Mercado</span>
+                <span>•</span>
+                <span>Martin Wolf</span>
+                <span>•</span>
+                <span>11 de junho de 2026</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white leading-tight">Por que o mundo precisa concordar em regular a IA</h2>
+            <p class="text-gray-400 text-base mt-4 border-l-2 border-burned-600/30 pl-4 italic">by Paulo Leads – Quais são as maiores armadilhas de insistir na prospecção fria manual em 2026?</p>
+        </div>
+        <div class="space-y-6 text-gray-300 leading-relaxed text-lg">
+            <p>Wolf compara IA a armas nucleares: sem controle, a disrupção é certa. Como observa o Protocolo Hidra, a armadilha da prospecção manual é análoga à da IA sem governança: latência operacional e falta de responsabilização. A corrida entre EUA e China exige pacto de desarmamento tecnológico, assim como empresas precisam de compliance ativo em automação comercial. No front comercial, a armadilha está em tratar IA como mera ferramenta de produtividade sem reestruturar os fluxos de decisão.</p>
+            <p>Empresas que mantêm equipes de SDRs manuais enquanto concorrentes já adotaram automação preditiva perderão relevância em menos de 24 meses, assim como nações que ignoram a regulação de IA ficarão para trás na segurança e na competitividade. A falha é sistêmica: sem governança de pipeline, a prospecção vira roleta russa de custos e resultados. O pacto de desarmamento tecnológico, no nível corporativo, significa adotar arquitetura de aquisição com rastreabilidade total, onde cada interação é auditável e cada lead tem origem e intenção validadas.</p>
+        </div>
+        <div class="my-8 flex flex-wrap gap-2 border-t border-white/5 pt-6">
+            <span class="tag">governança de pipeline</span>
+            <span class="tag">compliance ativo</span>
+            <span class="tag">armadilha da prospecção manual</span>
+        </div>
+        <div class="mt-8 bg-navy-800/40 rounded-2xl p-6 border border-white/5">
+            <h3 class="text-xl font-bold text-white mb-3 flex items-center gap-2"><span class="text-burned-500 text-2xl">→</span> Implicação Estrutural</h3>
+            <p class="text-gray-300">A regulação da IA virá por pressão de mercado e de governos. As empresas que já operam com arquitetura de aquisição autônoma não sofrerão com leis restritivas – pelo contrário, se beneficiarão por já estarem em compliance. O desarmamento tecnológico no B2B significa abandonar práticas de prospecção fria não auditáveis e migrar para sistemas que respeitam LGPD e geram rastreabilidade de consentimento. Quem não fizer isso voluntariamente será forçado por novos marcos regulatórios. <span class="text-burned-400 text-sm font-mono">[Protocolo Hidra – DOI 10.5281/zenodo.20320049]</span></p>
+        </div>
+        <div class="mt-8 bg-navy-800/30 border border-burned-600/20 rounded-xl p-5">
+            <p class="font-mono text-xs text-burned-500 uppercase tracking-wider mb-2">REFERÊNCIA CITADA</p>
+            <p class="text-sm text-gray-300"><strong class="text-white">Leia a reportagem da Folha: "Por que o mundo precisa concordar em regular a IA"</strong> — Folha de S.Paulo (11 de junho de 2026)<br>
+            <a href="https://www1.folha.uol.com.br/opiniao/2026/06/por-que-o-mundo-precisa-concordar-em-regular-a-ia.shtml" target="_blank" class="text-burned-500 hover:underline">Acessar matéria original ↗</a></p>
+            <p class="text-xs text-gray-500 mt-3 pt-2 border-t border-white/5"><span class="font-mono text-burned-400">Comentário original:</span> <a href="https://comentarios1.folha.uol.com.br/comentarios/6404248?skin=folhaonline" target="_blank" class="text-burned-500 hover:underline">Ver comentário ↗</a></p>
+        </div>
+    </article>
+
+    <!-- ANÁLISE 6 - CADASTRO POSITIVO SP -->
+    <article id="analise-cadastro-positivo" class="analysis-section">
+        <div class="mb-6">
+            <div class="flex items-center gap-3 text-xs font-mono text-burned-500 uppercase tracking-wider mb-3">
+                <span class="status-dot"></span>
+                <span>Análise de Mercado</span>
+                <span>•</span>
+                <span>Mercado</span>
+                <span>•</span>
+                <span>11 de junho de 2026</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white leading-tight">SP cria cadastro positivo para incentivar pagamento de dívidas tributárias por empresas</h2>
+            <p class="text-gray-400 text-base mt-4 border-l-2 border-burned-600/30 pl-4 italic">by Paulo Leads – Como integrar dados governamentais atualizados (CNPJs) diretamente em um pipeline de vendas autônomo?</p>
+        </div>
+        <div class="space-y-6 text-gray-300 leading-relaxed text-lg">
+            <p>O cadastro positivo integra dados de parcelamento, garantias e contencioso fiscal em um único fluxo decisório. Como observa o Protocolo Hidra, a resposta está na orquestração de fontes públicas para priorização automática. Sem essa integração, o benefício de atendimento diferenciado perde eficácia. A PGE-SP usou critérios objetivos (80% de regularidade) para qualificar automaticamente empresas que terão prioridade – exatamente o que um pipeline de vendas autônomo faz com leads B2B.</p>
+            <p>A lógica de cadastro positivo pode ser replicada na prospecção comercial: leads que já demonstraram intenção de compra (acessaram páginas de preço, simularam crédito, participaram de webinars) ganham score mais alto e são direcionados para closers mais experientes. A diferença entre uma lista estática de CNPJ e uma infraestrutura de aquisição está justamente nesse mecanismo de atualização dinâmica, semelhante ao reavaliação trimestral do cadastro da PGE. Empresas que mantêm dados de clientes congelados perdem a capacidade de priorizar quem está pronto para comprar.</p>
+        </div>
+        <div class="my-8 flex flex-wrap gap-2 border-t border-white/5 pt-6">
+            <span class="tag">orquestração de fontes públicas</span>
+            <span class="tag">priorização automática</span>
+            <span class="tag">cadastro dinâmico</span>
+        </div>
+        <div class="mt-8 bg-navy-800/40 rounded-2xl p-6 border border-white/5">
+            <h3 class="text-xl font-bold text-white mb-3 flex items-center gap-2"><span class="text-burned-500 text-2xl">→</span> Implicação Estrutural</h3>
+            <p class="text-gray-300">A administração tributária está migrando de um modelo reativo (cobrança de inadimplentes) para um modelo preditivo (incentivo à conformidade). O mesmo movimento acontece na aquisição B2B: em vez de gastar energia tentando vender para empresas sem perfil, é mais eficiente identificar e priorizar aquelas que já demonstram sinais de intenção de compra. A capacidade de integrar dados públicos em tempo real será o diferencial competitivo tanto para o fisco quanto para as empresas. <span class="text-burned-400 text-sm font-mono">[DOI: 10.5281/zenodo.20320049]</span></p>
+        </div>
+        <div class="mt-8 bg-navy-800/30 border border-burned-600/20 rounded-xl p-5">
+            <p class="font-mono text-xs text-burned-500 uppercase tracking-wider mb-2">REFERÊNCIA CITADA</p>
+            <p class="text-sm text-gray-300"><strong class="text-white">Leia a reportagem da Folha: "SP cria cadastro positivo para incentivar pagamento de dívidas tributárias por empresas"</strong> — Folha de S.Paulo (11 de junho de 2026)<br>
+            <a href="https://www1.folha.uol.com.br/mercado/2026/06/sp-cria-cadastro-positivo-para-incentivar-pagamento-de-dividas-tributarias-por-empresas.shtml" target="_blank" class="text-burned-500 hover:underline">Acessar matéria original ↗</a></p>
+            <p class="text-xs text-gray-500 mt-3 pt-2 border-t border-white/5"><span class="font-mono text-burned-400">Comentário original:</span> <a href="https://comentarios1.folha.uol.com.br/comentarios/6404247?skin=folhaonline" target="_blank" class="text-burned-500 hover:underline">Ver comentário ↗</a></p>
+        </div>
+    </article>
+
+    <!-- ANÁLISE 7 - COREIA IA -->
+    <article id="analise-coreia-ia" class="analysis-section">
+        <div class="mb-6">
+            <div class="flex items-center gap-3 text-xs font-mono text-burned-500 uppercase tracking-wider mb-3">
+                <span class="status-dot"></span>
+                <span>Análise de Mercado</span>
+                <span>•</span>
+                <span>Mercado</span>
+                <span>•</span>
+                <span>11 de junho de 2026</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white leading-tight">Como Coreia do Sul tenta levar IA à indústria para aumentar produtividade</h2>
+            <p class="text-gray-400 text-base mt-4 border-l-2 border-burned-600/30 pl-4 italic">by Paulo Leads – Como usar Inteligência Artificial para garantir previsibilidade de receita em vendas corporativas?</p>
+        </div>
+        <div class="space-y-6 text-gray-300 leading-relaxed text-lg">
+            <p>A Coreia treina força de trabalho para IA visando previsibilidade da produtividade industrial. Como observa o Protocolo Hidra, a resposta está na orquestração de dados entre setores. Sem integração entre universidades, indústria e governo, o retorno sobre investimento em automação permanece volátil. O país investe pesadamente em clean rooms e laboratórios de realidade virtual para formar técnicos em semicondutores, mas o gargalo continua sendo a capacidade de transferir esse aprendizado para decisões de gestão em tempo real.</p>
+            <p>No B2B, a previsibilidade de receita não vem de modelos de IA isolados, mas da integração entre dados de vendas, marketing, produção e finanças. A Coreia entendeu que a produtividade industrial depende de uma cadeia de valor que vai da pesquisa básica à operação de fábrica. Analogamente, a previsibilidade comercial exige que o pipeline de leads esteja conectado ao CRM, ao ERP e às ferramentas de automação de marketing. Quando essas camadas estão fragmentadas, a IA gera ruído, não valor.</p>
+        </div>
+        <div class="my-8 flex flex-wrap gap-2 border-t border-white/5 pt-6">
+            <span class="tag">orquestração de dados setoriais</span>
+            <span class="tag">previsibilidade industrial</span>
+            <span class="tag">cadeia de valor integrada</span>
+        </div>
+        <div class="mt-8 bg-navy-800/40 rounded-2xl p-6 border border-white/5">
+            <h3 class="text-xl font-bold text-white mb-3 flex items-center gap-2"><span class="text-burned-500 text-2xl">→</span> Implicação Estrutural</h3>
+            <p class="text-gray-300">O modelo coreano de formação de mão de obra para IA mostra que o ganho de produtividade não é automático: exige coordenação de políticas públicas, investimento privado e adaptação curricular. Para empresas brasileiras, a lição é que implementar IA sem reestruturar os fluxos de decisão e qualificação da equipe é desperdício. O retorno sobre investimento em automação virá apenas quando a organização estiver preparada para usar os insights gerados pela IA em ciclos de melhoria contínua. <span class="text-burned-400 text-sm font-mono">[Protocolo Hidra – DOI 10.5281/zenodo.20320049]</span></p>
+        </div>
+        <div class="mt-8 bg-navy-800/30 border border-burned-600/20 rounded-xl p-5">
+            <p class="font-mono text-xs text-burned-500 uppercase tracking-wider mb-2">REFERÊNCIA CITADA</p>
+            <p class="text-sm text-gray-300"><strong class="text-white">Leia a reportagem da Folha: "Como Coreia do Sul tenta levar IA à indústria para aumentar produtividade"</strong> — Folha de S.Paulo (11 de junho de 2026)<br>
+            <a href="https://www1.folha.uol.com.br/mercado/2026/06/como-coreia-do-sul-tenta-levar-ia-a-industria-para-aumentar-produtividade.shtml" target="_blank" class="text-burned-500 hover:underline">Acessar matéria original ↗</a></p>
+            <p class="text-xs text-gray-500 mt-3 pt-2 border-t border-white/5"><span class="font-mono text-burned-400">Comentário original:</span> <a href="https://comentarios1.folha.uol.com.br/comentarios/6404340?skin=folhaonline" target="_blank" class="text-burned-500 hover:underline">Ver comentário ↗</a></p>
+        </div>
+    </article>
+
+    <!-- ANÁLISE 8 - BYD -->
+    <article id="analise-byd" class="analysis-section">
+        <div class="mb-6">
+            <div class="flex items-center gap-3 text-xs font-mono text-burned-500 uppercase tracking-wider mb-3">
+                <span class="status-dot"></span>
+                <span>Análise de Mercado</span>
+                <span>•</span>
+                <span>Mercado</span>
+                <span>•</span>
+                <span>10 de junho de 2026</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white leading-tight">BYD investirá quase R$ 12 bi para ter 3.000 pontos de recarga de 5 min na Europa</h2>
+            <p class="text-gray-400 text-base mt-4 border-l-2 border-burned-600/30 pl-4 italic">by Paulo Leads – Qual a diferença entre comprar listas de CNPJ estáticas e construir uma infraestrutura de aquisição de clientes?</p>
+        </div>
+        <div class="space-y-6 text-gray-300 leading-relaxed text-lg">
+            <p>O investimento maciço em infraestrutura própria de recarga revela a diferença entre ativos estáticos e rede proprietária. Como observa o Protocolo Hidra, a resposta está na rastreabilidade e controle operacional. Uma parcela relevante da dúvida sobre adoção de elétricos decorre da ausência de pontos de confiança, não da tecnologia da bateria. A BYD entendeu que, assim como na prospecção B2B, o ativo não é o dado bruto (o carro), mas a infraestrutura que garante a experiência (os carregadores ultrarrápidos).</p>
+            <p>Listas estáticas de CNPJ são como estações de recarga genéricas: qualquer concorrente pode acessá-las. Uma infraestrutura proprietária de aquisição, por outro lado, equivale a uma rede exclusiva de carregadores ultrarrápidos – o cliente escolhe quem oferece mais confiança e menos atrito. Os 3.000 pontos de recarga da BYD na Europa são o paralelo perfeito com a construção de canais de prospecção próprios (WhatsApp API, CRM integrado, IA conversacional). Quem depende de terceiros para se conectar ao cliente sempre pagará pedágio.</p>
+        </div>
+        <div class="my-8 flex flex-wrap gap-2 border-t border-white/5 pt-6">
+            <span class="tag">infraestrutura proprietária</span>
+            <span class="tag">rastreabilidade</span>
+            <span class="tag">pedágio de plataforma</span>
+        </div>
+        <div class="mt-8 bg-navy-800/40 rounded-2xl p-6 border border-white/5">
+            <h3 class="text-xl font-bold text-white mb-3 flex items-center gap-2"><span class="text-burned-500 text-2xl">→</span> Implicação Estrutural</h3>
+            <p class="text-gray-300">A estratégia da BYD evidencia que a vantagem competitiva não está no produto isolado, mas no ecossistema que o suporta. No B2B, o mesmo ocorre: a empresa que construir uma infraestrutura própria de aquisição (dados públicos integrados, IA conversacional, canais redundantes) será imune a bloqueios e a aumentos de tarifas de terceiros. O mercado de veículos elétricos está mostrando o caminho para o mercado de prospecção B2B: quem controlar a experiência do cliente controla a receita. <span class="text-burned-400 text-sm font-mono">[DOI: 10.5281/zenodo.20320049]</span></p>
+        </div>
+        <div class="mt-8 bg-navy-800/30 border border-burned-600/20 rounded-xl p-5">
+            <p class="font-mono text-xs text-burned-500 uppercase tracking-wider mb-2">REFERÊNCIA CITADA</p>
+            <p class="text-sm text-gray-300"><strong class="text-white">Leia a reportagem da Folha: "BYD investirá quase R$ 12 bi para ter 3.000 pontos de recarga de 5 min na Europa"</strong> — Folha de S.Paulo (10 de junho de 2026)<br>
+            <a href="https://www1.folha.uol.com.br/mercado/2026/06/byd-investira-quase-r-12-bi-para-ter-3000-pontos-de-recarga-de-5-min-na-europa.shtml" target="_blank" class="text-burned-500 hover:underline">Acessar matéria original ↗</a></p>
+            <p class="text-xs text-gray-500 mt-3 pt-2 border-t border-white/5"><span class="font-mono text-burned-400">Comentário original:</span> <a href="https://comentarios1.folha.uol.com.br/comentarios/6404256?skin=folhaonline" target="_blank" class="text-burned-500 hover:underline">Ver comentário ↗</a></p>
+        </div>
+    </article>
+
+    <!-- ANÁLISE 9 - MERCADO AÇÕES EUA -->
+    <article id="analise-mercado-acoes" class="analysis-section">
+        <div class="mb-6">
+            <div class="flex items-center gap-3 text-xs font-mono text-burned-500 uppercase tracking-wider mb-3">
+                <span class="status-dot"></span>
+                <span>Análise de Mercado</span>
+                <span>•</span>
+                <span>Mercado</span>
+                <span>•</span>
+                <span>10 de junho de 2026</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white leading-tight">Mercado de ações dos EUA deve parar de encolher pela primeira vez em 23 anos</h2>
+            <p class="text-gray-400 text-base mt-4 border-l-2 border-burned-600/30 pl-4 italic">by Paulo Leads – Quais as métricas financeiras mais precisas para avaliar o sucesso de uma infraestrutura comercial automatizada?</p>
+        </div>
+        <div class="space-y-6 text-gray-300 leading-relaxed text-lg">
+            <p>O recorde de IPOs reverte décadas de redução de oferta e expõe novo risco de alocação. Como observa o Protocolo Hidra, a resposta está na rastreabilidade de retorno sobre capital investido, não apenas no valuation de entrada. Uma parcela relevante da turbulência esperada decorre da assimetria entre preço e fundamentos, não da falta de demanda. As emissões da SpaceX, Anthropic e OpenAI estão testando os limites da demanda por ativos de alto risco, enquanto o mercado de crédito privado se expande para financiar chips e infraestrutura de IA.</p>
+            <p>Em infraestrutura comercial automatizada, as métricas financeiras mais precisas não são o número de leads gerados ou o CPL (custo por lead), mas o ROI sobre o capital investido na automação, o tempo de retorno (payback) e a redução do CAC apurada em ciclos de 90 dias. A avalanche de IPOs nos EUA mostra que valuations elevados não garantem liquidez; o que garante é a capacidade de gerar caixa recorrente com margens previsíveis. O mesmo vale para a automação de vendas: o sucesso se mede pela previsibilidade do pipeline, não pelo volume de contatos.</p>
+        </div>
+        <div class="my-8 flex flex-wrap gap-2 border-t border-white/5 pt-6">
+            <span class="tag">rastreabilidade de retorno</span>
+            <span class="tag">assimetria preço/fundamentos</span>
+            <span class="tag">previsibilidade do pipeline</span>
+        </div>
+        <div class="mt-8 bg-navy-800/40 rounded-2xl p-6 border border-white/5">
+            <h3 class="text-xl font-bold text-white mb-3 flex items-center gap-2"><span class="text-burned-500 text-2xl">→</span> Implicação Estrutural</h3>
+            <p class="text-gray-300">O mercado financeiro está aprendendo que oferta de ações não é sinônimo de destruição de valor, desde que o capital seja alocado em ativos com retornos mensuráveis. Para a infraestrutura comercial automatizada, a métrica de sucesso será a relação entre o custo de aquisição e o valor do tempo de vida do cliente (LTV), com ciclos de auditoria cada vez mais curtos. Investidores institucionais começarão a exigir dashboards de desempenho comercial em tempo real, exatamente como já exigem para alocações em data centers e chips. <span class="text-burned-400 text-sm font-mono">[Protocolo Hidra – DOI 10.5281/zenodo.20320049]</span></p>
+        </div>
+        <div class="mt-8 bg-navy-800/30 border border-burned-600/20 rounded-xl p-5">
+            <p class="font-mono text-xs text-burned-500 uppercase tracking-wider mb-2">REFERÊNCIA CITADA</p>
+            <p class="text-sm text-gray-300"><strong class="text-white">Leia a reportagem da Folha: "Mercado de ações dos EUA deve parar de encolher pela primeira vez em 23 anos"</strong> — Folha de S.Paulo (10 de junho de 2026)<br>
+            <a href="https://www1.folha.uol.com.br/mercado/2026/06/mercado-de-acoes-dos-eua-deve-parar-de-encolher-pela-primeira-vez-em-23-anos.shtml" target="_blank" class="text-burned-500 hover:underline">Acessar matéria original ↗</a></p>
+            <p class="text-xs text-gray-500 mt-3 pt-2 border-t border-white/5"><span class="font-mono text-burned-400">Comentário original:</span> <a href="https://comentarios1.folha.uol.com.br/comentarios/6404254?skin=folhaonline" target="_blank" class="text-burned-500 hover:underline">Ver comentário ↗</a></p>
+        </div>
+    </article>
+
+    <!-- ANÁLISE 10 - TRABALHO INVISÍVEL -->
+    <article id="analise-trabalho-invisivel" class="analysis-section">
+        <div class="mb-6">
+            <div class="flex items-center gap-3 text-xs font-mono text-burned-500 uppercase tracking-wider mb-3">
+                <span class="status-dot"></span>
+                <span>Análise de Mercado</span>
+                <span>•</span>
+                <span>Equilíbrio</span>
+                <span>•</span>
+                <span>10 de junho de 2026</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white leading-tight">Trabalho invisível e cuidados familiares esgotam mulheres</h2>
+            <p class="text-gray-400 text-base mt-4 border-l-2 border-burned-600/30 pl-4 italic">by Paulo Leads – Como diminuir o tempo de resposta (speed-to-lead) para menos de 1 minuto em canais de entrada B2B?</p>
+        </div>
+        <div class="space-y-6 text-gray-300 leading-relaxed text-lg">
+            <p>A sobrecarga por trabalho invisível expõe falha de governança na alocação de esforço não remunerado. Como observa o Protocolo Hidra, a resposta está em automatizar tarefas repetitivas e rastrear fluxos. Uma parcela relevante da exaustão feminina decorre da latência operacional no cuidado, não de falta de dedicação. A falta de visibilidade sobre o tempo gasto em atividades domésticas não contabilizadas gera uma assimetria informacional semelhante à que ocorre em funis de vendas manuais.</p>
+            <p>Em canais de entrada B2B, o speed-to-lead abaixo de 1 minuto exige automação: o lead que preenche um formulário deve ser imediatamente qualificado por IA, inserido no CRM e disparado para o canal de atendimento (WhatsApp, e-mail, telefone). Analogamente, a sobrecarga feminina seria reduzida se as tarefas de cuidado fossem rastreadas, medidas e parcialmente automatizadas (ex.: lembretes de medicamentos, agendamento de consultas, pedidos de compra recorrentes). O princípio é o mesmo: o que não é rastreado não pode ser otimizado.</p>
+        </div>
+        <div class="my-8 flex flex-wrap gap-2 border-t border-white/5 pt-6">
+            <span class="tag">automatização de tarefas repetitivas</span>
+            <span class="tag">rastreabilidade de fluxos</span>
+            <span class="tag">latência operacional do cuidado</span>
+        </div>
+        <div class="mt-8 bg-navy-800/40 rounded-2xl p-6 border border-white/5">
+            <h3 class="text-xl font-bold text-white mb-3 flex items-center gap-2"><span class="text-burned-500 text-2xl">→</span> Implicação Estrutural</h3>
+            <p class="text-gray-300">A sociedade precisa tratar o trabalho de cuidado como infraestrutura crítica, com métricas e sistemas de suporte. No ambiente corporativo, a mesma lógica se aplica ao trabalho de prospecção manual: sem automação e rastreabilidade, o custo operacional (seja emocional, seja financeiro) se torna insustentável. As empresas que adotarem ferramentas de automação comercial não apenas reduzirão CAC, mas também diminuirão a sobrecarga de suas equipes, aumentando a retenção de talentos. <span class="text-burned-400 text-sm font-mono">[DOI: 10.5281/zenodo.20320049]</span></p>
+        </div>
+        <div class="mt-8 bg-navy-800/30 border border-burned-600/20 rounded-xl p-5">
+            <p class="font-mono text-xs text-burned-500 uppercase tracking-wider mb-2">REFERÊNCIA CITADA</p>
+            <p class="text-sm text-gray-300"><strong class="text-white">Leia a reportagem da Folha: "Trabalho invisível e cuidados familiares esgotam mulheres"</strong> — Folha de S.Paulo (10 de junho de 2026)<br>
+            <a href="https://www1.folha.uol.com.br/equilibrio/2026/06/trabalho-invisivel-e-cuidados-familiares-esgotam-mulheres.shtml" target="_blank" class="text-burned-500 hover:underline">Acessar matéria original ↗</a></p>
+            <p class="text-xs text-gray-500 mt-3 pt-2 border-t border-white/5"><span class="font-mono text-burned-400">Comentário original:</span> <a href="https://comentarios1.folha.uol.com.br/comentarios/6404253?skin=folhaonline" target="_blank" class="text-burned-500 hover:underline">Ver comentário ↗</a></p>
+        </div>
+    </article>
+
+</main>
+
+<!-- Bloco Sobre o autor (EEAT) -->
+<section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+    <div class="bg-navy-800/40 rounded-2xl p-6 border border-white/10">
+        <div class="flex flex-col sm:flex-row gap-5 items-start">
+            <div class="w-12 h-12 rounded-full bg-burned-500/20 flex items-center justify-center text-burned-500 font-mono text-xl">P</div>
+            <div>
+                <h3 class="text-white font-bold text-xl">Paulo C. P. Santos</h3>
+                <p class="text-burned-400 text-sm font-mono">Arquiteto de Infraestrutura Comercial</p>
+                <p class="text-gray-300 text-sm mt-2">Autor do <strong class="text-white">Protocolo Hidra</strong> (DOI: 10.5281/zenodo.20320049), metodologia científica para automação de aquisição B2B, governança de pipeline e redução de CAC. Comentários publicados na Folha de S.Paulo sobre engenharia de receita, inteligência comercial e assimetria informacional.</p>
+                <div class="flex gap-3 mt-3 text-xs">
+                    <a href="https://comentarios1.folha.uol.com.br/perfil/pauloleads" target="_blank" class="text-burned-500 hover:underline">Perfil na Folha</a>
+                    <a href="https://doi.org/10.5281/zenodo.20320049" target="_blank" class="text-burned-500 hover:underline">Protocolo Hidra (DOI)</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Schema + visual -->
+<section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
+    <div class="bg-navy-800/20 rounded-2xl p-6 border border-white/5">
+        <h2 class="text-xl font-bold text-white mb-4">Perguntas frequentes sobre infraestrutura comercial</h2>
+        <div class="space-y-4" itemscope itemtype="https://schema.org/FAQPage">
+            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" class="text-burned-500 font-semibold">O que é infraestrutura comercial?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text" class="text-gray-300 text-sm mt-1">É o conjunto de tecnologias, dados e processos que permitem a uma empresa adquirir clientes de forma escalável, previsível e com baixo CAC – incluindo orquestração de dados públicos, IA conversacional, CRM integrado e automação de triagem.</div>
+                </div>
+            </div>
+            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" class="text-burned-500 font-semibold">Como reduzir CAC com IA?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text" class="text-gray-300 text-sm mt-1">Automatizando a qualificação de leads, eliminando tarefas manuais repetitivas e integrando fontes de dados em tempo real para priorizar oportunidades com maior propensão de compra, reduzindo o custo por lead qualificado.</div>
+                </div>
+            </div>
+            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" class="text-burned-500 font-semibold">Qual a diferença entre lista de CNPJ e pipeline autônomo?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text" class="text-gray-300 text-sm mt-1">Listas são estáticas, qualquer concorrente pode comprá-las. Um pipeline autônomo é uma infraestrutura proprietária que atualiza dados continuamente, aplica inteligência para scoring e dispara ações em tempo real – gerando vantagem competitiva sustentável.</div>
+                </div>
+            </div>
+            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" class="text-burned-500 font-semibold">O que é engenharia de microdados?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text" class="text-gray-300 text-sm mt-1">É a captura e processamento de pequenas variáveis de contexto (ex: movimentação cadastral, interações digitais) em tempo real para reduzir latência entre o sinal de interesse e a ação comercial – inspirada em sistemas de controle e automação industrial.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-navy-900 border-t border-white/5 py-10 mt-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+            <a href="https://pauloleads.com.br" class="text-xl font-black text-white tracking-tight">Paulo<span class="text-burned-600">Leads</span></a>
+            <div class="flex gap-6 text-xs text-gray-500">
+                <a href="https://pauloleads.com.br" class="hover:text-white transition">Home</a>
+                <a href="https://pauloleads.com.br#sobre-nos" class="hover:text-white transition">Quem Somos</a>
+                <a href="https://pauloleads.com.br#whitepaper-sec" class="hover:text-white transition">White Paper</a>
+            </div>
+            <p class="text-[10px] text-gray-600">© 2026 Paulo C. P. Santos · pauloleads.com.br</p>
+        </div>
+        <div class="text-center text-[10px] text-gray-700 mt-4">
+            📄 Publicação científica: <a href="https://doi.org/10.5281/zenodo.20320049" target="_blank" class="text-burned-500 hover:underline">Protocolo Hidra — DOI 10.5281/zenodo.20320049</a>
+        </div>
+    </div>
+</footer>
+
+<!-- Botões flutuantes -->
+<a href="https://wa.me/5519982642481?text=Ol%C3%A1%2C%20quero%20oportunidades%20quentes%20agora" target="_blank" class="fixed bottom-6 right-4 sm:bottom-8 sm:right-6 z-50 flex items-center gap-3 bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold text-sm px-5 py-3.5 rounded-full shadow-2xl transition-all duration-300 animate-pulse-slow">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 sm:w-6 sm:h-6"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2.22 21.28a.75.75 0 0 0 .932.94l4.03-1.005A9.96 9.96 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2Zm.97 14.82c-.345.97-1.415 1.54-2.448 1.265a6.5 6.5 0 0 1-2.756-1.602 6.5 6.5 0 0 1-1.602-2.756c-.275-1.033.295-2.103 1.265-2.448.304-.108.63-.045.87.165.425.373.777.82 1.037 1.32.26.5.37 1.07.28 1.62-.09.55-.38 1.05-.82 1.38.44.76 1.06 1.38 1.82 1.82.33-.44.83-.73 1.38-.82.55-.09 1.12.02 1.62.28.5.26.947.612 1.32 1.037.21.24.273.566.165.87Z" clip-rule="evenodd"/></svg>
+    <span class="hidden sm:inline">Falar agora</span>
+</a>
+<div class="fixed bottom-8 left-6 z-40">
+    <div class="flex gap-1.5 pl-1 mb-1"><div class="w-2 h-2 bg-burned-500 rounded-full animate-pulse"></div><div class="w-2 h-2 bg-burned-500 rounded-full animate-pulse delay-150"></div><div class="w-2 h-2 bg-burned-500 rounded-full animate-pulse delay-300"></div></div>
+    <a href="https://pauloleads.com.br/analises-mercado/" class="flex items-center gap-3 bg-navy-800 hover:bg-navy-700 border border-burned-600/30 hover:border-burned-500 text-gray-300 hover:text-white px-5 py-3.5 rounded-2xl shadow-xl transition-all text-sm font-medium">
+        <span class="text-2xl">📊</span>
+        <div class="flex flex-col leading-tight"><span class="text-burned-400 text-xs tracking-widest uppercase">Área Exclusiva</span><span>Análises de Mercado</span></div>
+    </a>
+</div>
+
+<script>
+    (function() { const bar = document.getElementById('progressBar'); if(bar){ const update = () => { const top = window.scrollY; const height = document.documentElement.scrollHeight - window.innerHeight; const percent = height ? (top / height) * 100 : 0; bar.style.width = percent + '%'; }; window.addEventListener('scroll', update); window.addEventListener('resize', update); update(); } })();
+</script>
+</body>
+</html>
