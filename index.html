@@ -34,7 +34,10 @@
       "image": "https://avatars.githubusercontent.com/u/13968567?v=4",
       "description": "Infraestrutura Comercial com IA, Engenharia de Microdados e RAG para B2B e Mercado Imobiliário High-Ticket. Criadores do Protocolo Hidra e do Ecossistema de 50 Skills.",
       "foundingDate": "2011",
-      "foundingLocation": "Brazil",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Brazil"
+      },
       "founder": {
         "@id": "https://pauloleads.com.br/#person"
       },
@@ -53,7 +56,10 @@
       },
       "address": {
         "@type": "PostalAddress",
-        "addressCountry": "BR"
+        "addressCountry": {
+          "@type": "Country",
+          "name": "BR"
+        }
       },
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -242,6 +248,7 @@
       "@id": "https://pauloleads.com.br/#product",
       "name": "Protocolo Hidra - Infraestrutura Comercial com IA",
       "alternateName": "Ecossistema de 50 Skills",
+      "image": "https://avatars.githubusercontent.com/u/13968567?v=4",
       "description": "Sistema unificado de inteligência comercial, IA conversacional, big data e automação que transforma aquisição de clientes em um processo previsível, escalável e economicamente eficiente. Redução de CAC de 30% a 50%. Blindagem anti-bloqueio Meta e WhatsApp.",
       "brand": {
         "@type": "Brand",
@@ -257,8 +264,15 @@
         "price": "1997.00",
         "priceCurrency": "BRL",
         "priceValidUntil": "2026-12-31",
+        "validFrom": "2026-01-01",
         "availability": "https://schema.org/InStock",
         "itemCondition": "https://schema.org/NewCondition",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "returnWindow": "P7D",
+          "returnFees": "https://schema.org/FreeReturn"
+        },
         "paymentMethod": ["CreditCard", "Pix", "BankTransfer"],
         "shippingDetails": {
           "@type": "OfferShippingDetails",
@@ -267,17 +281,25 @@
             "value": "0.00",
             "currency": "BRL"
           },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "BR"
+          },
           "deliveryTime": {
             "@type": "ShippingDeliveryTime",
             "handlingTime": {
               "@type": "QuantitativeValue",
-              "value": "24",
-              "unitCode": "HUR"
+              "minValue": 12,
+              "maxValue": 36,
+              "value": 24,
+              "unitCode": "h"
             },
             "transitTime": {
               "@type": "QuantitativeValue",
-              "value": "0",
-              "unitCode": "HUR"
+              "minValue": 0,
+              "maxValue": 0,
+              "value": 0,
+              "unitCode": "d"
             }
           }
         }
