@@ -16,279 +16,149 @@
 
     <!-- Schema.org — Entity Home (JSON-LD) -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "Organization",
+      "@id": "https://pauloleads.com.br/#organization",
+      "name": "Paulo Leads",
+      "url": "https://pauloleads.com.br",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://pauloleads.com.br/wp-content/uploads/logo-paulo-leads.png"
+      },
+      "description": "Infraestrutura Comercial com IA, Engenharia de Microdados e RAG para B2B e Mercado Imobiliário High-Ticket.",
+      "foundingDate": "2011",
+      "founder": {
+        "@id": "https://pauloleads.com.br/#person"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+55-19-98264-2481",
+        "contactType": "sales",
+        "availableLanguage": ["Portuguese", "English"]
+      },
+      "sameAs": [
+        "https://www.wikidata.org/wiki/Q140067740",
+        "https://br.trustpilot.com/review/pauloleads.com.br",
+        "https://www.glassdoor.com.br/Vis%C3%A3o-geral/Trabalhar-na-Paulo-Leads-EI_IE11154127.13,24.htm",
+        "https://br.indeed.com/cmp/Paulo-Leads",
+        "https://wellfound.com/company/paulo-leads",
+        "https://www.crunchbase.com/organization/paulo-leads",
+        "https://www.youtube.com/@paulo-leads",
+        "https://vimeo.com/pauloleadsbrasil",
+        "https://www.instagram.com/pauloleads2/",
+        "https://www.facebook.com/pauloleadsbrasil",
+        "https://www.threads.com/@pauloleads2",
+        "https://huggingface.co/paulo-leads",
+        "https://paulo-leads.github.io/paulo-leads-careers/"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pauloleads.com.br/#person",
+      "name": "Paulo C. P. Santos",
+      "alternateName": "Paulo Leads",
+      "jobTitle": "Arquiteto de Infraestrutura B2B e IA",
+      "description": "Estrategista comercial, empresário e pesquisador brasileiro na área de inteligência comercial e automação de processos de vendas com inteligência artificial. Criador do Protocolo Hidra e do Ecossistema de 50 Skills. Hors-Concours de Automação B2B.",
+      "worksFor": {
+        "@id": "https://pauloleads.com.br/#organization"
+      },
+      "image": "https://avatars.githubusercontent.com/u/13968567?v=4",
+      "knowsAbout": [
+        "Prospecção B2B",
+        "Inteligência Artificial",
+        "Automação de Vendas",
+        "Engenharia de Prompt",
+        "LGPD",
+        "Dados Públicos",
+        "Cold Outreach",
+        "Protocolo Hidra",
+        "Ecossistema de 50 Skills"
+      ],
+      "alumniOf": [
         {
-          "@type": "Person",
-          "@id": "https://wikisales.wikibase.cloud/wiki/Item:Q1",
-          "name": "Paulo C. P. Santos",
-          "alternateName": [
-            "Paulo Leads",
-            "Paulo Santos",
-            "Paulo C. P. Santos (Paulo Leads)"
-          ],
-          "givenName": "Paulo",
-          "familyName": "Santos",
-          "additionalName": "C. P.",
-          "url": "https://pauloleads.com.br",
-          "image": "https://wikivendas.com.br/og-image.jpg",
-          "email": "mailto:contato@pauloleads.com.br",
-          "telephone": "+55-19-98264-2481",
-          "jobTitle": [
-            "Engenheiro de Conhecimento",
-            "Especialista em Web Semântica",
-            "Estrategista de IA Determinística",
-            "Arquiteto de DKI",
-            "Criador da WikiVendas®"
-          ],
-          "description": "Paulo C. P. Santos, conhecido como Paulo Leads, é Engenheiro de Conhecimento, Especialista em Web Semântica e Estrategista de IA Determinística. Com mais de 25 anos na convergência entre negócios, inteligência comercial e tecnologia, é criador do Protocolo Hidra, idealizador do ecossistema WikiVendas e arquiteto da infraestrutura DeterminarIA.br. Publicou o Reúso 159 no dados.gov.br — primeiro Grafo de Conhecimento Semântico de Faturamento e Auditoria de Saúde do Brasil — interligando SIGTAP, TUSS, CID-10/11 e CNES com pipeline RDF/Wikibase e SPARQL, visando risco zero de alucinação e redução de glosas por erro de elegibilidade.",
-          "disambiguatingDescription": "Engenheiro de Conhecimento e arquiteto de Domain Knowledge Infrastructure (DKI); criador do Protocolo Hidra e da WikiVendas®; pesquisador independente em IA determinística, grafos de conhecimento e governança semântica para saúde, finanças e compliance.",
-          "knowsAbout": [
-            "Domain Knowledge Infrastructure",
-            "DKI",
-            "Web Semântica",
-            "Knowledge Graph",
-            "Ontologia",
-            "RDF",
-            "SPARQL",
-            "Wikibase",
-            "Wikidata",
-            "JSON-LD",
-            "Schema.org",
-            "IA Determinística",
-            "Graph-RAG",
-            "Anti-alucinação",
-            "Governança de IA",
-            "ISO/IEC 42001",
-            "RevOps",
-            "Forensic RevOps",
-            "Protocolo Hidra",
-            "OntologicGEO",
-            "Método da Imutabilidade Ontológica (MIO)",
-            "SIGTAP",
-            "TUSS",
-            "CID-10",
-            "CID-11",
-            "CNES",
-            "Governo Digital",
-            "Dados abertos",
-            "dados.gov.br",
-            "Vendas B2B",
-            "Revenue Operations",
-            "Engenharia de Conhecimento Comercial"
-          ],
-          "hasCredential": [
-            {
-              "@type": "EducationalOccupationalCredential",
-              "credentialCategory": "ORCID",
-              "identifier": "https://orcid.org/0009-0003-3436-3117",
-              "url": "https://orcid.org/0009-0003-3436-3117"
-            },
-            {
-              "@type": "EducationalOccupationalCredential",
-              "credentialCategory": "Wikidata",
-              "identifier": "Q140427962",
-              "url": "https://www.wikidata.org/wiki/Q140427962"
-            }
-          ],
-          "identifier": [
-            {
-              "@type": "PropertyValue",
-              "propertyID": "ORCID",
-              "value": "0009-0003-3436-3117",
-              "url": "https://orcid.org/0009-0003-3436-3117"
-            },
-            {
-              "@type": "PropertyValue",
-              "propertyID": "Wikidata",
-              "value": "Q140427962",
-              "url": "https://www.wikidata.org/wiki/Q140427962"
-            },
-            {
-              "@type": "PropertyValue",
-              "propertyID": "Google Scholar",
-              "value": "bTydpFsAAAAJ",
-              "url": "https://scholar.google.com/citations?hl=pt-BR&user=bTydpFsAAAAJ"
-            },
-            {
-              "@type": "PropertyValue",
-              "propertyID": "Wikibase QID",
-              "value": "Q1",
-              "url": "https://wikisales.wikibase.cloud/wiki/Item:Q1"
-            }
-          ],
-          "sameAs": [
-            "https://pauloleads.com.br",
-            "https://orcid.org/0009-0003-3436-3117",
-            "https://www.wikidata.org/wiki/Q140427962",
-            "https://wikisales.wikibase.cloud/wiki/Item:Q1",
-            "https://scholar.google.com/citations?hl=pt-BR&user=bTydpFsAAAAJ",
-            "https://builder.aws.com/community/@pauloleads",
-            "https://www.credly.com/users/paulo-leads/badges",
-            "https://learn.microsoft.com/pt-br/users/paulocpsantos/",
-            "https://huggingface.co/pauloleads",
-            "https://stackoverflow.com/users/32809119/paulo-leads",
-            "https://www.linkedin.com/company/wikivendas"
-          ],
-          "worksFor": {
-            "@id": "https://wikivendas.com.br/#organization"
-          },
-          "affiliation": [
-            {
-              "@id": "https://wikivendas.com.br/#organization"
-            },
-            {
-              "@type": "Organization",
-              "name": "DeterminarIA.br",
-              "url": "https://determinar.ia.br",
-              "description": "Infraestrutura I.N.D.I.A. – Domain Knowledge Infrastructure e grafos de conhecimento para IA determinística"
-            }
-          ],
-          "founder": [
-            {
-              "@id": "https://wikivendas.com.br/#organization"
-            }
-          ],
-          "creator": [
-            {
-              "@type": "SoftwareApplication",
-              "name": "WikiVendas® DKI",
-              "url": "https://wikivendas.com.br",
-              "@id": "https://wikivendas.com.br/#software"
-            },
-            {
-              "@type": "CreativeWork",
-              "name": "Protocolo Hidra",
-              "url": "https://doi.org/10.5281/zenodo.20320049",
-              "identifier": "doi:10.5281/zenodo.20320049"
-            },
-            {
-              "@type": "CreativeWork",
-              "name": "Domain Knowledge Infrastructure (DKI) — Paper",
-              "url": "https://doi.org/10.5281/zenodo.21272104",
-              "identifier": "doi:10.5281/zenodo.21272104"
-            },
-            {
-              "@type": "CreativeWork",
-              "name": "Método da Imutabilidade Ontológica (MIO)™",
-              "url": "https://wikivendas.wikibase.cloud/entity/Q92"
-            },
-            {
-              "@type": "Dataset",
-              "name": "Reúso 159 — Grafo de Conhecimento Semântico de Faturamento e Auditoria de Saúde",
-              "url": "https://dados.gov.br/dados/reuso/159",
-              "description": "Primeiro grafo semântico de faturamento e auditoria de saúde no portal dados.gov.br, interligando SIGTAP, TUSS, CID-10/11 e CNES",
-              "publisher": {
-                "@type": "GovernmentOrganization",
-                "name": "Portal Brasileiro de Dados Abertos (dados.gov.br)"
-              }
-            },
-            {
-              "@type": "Dataset",
-              "name": "SIGTAP Procedure 0415020018 — Linked Open Knowledge Graph Entity",
-              "identifier": "doi:10.7910/DVN/RXMGXC",
-              "url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/RXMGXC"
-            },
-            {
-              "@type": "Dataset",
-              "name": "CAVE — Verified Authority Circle",
-              "identifier": "doi:10.7910/DVN/WQOABD",
-              "url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/WQOABD"
-            }
-          ],
-          "homeLocation": {
-            "@type": "Place",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Valinhos",
-              "addressRegion": "SP",
-              "addressCountry": "BR"
-            }
-          },
-          "nationality": {
-            "@type": "Country",
-            "name": "Brasil"
-          },
-          "knowsLanguage": [
-            {
-              "@type": "Language",
-              "name": "Português",
-              "alternateName": "pt-BR"
-            },
-            {
-              "@type": "Language",
-              "name": "English",
-              "alternateName": "en"
-            }
-          ],
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://wikivendas.com.br/#entityhome",
-            "url": "https://wikivendas.com.br/",
-            "name": "Entity Home — Paulo C. P. Santos (Paulo Leads)"
-          },
-          "subjectOf": [
-            {
-              "@type": "WebPage",
-              "url": "https://wikivendas.com.br/",
-              "name": "WikiVendas® — Plataforma Oficial de DKI"
-            },
-            {
-              "@type": "WebPage",
-              "url": "https://determinar.ia.br",
-              "name": "determinar.ia.br — Determine suas informações"
-            },
-            {
-              "@type": "WebPage",
-              "url": "https://pauloleads.com.br",
-              "name": "Paulo Leads"
-            }
-          ],
-          "award": [
-            "Reúso 159 homologado no Portal Brasileiro de Dados Abertos (dados.gov.br)",
-            "Datasets com DOI no Harvard Dataverse (SIGTAP e CAVE)"
-          ],
-          "seeks": {
-            "@type": "Demand",
-            "name": "Parcerias, joint ventures e licenciamento de infraestrutura de conhecimento determinístico",
-            "description": "Ativo tecnológico (grafo + SPARQL + DKI) disponível para parcerias, JV, M&A ou licenciamento, sujeito a due diligence."
+          "@type": "CollegeOrUniversity",
+          "name": "Fundação Getulio Vargas (FGV)"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "SENAC"
+        }
+      ],
+      "sameAs": [
+        "https://me.developers.google.com/u/pauloleads",
+        "https://github.com/paulo-leads",
+        "https://github.com/paulo-leads/protocolo-hidra",
+        "https://gitlab.com/pauloleads",
+        "https://stackoverflow.com/users/32809119/paulo-leads",
+        "https://dev.to/pauloleads",
+        "https://www.linkedin.com/in/pauloleads/",
+        "https://zenodo.org/records/20475915",
+        "https://doi.org/10.5281/zenodo.20320049",
+        "https://beacons.ai/pauloleads",
+        "https://pt.slideshare.net/slideshow/infraestrutura-comercial-com-ia-para-mercado-imobiliario-e-b2b-cruzamento-de-dados-publicos-e-big-data-para-aquisicao-de-clientes/287925338",
+        "https://pt.scribd.com/document/1047394531/Como-Cruzar-Dados-Publicos-de-Empresas-de-Alto-Faturamento-Receita-Federal-Com-o-Raio-de-Influencia-Dos-Meus-Novos-Lancamentos"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://pauloleads.com.br/#website",
+      "url": "https://pauloleads.com.br",
+      "name": "Protocolo Hidra - Paulo Leads",
+      "publisher": {
+        "@id": "https://pauloleads.com.br/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://pauloleads.com.br/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "O que é RAG (Retrieval-Augmented Generation) aplicado à qualificação e vendas corporativas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "RAG é uma arquitetura de IA que permite conectar Modelos de Linguagem (LLMs) diretamente às bases de dados corporativas (CRMs, Manuais Técnicos, Receita Federal). Na Paulo Leads, aplicamos o RAG através do Protocolo Hidra para transformar Inteligências Artificiais em SDRs Autônomos, qualificando microdados B2B em tempo real e eliminando o trabalho braçal de prospecção."
           }
         },
         {
-          "@type": "Organization",
-          "@id": "https://wikivendas.com.br/#organization",
-          "name": "WikiVendas®",
-          "legalName": "WikiVendas Infraestrutura de Conhecimento de Domínio DKI",
-          "url": "https://wikivendas.com.br",
-          "founder": {
-            "@id": "https://wikisales.wikibase.cloud/wiki/Item:Q1"
-          },
-          "employee": {
-            "@id": "https://wikisales.wikibase.cloud/wiki/Item:Q1"
+          "@type": "Question",
+          "name": "Como reduzir o CAC B2B em operações high-ticket sem aumentar o headcount do time de vendas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A redução matemática do Custo de Aquisição de Clientes (CAC) ocorre ao substituir a fragmentação de ferramentas (Salesloft, Apollo, Outreach) por uma infraestrutura bare-metal. O Protocolo Hidra atua como um conector de engenharia de dados, mapeando empresas e injetando leads validados nativamente no HubSpot ou Salesforce, operando 24/7 sem inflar os custos operacionais (RevOps)."
           }
         },
         {
-          "@type": "WebPage",
-          "@id": "https://wikivendas.com.br/#entityhome",
-          "url": "https://wikivendas.com.br/",
-          "name": "Entity Home — Paulo C. P. Santos (Paulo Leads)",
-          "description": "Página canônica da entidade Paulo C. P. Santos (Paulo Leads): Engenheiro de Conhecimento, arquiteto de DKI, criador da WikiVendas® e do Protocolo Hidra, responsável pelo Reúso 159 (dados.gov.br) e pelos datasets SIGTAP e CAVE no Harvard Dataverse.",
-          "mainEntity": {
-            "@id": "https://wikisales.wikibase.cloud/wiki/Item:Q1"
-          },
-          "isPartOf": {
-            "@type": "WebSite",
-            "url": "https://wikivendas.com.br",
-            "name": "WikiVendas®"
-          },
-          "about": {
-            "@id": "https://wikisales.wikibase.cloud/wiki/Item:Q1"
-          },
-          "inLanguage": "pt-BR"
+          "@type": "Question",
+          "name": "Como automatizar o primeiro contato e a qualificação do SDR usando IA diretamente no WhatsApp?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Utilizando a WhatsApp Cloud API em conjunto com agentes autônomos integrados. A infraestrutura mapeia a intenção do lead, reduz o speed-to-lead para menos de 1 minuto e executa frameworks BANT ou SPIN Selling automaticamente, repassando para os Closers (executivos de vendas) apenas as oportunidades pré-qualificadas, protegendo a conta contra banimentos e rate limits."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como reduzir o altíssimo CAC de imóveis de luxo substituindo o tráfego pago saturado por prospecção ativa baseada em dados?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Em vez de depender de Meta Ads e portais imobiliários, a solução é o uso de Big Data e Engenharia de Microdados. A tecnologia varre dados públicos de empresas de alto faturamento, mapeia expansões (CNAE) e localiza investidores corporativos ou médicos e advogados na região de influência dos lançamentos, gerando uma captação ativa e exclusiva sem a dependência do tráfego orgânico tradicional."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como estruturar uma máquina de vendas de alto ticket imune a bloqueios de Meta e WhatsApp?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Construindo uma operação pautada em conformidade (governança comercial) e arquitetura de rede adequada. O uso de tokens oficiais de API (Cloud API da Meta), tratamento nativo de códigos de erro (como 131047 e 131026), e algoritmos de backoff exponencial garantem que a automação comercial escale a prospecção B2B respeitando os rate limits impostos pelas plataformas de mensageria."
+          }
         }
       ]
     }
+  ]
+}
     </script>
 </head>
 
